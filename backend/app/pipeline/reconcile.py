@@ -184,6 +184,8 @@ def apply_state_delta(state: ConversationState, delta: StateDelta, today: date, 
         state.referents = ReferentRegistry()
         state.focused_option = None
         state.quote = None
+        state.accepted_addon_ids = []
+        state.quote_addon_ids = []
         state.stage = Stage.DISCOVER
 
     if delta.objection is not None and state.focused_option is not None:

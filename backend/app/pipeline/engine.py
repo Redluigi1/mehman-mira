@@ -15,6 +15,7 @@ from app.domain.trace import NextAction, NextActionType, TurnTrace
 from app.llm.base import LLMClient
 from app.logging_config import turn_logger
 from app.pipeline.act import TurnServices, run_action
+from app.pipeline.addon_selection import resolve_addon_response
 from app.pipeline.conflicts import sync_conflicts
 from app.pipeline.extract import extract_state_delta
 from app.pipeline.ground import build_grounding_packet
@@ -132,6 +133,8 @@ class ConversationEngine:
                 state.quote = None
                 state.hold = None
                 state.upsell_offered_for_quote = None
+                state.accepted_addon_ids = []
+                state.quote_addon_ids = []
 
         sync_conflicts(state, self.repo, self.today)
 
@@ -149,6 +152,13 @@ class ConversationEngine:
                 guests_for_addons=party.total_guests if party else 1,
             )
             eligible_addons = self.registry.get("suggest_addons").fn(addon_args).suggestions
+
+            # Only read the guest's reply as an add-on decision once the
+            # offer has actually been made — otherwise an unrelated mention
+            # of, say, "breakfast" earlier in the trip planning would be
+            # misread as accepting an upsell that was never offered.
+            if eligible_addons and state.upsell_offered_for_quote == state.quote.option_id:
+                state.accepted_addon_ids = resolve_addon_response(text, eligible_addons, state.accepted_addon_ids)
 
         ctx = TurnContext(
             user_act=delta.user_act, objection=delta.objection, is_question=delta.is_question,

@@ -86,6 +86,8 @@ def decide(state: ConversationState, ctx: TurnContext) -> NextAction:
         already_offered = state.upsell_offered_for_quote == state.quote.option_id
         if ctx.eligible_addons and not already_offered:
             return NextAction(type=NextActionType.UPSELL, reason="guest engaged with the quote, offering add-ons before the hold")
+        if set(state.accepted_addon_ids) != set(state.quote_addon_ids):
+            return NextAction(type=NextActionType.QUOTE, reason="add-on selection changed since the quote was built, rebuilding")
         return NextAction(type=NextActionType.HOLD, reason="guest accepted the quote")
 
     if ctx.objection is not None and ctx.last_search is None:
@@ -120,6 +122,8 @@ def decide(state: ConversationState, ctx: TurnContext) -> NextAction:
         already_offered = state.upsell_offered_for_quote == state.quote.option_id
         if ctx.eligible_addons and not already_offered:
             return NextAction(type=NextActionType.UPSELL, reason="quote pending, offering add-ons before the hold")
+        if set(state.accepted_addon_ids) != set(state.quote_addon_ids):
+            return NextAction(type=NextActionType.QUOTE, reason="add-on selection changed since the quote was built, rebuilding")
         return NextAction(type=NextActionType.HOLD, reason="quote pending and nothing else claimed this turn, treating as acceptance")
 
     if state.shortlist:

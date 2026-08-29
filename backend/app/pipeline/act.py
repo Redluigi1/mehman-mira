@@ -157,7 +157,7 @@ def _build_quote(state: ConversationState, services: TurnServices) -> ToolCall |
     args = QuoteArgs(
         option_id=option.option_id, property_id=option.property_id, room_type_id=option.room_type_id,
         check_in=stay.check_in, check_out=stay.check_out, rooms_needed=rooms_needed,
-        extra_beds=extra_beds, add_on_ids=[], guests_for_addons=total_guests,
+        extra_beds=extra_beds, add_on_ids=state.accepted_addon_ids, guests_for_addons=total_guests,
     )
     result, latency = _timed(services.registry.get("calculate_quote").fn, args)
     if result is None:
@@ -169,6 +169,7 @@ def _build_quote(state: ConversationState, services: TurnServices) -> ToolCall |
         line_items=[QuoteLineItem(label=li.label, amount=li.amount) for li in result.line_items],
         taxes=result.taxes, fixed_fees=result.fixed_fees, total=result.total, currency=result.currency,
     )
+    state.quote_addon_ids = list(state.accepted_addon_ids)
     return ToolCall(name="calculate_quote", args=args.model_dump(mode="json"),
                      result_summary=f"total {result.total} {result.currency}", latency_ms=latency)
 

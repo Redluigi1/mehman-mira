@@ -146,6 +146,8 @@ class ConversationState(BaseModel):
     quote: Quote | None = None
     hold: BookingHold | None = None
     upsell_offered_for_quote: str | None = None  # option_id — upsell timing rule (Bonus 1), never re-offered
+    accepted_addon_ids: list[str] = Field(default_factory=list)  # deterministically matched from guest text against offered add-ons
+    quote_addon_ids: list[str] = Field(default_factory=list)  # add-on ids baked into the current `quote` — detects when a rebuild is owed
     rejected: list[Rejection] = Field(default_factory=list)
     conflicts: list[Conflict] = Field(default_factory=list)
     open_questions: list[str] = Field(default_factory=list)
