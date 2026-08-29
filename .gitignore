@@ -1,0 +1,33 @@
+# Assignment brief — kept locally for context, not part of the submission
+reference/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Env & secrets
+.env
+.env.local
+*.key
+
+# Runtime data (SQLite is rebuilt from JSON at boot)
+*.db
+*.sqlite3
+data/runtime/
+
+# Eval output
+evals/output/
+
+# OS
+.DS_Store
+Thumbs.db
