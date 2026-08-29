@@ -54,6 +54,15 @@ class ConversationStore:
     def get_events(self, conversation_id: str) -> list[ConversationEvent]:
         return list(self._get(conversation_id).events)
 
+    def get_replies(self, conversation_id: str) -> list[str]:
+        return list(self._get(conversation_id).replies)
+
+    def get_snapshots(self, conversation_id: str) -> list[ConversationState]:
+        return list(self._get(conversation_id).snapshots)
+
+    def get_traces(self, conversation_id: str) -> list[TurnTrace]:
+        return list(self._get(conversation_id).traces)
+
     def append_reply(self, conversation_id: str, text: str) -> None:
         self._get(conversation_id).replies.append(text)
 

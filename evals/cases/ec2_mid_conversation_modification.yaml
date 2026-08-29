@@ -1,0 +1,36 @@
+id: ec2_mid_conversation_modification
+description: >
+  EC2 — "actually make that 4 people and one more night" updates party size
+  and stay length in place; destination and check-in survive untouched.
+conversation_id: eval-ec2
+turns:
+  - guest_message: "Goa this weekend for 3 of us."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Goa
+        party.adults: 3
+      date_expression: "this weekend"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+      state:
+        intent.destination.value.city: Goa
+        intent.party.value.adults: 3
+        intent.stay.value.check_in: "2026-09-04"
+        intent.stay.value.nights: 2
+  - guest_message: "Actually make that 4 people and one more night."
+    extracted_delta:
+      user_act: modify
+      set_fields:
+        party.adults: 4
+      date_expression: "one more night"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+      state:
+        intent.destination.value.city: Goa  # untouched by the modify
+        intent.party.value.adults: 4
+        intent.stay.value.check_in: "2026-09-04"  # unchanged
+        intent.stay.value.check_out: "2026-09-07"  # 09-06 -> 09-07
+        intent.stay.value.nights: 3  # 2 -> 3

@@ -1,0 +1,19 @@
+id: ec4_capacity_conflict
+description: >
+  EC4 — a 7-guest party can't fit the small planted cap-2 unit (excluded
+  entirely, not offered as a lie) but is resolved by a single larger villa
+  in the exact bucket and a capacity-split (2 rooms) alternative near it.
+conversation_id: eval-ec4
+turns:
+  - guest_message: "Goa tonight for 2 nights, 7 of us."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Goa
+        party.adults: 7
+      date_expression: "tonight for 2 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+      shortlist_contains: goa-edge-villa8  # single larger unit, no relaxation needed
+      must_not_say: ["Cove Corner"]  # the cap-2 unit must not be offered for 7 guests

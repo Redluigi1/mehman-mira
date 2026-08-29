@@ -14,6 +14,8 @@ from pydantic import BaseModel
 from app.data.indexes import CityIndex
 from app.data.repo import Repo
 from app.store.holds import HoldStore
+from app.tools.addons import suggest_addons
+from app.tools.alternatives import find_alternatives
 from app.tools.availability import check_availability, get_room_details
 from app.tools.booking import create_booking_hold
 from app.tools.policy_tool import get_property_policies
@@ -23,6 +25,7 @@ from app.tools.types import (
     AvailabilityArgs, AvailabilityResult, BookingHoldArgs, BookingHoldResult,
     PropertyPoliciesArgs, PropertyPoliciesResult, QuoteArgs, QuoteResult,
     RoomDetailsArgs, RoomDetailsResult, SearchArgs, SearchResult,
+    SuggestAddonsArgs, SuggestAddonsResult,
 )
 
 
@@ -97,6 +100,19 @@ def build_default_registry(repo: Repo, city_index: CityIndex, hold_store: HoldSt
         name="create_booking_hold", description="Hold with TTL and idempotency key.",
         args_schema=BookingHoldArgs, result_schema=BookingHoldResult,
         fn=lambda args: create_booking_hold(hold_store, args),
+    ))
+    registry.register(ToolSpec(
+        name="find_alternatives",
+        description="Sequenced relaxation search used when nothing matches at all: drops budget, "
+                     "then amenities, then property type, then returns the honest cheapest floor.",
+        args_schema=SearchArgs, result_schema=SearchResult,
+        fn=lambda args: find_alternatives(repo, city_index, args),
+    ))
+    registry.register(ToolSpec(
+        name="suggest_addons",
+        description="Eligibility-checked add-on suggestions, ranked by segment affinity, at most two with reasons.",
+        args_schema=SuggestAddonsArgs, result_schema=SuggestAddonsResult,
+        fn=lambda args: suggest_addons(repo, args),
     ))
 
     return registry

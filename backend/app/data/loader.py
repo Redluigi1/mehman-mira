@@ -100,7 +100,12 @@ def build_database(data_dir: Path, sqlite_path: Path) -> sqlite3.Connection:
     if sqlite_path.exists():
         sqlite_path.unlink()
 
-    conn = sqlite3.connect(sqlite_path)
+    # FastAPI's sync route handlers each run on a threadpool worker thread, not
+    # the thread that built this connection at startup — sqlite3's default
+    # same-thread check would reject every request. The catalogue is
+    # read-only after this function returns, so sharing one connection across
+    # threads is safe here.
+    conn = sqlite3.connect(sqlite_path, check_same_thread=False)
     conn.executescript(SCHEMA)
 
     catalogue = _read_json(data_dir / "properties.json")

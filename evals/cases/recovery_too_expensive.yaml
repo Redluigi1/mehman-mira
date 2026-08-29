@@ -1,0 +1,38 @@
+id: recovery_too_expensive
+description: >
+  Recovery phrase 2/5 — an objection with nothing searched yet this turn
+  re-triggers search rather than stalling; act.py additionally re-ranks
+  cheapest-first on a price objection so the guest doesn't see the same
+  order they just pushed back on.
+conversation_id: eval-recovery-expensive
+turns:
+  - guest_message: "Rishikesh in 14 days for 2 nights, 2 of us."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Rishikesh
+        party.adults: 2
+      date_expression: "in 14 days for 2 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+  - guest_message: "The first one."
+    extracted_delta:
+      user_act: select
+      referent_mentions: ["the first one"]
+    assert:
+      next_action: quote
+      tools_called: [calculate_quote]
+      price_total: 9770.0
+  - guest_message: "That's too expensive."
+    extracted_delta:
+      user_act: objection
+      objection: {kind: price, detail: "too expensive"}
+    assert:
+      # decide() picks refine_search first, act.py re-searches, then decide()
+      # is consulted again with the fresh results now in hand — landing on
+      # present, the same way a first-time search always finalizes there.
+      next_action: present
+      tools_called: [search_properties]
+      state:
+        shortlist.0.property_id: rishikesh-gen-07  # cheapest-first re-rank, not the same order

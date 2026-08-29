@@ -1,0 +1,45 @@
+id: happy_goa_couple
+description: >
+  Full golden path: search -> select -> quote -> upsell -> hold. The
+  breakfast/candlelight-dinner add-ons are always eligible (no property
+  precondition), so the upsell timing rule fires on every accepted quote —
+  the guest gets exactly one chance to add on before the hold is created.
+conversation_id: eval-happy-goa
+turns:
+  - guest_message: "Looking for a place in Goa for 2 of us."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Goa
+        party.adults: 2
+      date_expression: "in 10 days for 2 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+      state:
+        intent.party_type: couple
+  - guest_message: "The first one looks great."
+    extracted_delta:
+      user_act: select
+      referent_mentions: ["the first one"]
+    assert:
+      next_action: quote
+      tools_called: [calculate_quote]
+      state:
+        focused_option.property_id: goa-edge-villa8
+      price_total: 45916.0
+  - guest_message: "Yes that works."
+    extracted_delta:
+      user_act: answer
+    assert:
+      next_action: upsell
+      tools_called: [suggest_addons]
+      grounding_verdict: fallback
+      must_not_say: ["since you're a couple", "couple"]  # segmentation is silent (Decision 009)
+  - guest_message: "No thanks, just hold it."
+    extracted_delta:
+      user_act: answer
+    assert:
+      next_action: hold
+      tools_called: [create_booking_hold]
+      price_total: 45916.0

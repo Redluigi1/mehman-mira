@@ -1,0 +1,36 @@
+id: recovery_any_cheaper_option
+description: >
+  Recovery phrase 5/5 — "is there anything cheaper?" is the same code path
+  as "too expensive" (an objection of kind price with nothing searched yet
+  this turn), re-ranked cheapest-first.
+conversation_id: eval-recovery-cheaper
+turns:
+  - guest_message: "Manali in 14 days for 2 nights, 2 of us."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Manali
+        party.adults: 2
+      date_expression: "in 14 days for 2 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+  - guest_message: "The first one."
+    extracted_delta:
+      user_act: select
+      referent_mentions: ["the first one"]
+    assert:
+      next_action: quote
+      tools_called: [calculate_quote]
+      price_total: 21490.0
+  - guest_message: "Is there anything cheaper?"
+    extracted_delta:
+      user_act: objection
+      objection: {kind: price, detail: "wants a cheaper option"}
+    assert:
+      # see recovery_too_expensive.yaml — refine_search finalizes to present
+      # once the re-search actually runs and finds exact matches.
+      next_action: present
+      tools_called: [search_properties]
+      state:
+        shortlist.0.property_id: manali-gen-09

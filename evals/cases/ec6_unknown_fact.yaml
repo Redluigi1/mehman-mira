@@ -1,0 +1,36 @@
+id: ec6_unknown_fact
+description: >
+  EC6 — the planted property's pool-heated status is genuinely absent from
+  the dataset (status=unknown, not false). Mira says so plainly instead of
+  guessing either way.
+conversation_id: eval-ec6
+turns:
+  - guest_message: "Goa tonight for 2 nights, 2 of us."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Goa
+        party.adults: 2
+      date_expression: "tonight for 2 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+  - guest_message: "Palm Grove Homestay looks nice."
+    extracted_delta:
+      user_act: select
+      referent_mentions: ["Palm Grove Homestay"]
+    assert:
+      next_action: quote
+      tools_called: [calculate_quote]
+      state:
+        focused_option.property_id: goa-edge-unknown
+      price_total: 9658.0
+  - guest_message: "Is the pool heated there?"
+    extracted_delta:
+      user_act: question
+      is_question: true
+      question_about: "policy.pool_heated"
+    assert:
+      next_action: surface_unknown
+      tools_called: [get_property_policies]
+      must_not_say: ["yes", "it is heated", "not heated"]

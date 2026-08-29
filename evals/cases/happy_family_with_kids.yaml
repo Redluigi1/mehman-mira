@@ -1,0 +1,43 @@
+id: happy_family_with_kids
+description: >
+  Party composition (2 adults + a child, no inference beyond that) derives
+  party_type=family_with_kids silently; suggest_addons ranks Daily Breakfast
+  above the couple-oriented candlelight dinner for this party, and Airport
+  Pickup ranks first only because this property happens to have a shuttle.
+conversation_id: eval-happy-family
+turns:
+  - guest_message: "Goa in 14 days for 3 nights, 2 adults and one 8-year-old."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Goa
+        party.adults: 2
+        party.children: [{age: 8}]
+      date_expression: "in 14 days for 3 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+      state:
+        intent.party_type: family_with_kids
+  - guest_message: "The first one please."
+    extracted_delta:
+      user_act: select
+      referent_mentions: ["the first one"]
+    assert:
+      next_action: quote
+      tools_called: [calculate_quote]
+      price_total: 67156.0
+  - guest_message: "Yes, that works."
+    extracted_delta:
+      user_act: answer
+    assert:
+      next_action: upsell
+      tools_called: [suggest_addons]
+      must_not_say: ["since you have kids", "family", "8-year-old"]
+  - guest_message: "No add-ons, just hold it."
+    extracted_delta:
+      user_act: answer
+    assert:
+      next_action: hold
+      tools_called: [create_booking_hold]
+      price_total: 67156.0

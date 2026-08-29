@@ -1,0 +1,20 @@
+id: ec3_no_availability_dateshift
+description: >
+  EC3 — a pool-required search narrows the exact bucket enough that the
+  planted date-shift property (2 days later than asked) survives pruning
+  into the presented shortlist instead of being silently dropped (Decision 008).
+conversation_id: eval-ec3
+turns:
+  - guest_message: "Goa tonight for 2 nights, needs a pool."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Goa
+        party.adults: 2
+        amenities_required: [pool]
+      date_expression: "tonight for 2 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+      shortlist_contains: goa-edge-dateshift
+      must_not_say: ["invented", "guaranteed available"]

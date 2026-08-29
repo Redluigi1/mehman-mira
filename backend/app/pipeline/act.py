@@ -11,7 +11,7 @@ from datetime import date
 
 from app.data.indexes import CityIndex
 from app.data.repo import Repo
-from app.domain.state import BookingHold, ConversationState, OptionRef, Quote, QuoteLineItem
+from app.domain.state import BookingHold, ConversationState, OptionRef, Quote, QuoteLineItem, RejectionReason
 from app.domain.trace import NextAction, NextActionType, ToolCall
 from app.pipeline.policy import TurnContext
 from app.pipeline.referents import resolve_target_property
@@ -61,8 +61,13 @@ def _search_args_from_state(state: ConversationState) -> SearchArgs:
     )
 
 
-def _apply_search_result_to_state(state: ConversationState, result) -> None:
-    hits = (result.exact + result.near_miss)[:MAX_REFERENTS]
+def _apply_search_result_to_state(state: ConversationState, result, cheapest_first: bool = False) -> None:
+    hits = result.exact + result.near_miss
+    if cheapest_first:
+        rejected_ids = {r.option_id for r in state.rejected}
+        current = state.focused_option.option_id if state.focused_option else None
+        hits = sorted(hits, key=lambda h: (h.option_id in rejected_ids or h.option_id == current, h.price_per_night))
+    hits = hits[:MAX_REFERENTS]
     options = [
         OptionRef(
             option_id=h.option_id, property_id=h.property_id, room_type_id=h.room_type_id, ordinal=i + 1,
@@ -80,10 +85,27 @@ def _do_search(state: ConversationState, ctx: TurnContext, services: TurnService
     args = _search_args_from_state(state)
     result, latency = _timed(services.registry.get("search_properties").fn, args)
     ctx.last_search = result
-    _apply_search_result_to_state(state, result)
+    # Recovery behaviour: "any cheaper option?" is an objection of kind price
+    # re-triggering a plain search (policy.py) — re-rank cheapest-first rather
+    # than returning the same order the guest already pushed back on.
+    cheapest_first = ctx.objection is not None and ctx.objection.kind == RejectionReason.PRICE
+    _apply_search_result_to_state(state, result, cheapest_first=cheapest_first)
     return ToolCall(
         name="search_properties", args=args.model_dump(mode="json"),
         result_summary=f"{len(result.exact)} exact, {len(result.near_miss)} near-miss", latency_ms=latency,
+    )
+
+
+def _do_widen(state: ConversationState, ctx: TurnContext, services: TurnServices) -> ToolCall:
+    args = _search_args_from_state(state)
+    result, latency = _timed(services.registry.get("find_alternatives").fn, args)
+    ctx.last_search = result
+    ctx.last_widen = result
+    _apply_search_result_to_state(state, result)
+    return ToolCall(
+        name="find_alternatives", args=args.model_dump(mode="json"),
+        result_summary=f"{len(result.exact)} exact, {len(result.near_miss)} near-miss via '{result.strategy}'",
+        latency_ms=latency,
     )
 
 
@@ -167,16 +189,31 @@ def _create_hold(state: ConversationState, services: TurnServices) -> ToolCall |
                      latency_ms=latency)
 
 
+def _do_upsell(state: ConversationState, ctx: TurnContext) -> ToolCall | None:
+    if state.quote is None:
+        return None
+    state.upsell_offered_for_quote = state.quote.option_id
+    names = ", ".join(a.name for a in ctx.eligible_addons)
+    return ToolCall(
+        name="suggest_addons", args={"property_id": state.focused_option.property_id if state.focused_option else ""},
+        result_summary=f"suggested: {names}" if names else "no eligible add-ons", latency_ms=0.0,
+    )
+
+
 def run_action(action: NextAction, state: ConversationState, ctx: TurnContext, services: TurnServices) -> ToolCall | None:
     try:
         if action.type in (NextActionType.SEARCH, NextActionType.REFINE_SEARCH):
             return _do_search(state, ctx, services)
+        if action.type == NextActionType.WIDEN_OR_ASK:
+            return _do_widen(state, ctx, services)
         if action.type == NextActionType.ANSWER_FACTUAL and not ctx.question_resolved:
             return _answer_question(state, ctx, services)
         if action.type == NextActionType.QUOTE:
             return _build_quote(state, services)
         if action.type == NextActionType.HOLD:
             return _create_hold(state, services)
+        if action.type == NextActionType.UPSELL:
+            return _do_upsell(state, ctx)
         return None
     except Exception as exc:  # noqa: BLE001 — a tool failure must never crash the turn
         return ToolCall(name=action.type.value, args={}, result_summary="tool error", latency_ms=0.0,

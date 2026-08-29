@@ -1,0 +1,27 @@
+id: recovery_whichever_is_better
+description: >
+  Recovery phrase 3/5 — "whichever is better, you pick" carries no ordinal
+  or name at all; `resolve_selection` defers to the shortlist's own ranking
+  (ordinal 1 = best match) rather than guessing a preference.
+conversation_id: eval-recovery-whichever
+turns:
+  - guest_message: "Udaipur in 14 days for 2 nights, 2 of us."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Udaipur
+        party.adults: 2
+      date_expression: "in 14 days for 2 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+  - guest_message: "Whichever is better, you pick."
+    extracted_delta:
+      user_act: select
+      referent_mentions: ["whichever is better"]
+    assert:
+      next_action: quote
+      tools_called: [calculate_quote]
+      state:
+        focused_option.property_id: udaipur-gen-05  # ordinal 1, the top-ranked option
+      price_total: 11898.0

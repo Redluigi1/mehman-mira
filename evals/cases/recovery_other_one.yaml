@@ -1,0 +1,41 @@
+id: recovery_other_one
+description: >
+  Recovery phrase 4/5 — "what about the other one?" resolves only when
+  there's exactly one other option to switch to (here, the same property's
+  two room tiers); `_OTHER_PHRASES` is checked before the ordinal-word match
+  so "the other one" isn't misread as ordinal 1 via its own "one". Switching
+  also invalidates the stale quote built for the first room (a real bug this
+  case caught — see `docs/04-decisions.md` — engine.py now rebuilds it).
+conversation_id: eval-recovery-other
+turns:
+  - guest_message: "Jaipur in 14 days for 2 nights, need a spa."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Jaipur
+        party.adults: 2
+        amenities_required: [spa]
+      date_expression: "in 14 days for 2 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+      state:
+        shortlist.0.property_id: jaipur-gen-04
+  - guest_message: "The first one."
+    extracted_delta:
+      user_act: select
+      referent_mentions: ["the first one"]
+    assert:
+      next_action: quote
+      tools_called: [calculate_quote]
+      price_total: 5850.0
+  - guest_message: "What about the other one?"
+    extracted_delta:
+      user_act: select
+      referent_mentions: ["the other one"]
+    assert:
+      next_action: quote  # switched option -> stale quote invalidated -> re-quoted, not silently accepted
+      tools_called: [calculate_quote]
+      state:
+        focused_option.option_id: jaipur-gen-04:jaipur-gen-04-rt2
+      price_total: 23260.0

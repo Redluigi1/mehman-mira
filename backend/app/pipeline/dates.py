@@ -12,6 +12,8 @@ from dateutil import parser as dateutil_parser
 
 FRIDAY = 4  # Monday == 0
 
+_WORD_NUMBERS = {"a": 1, "an": 1, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5}
+
 
 @dataclass
 class DateResolution:
@@ -28,6 +30,20 @@ def _next_weekday_on_or_after(today: date, weekday: int) -> date:
 def _explicit_nights(text: str) -> int | None:
     m = re.search(r"(\d+)\s*nights?", text)
     return int(m.group(1)) if m else None
+
+
+def _relative_night_delta(text: str) -> int | None:
+    """"one more night", "2 extra nights", "another night" — a stay-length
+    adjustment relative to what's already known, not a fresh duration
+    (EC2, plan §12). Only meaningful combined with `known_nights`.
+    """
+    m = re.search(r"\b(a|an|one|two|three|four|five|\d+)\s+(?:more|extra|additional)\s+nights?\b", text)
+    if m:
+        token = m.group(1)
+        return int(token) if token.isdigit() else _WORD_NUMBERS.get(token)
+    if re.search(r"\banother\s+night\b", text):
+        return 1
+    return None
 
 
 def _try_parse_range(text: str, today: date) -> tuple[date, date] | None:
@@ -81,6 +97,10 @@ def resolve_date_expression(expression: str | None, today: date, known_nights: i
 
     text = expression.strip().lower()
     nights = _explicit_nights(text) or known_nights
+
+    night_delta = _relative_night_delta(text)
+    if night_delta is not None and known_nights is not None:
+        return DateResolution(nights=known_nights + night_delta)
 
     if "next weekend" in text:
         this_friday = _next_weekday_on_or_after(today, FRIDAY)

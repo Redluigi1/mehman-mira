@@ -83,8 +83,9 @@ Rules:
   state, e.g. "actually make that 4 people"), answer (answering a question you asked),
   select (picking one of the presented options), objection (pushing back, e.g. "too
   expensive"), question (asking something factual), chitchat, or other.
-- `referent_mentions` captures phrases like "the second one" or "the villa" so code can
-  resolve them against what was actually shown.
+- `referent_mentions` captures phrases like "the second one", "the villa", "the other one",
+  or "whichever is better"/"you pick" (the guest deferring to your judgment) so code can
+  resolve them against what was actually shown. Copy the phrase near-verbatim; don't paraphrase it.
 - If the guest asks a factual question, set is_question=true and question_about to the
   closest match from the allowed vocabulary.
 - `confidence` maps each field path you set to a 0..1 confidence score.

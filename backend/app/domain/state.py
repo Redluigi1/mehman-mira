@@ -145,6 +145,7 @@ class ConversationState(BaseModel):
     focused_option: OptionRef | None = None
     quote: Quote | None = None
     hold: BookingHold | None = None
+    upsell_offered_for_quote: str | None = None  # option_id — upsell timing rule (Bonus 1), never re-offered
     rejected: list[Rejection] = Field(default_factory=list)
     conflicts: list[Conflict] = Field(default_factory=list)
     open_questions: list[str] = Field(default_factory=list)

@@ -24,11 +24,11 @@ def repo(tmp_path_factory) -> Repo:
     return Repo(conn)
 
 
-def test_registry_has_all_six_tools(repo: Repo):
+def test_registry_has_all_eight_tools(repo: Repo):
     registry = build_default_registry(repo, CityIndex(repo), HoldStore(), repo.get_demo_today())
     assert registry.names() == sorted([
-        "search_properties", "check_availability", "get_room_details",
-        "get_property_policies", "calculate_quote", "create_booking_hold",
+        "search_properties", "check_availability", "get_room_details", "get_property_policies",
+        "calculate_quote", "create_booking_hold", "find_alternatives", "suggest_addons",
     ])
 
 

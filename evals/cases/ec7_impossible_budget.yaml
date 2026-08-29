@@ -1,0 +1,21 @@
+id: ec7_impossible_budget
+description: >
+  EC7 — a hard ceiling of ₹100/night matches nothing in Goa at all. Mira
+  doesn't go silent; `find_alternatives` drops the budget ceiling and offers
+  the honest cheapest floor instead (Decision 015).
+conversation_id: eval-ec7
+turns:
+  - guest_message: "Goa tonight for 2 nights, budget 100 rupees a night max."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Goa
+        party.adults: 2
+        budget.amount: 100
+        budget.basis: per_night
+        budget.hard: true
+      date_expression: "tonight for 2 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties, find_alternatives]
+      must_not_say: ["under 100", "within your budget"]

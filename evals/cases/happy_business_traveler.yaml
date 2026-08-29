@@ -1,0 +1,47 @@
+id: happy_business_traveler
+description: >
+  An explicitly-stated trip purpose (business) is a fine thing to act on —
+  Decision 009 only forbids *inferring* segmentation, not using what the
+  guest actually said. Guaranteed Early Check-in is only eligible here
+  because this property's real early-checkin policy is "on_request", not
+  free — paying to guarantee it is a genuine upsell, not a duplicate offer.
+conversation_id: eval-happy-business
+turns:
+  - guest_message: "Alibaug in 14 days for 2 nights, just me, it's a work trip."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Alibaug
+        party.adults: 1
+        trip_purpose: business
+      date_expression: "in 14 days for 2 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+      state:
+        intent.party_type: solo
+        intent.trip_purpose.value: business
+  - guest_message: "The first one."
+    extracted_delta:
+      user_act: select
+      referent_mentions: ["the first one"]
+    assert:
+      next_action: quote
+      tools_called: [calculate_quote]
+      state:
+        focused_option.property_id: alibaug-gen-16
+      price_total: 13130.0
+  - guest_message: "Sure."
+    extracted_delta:
+      user_act: answer
+    assert:
+      next_action: upsell
+      tools_called: [suggest_addons]
+      must_not_say: ["business trip", "since you're traveling for work"]
+  - guest_message: "Just the room, hold it."
+    extracted_delta:
+      user_act: answer
+    assert:
+      next_action: hold
+      tools_called: [create_booking_hold]
+      price_total: 13130.0

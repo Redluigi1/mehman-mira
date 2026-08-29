@@ -9,15 +9,18 @@ from dataclasses import dataclass, field
 from app.domain.state import ConversationState
 from app.domain.trace import NextAction, NextActionType, UserAct
 from app.pipeline.extract import Objection
-from app.tools.types import PropertyPoliciesResult, RoomDetailsResult, SearchResult
+from app.tools.types import PropertyPoliciesResult, RoomDetailsResult, SearchResult, SuggestedAddon
 
 MIN_VIABLE_SET_MISSING_ORDER = ["destination", "dates", "party"]
 
 # Actions whose tool result changes what the *final* action should be —
 # decide() is consulted a second time after the tool runs.
-NEEDS_REDECIDE_AFTER_ACT = {NextActionType.SEARCH, NextActionType.REFINE_SEARCH, NextActionType.ANSWER_FACTUAL}
+NEEDS_REDECIDE_AFTER_ACT = {
+    NextActionType.SEARCH, NextActionType.REFINE_SEARCH, NextActionType.ANSWER_FACTUAL,
+    NextActionType.WIDEN_OR_ASK,
+}
 # Actions with exactly one tool call and no further branching on the result.
-ONE_SHOT_TOOL_ACTIONS = {NextActionType.QUOTE, NextActionType.HOLD}
+ONE_SHOT_TOOL_ACTIONS = {NextActionType.QUOTE, NextActionType.HOLD, NextActionType.UPSELL}
 
 
 @dataclass
@@ -29,10 +32,12 @@ class TurnContext:
     referent_mentions: list[str] = field(default_factory=list)
 
     last_search: SearchResult | None = None
+    last_widen: SearchResult | None = None  # set once find_alternatives has run this turn (distinct from last_search: a plain search can legitimately come back empty and still need widening)
     last_policy_fact: PropertyPoliciesResult | None = None
     last_room_details: RoomDetailsResult | None = None
     question_target_property_id: str | None = None
     question_resolved: bool = False  # true once a lookup for this turn's question has run, even if target couldn't be resolved
+    eligible_addons: list[SuggestedAddon] = field(default_factory=list)  # precomputed, upsell timing rule (Bonus 1)
 
 
 def _missing_field(state: ConversationState) -> str | None:
@@ -70,6 +75,9 @@ def decide(state: ConversationState, ctx: TurnContext) -> NextAction:
         return NextAction(type=NextActionType.ANSWER_FACTUAL, reason="booking already held")
 
     if state.quote is not None and ctx.user_act in (UserAct.SELECT, UserAct.ANSWER) and not ctx.objection:
+        already_offered = state.upsell_offered_for_quote == state.quote.option_id
+        if ctx.eligible_addons and not already_offered:
+            return NextAction(type=NextActionType.UPSELL, reason="guest engaged with the quote, offering add-ons before the hold")
         return NextAction(type=NextActionType.HOLD, reason="guest accepted the quote")
 
     if ctx.objection is not None and ctx.last_search is None:

@@ -103,3 +103,22 @@ def test_derived_party_type_family_with_kids():
     delta = _delta(set_fields={"party.adults": 2, "party.children": [{"age": 8}]})
     state = apply_state_delta(state, delta, TODAY, turn_index=1)
     assert state.intent.party_type.value == "family_with_kids"
+
+
+def test_budget_amount_without_basis_is_flagged_an_assumption():
+    """Budget.basis defaults to per_night (a pydantic field default, not
+    something the guest said) — the State panel's assumption marker needs
+    this flagged, not silently presented as a known fact.
+    """
+    state = ConversationState(conversation_id="c1")
+    state = apply_state_delta(state, _delta(set_fields={"budget.amount": 5000}), TODAY, turn_index=1)
+    assert state.intent.budget.value.basis.value == "per_night"
+    assert state.intent.budget.is_assumption is True
+
+
+def test_budget_amount_with_explicit_basis_is_not_flagged_an_assumption():
+    state = ConversationState(conversation_id="c1")
+    state = apply_state_delta(state, _delta(
+        set_fields={"budget.amount": 5000, "budget.basis": "total"},
+    ), TODAY, turn_index=1)
+    assert state.intent.budget.is_assumption is False

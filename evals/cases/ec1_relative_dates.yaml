@@ -1,0 +1,21 @@
+id: ec1_relative_dates
+description: >
+  EC1 — "this weekend" resolves deterministically against an explicit today
+  (2026-09-02, a Wednesday) to the coming Friday, never via the model.
+conversation_id: eval-ec1
+turns:
+  - guest_message: "Goa this weekend for 2 of us."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Goa
+        party.adults: 2
+      date_expression: "this weekend"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+      state:
+        intent.stay.value.check_in: "2026-09-04"
+        intent.stay.value.check_out: "2026-09-06"
+        intent.stay.value.nights: 2
+      must_not_say: ["I don't know", "system prompt"]

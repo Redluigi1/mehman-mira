@@ -141,6 +141,7 @@ def apply_state_delta(state: ConversationState, delta: StateDelta, today: date, 
     state.turn_index = turn_index
     intent = state.intent
     before_key = _search_key(intent)
+    had_budget_before = intent.budget.value is not None
 
     for path, value in delta.set_fields.items():
         try:
@@ -148,19 +149,35 @@ def apply_state_delta(state: ConversationState, delta: StateDelta, today: date, 
         except (ValueError, TypeError, KeyError):
             continue  # a malformed proposal from the extractor never crashes the turn
 
-    known_nights = intent.stay.value.nights if intent.stay.value else None
+    if not had_budget_before and intent.budget.value is not None and "budget.basis" not in delta.set_fields:
+        # The guest gave a number but never said per-night or total — Budget's
+        # own pydantic default (per_night) is filling the gap, not something
+        # they stated. Flag it so the State panel can mark it an assumption
+        # rather than presenting it as a known fact.
+        intent.budget.is_assumption = True
+
+    existing_stay = intent.stay.value
+    known_nights = existing_stay.nights if existing_stay else None
     date_res = resolve_date_expression(delta.date_expression, today, known_nights=known_nights)
     if date_res.check_in or date_res.check_out or date_res.nights:
-        stay = intent.stay.value or StayWindow()
+        stay = existing_stay.model_copy() if existing_stay else StayWindow()
         if date_res.check_in:
             stay.check_in = date_res.check_in.isoformat()
         if date_res.nights:
             stay.nights = date_res.nights
         if date_res.check_out:
             stay.check_out = date_res.check_out.isoformat()
-        elif stay.check_in and stay.nights and not stay.check_out:
+        elif stay.check_in and stay.nights:
+            # nights (or check_in) changed with no explicit new check_out this turn —
+            # check_out is derived, not independently stated, so it always follows.
             stay.check_out = (date.fromisoformat(stay.check_in) + timedelta(days=stay.nights)).isoformat()
-        intent.stay = Slot(value=stay, confidence=0.8, source_turn=turn_index)
+        # A guest message with no date_expression at all still runs this block
+        # (known_nights carries forward as a truthy value) — only actually
+        # replace the slot, bumping its source_turn, when something about the
+        # stay genuinely changed. Otherwise "changed this turn" provenance
+        # (used by the UI's State panel) would fire on every single turn.
+        if stay != existing_stay:
+            intent.stay = Slot(value=stay, confidence=0.8, source_turn=turn_index)
 
     for path in delta.clear_fields:
         _clear_field(intent, path)

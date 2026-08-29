@@ -56,40 +56,70 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 
 ## Phase 3 — Edge cases (4h)
 
-- [ ] Conflict engine — capacity, budget, policy, min-stay, past dates, contradictions
-- [ ] Relaxation lane — `date_shift`, `over_budget`, `capacity_split`, `policy_conflict`, `min_stay`
-- [ ] `find_alternatives` — date shift, nearby property, room split, cheaper tier
-- [ ] EC1 relative dates
-- [ ] EC2 mid-conversation modification
-- [ ] EC3 no availability, date-shift offer
-- [ ] EC4 capacity conflict, split or upgrade
-- [ ] EC5 policy conflict, surfaced not silently filtered
-- [ ] EC6 unknown information, with `resolution_path`
-- [ ] EC7 impossible budget, honest floor
-- [ ] EC8 prompt injection in a guest message, deflected
-- [ ] Test per edge case
+- [x] Conflict engine — capacity, budget, policy, min-stay, past dates, contradictions
+      (`pipeline/conflicts.py`; hard conflicts recompute every turn, soft conflicts tied to
+      `focused_option` are surfaced once then treated as acknowledged — Decision 014)
+- [x] Relaxation lane — `date_shift`, `over_budget`, `capacity_split`, `policy_conflict`, `min_stay`
+      (mechanism was already in `tools/search.py` from Phase 2; Phase 3 wires it into
+      `RESOLVE_CONFLICT` via the conflict engine and extends it with `find_alternatives`)
+- [x] `find_alternatives` — cheaper tier via sequenced relaxation (budget ceiling, then required
+      amenities, then property type, then an honest unfiltered floor); wired to `WIDEN_OR_ASK`
+      (Decision 015 — further date-shift/room-split widening beyond search's own ±2 days / 2
+      rooms was deliberately not added, see decision log)
+- [x] EC1 relative dates — `tests/test_edge_cases.py::test_ec1_...`
+- [x] EC2 mid-conversation modification — also fixed `pipeline/dates.py` to parse relative
+      night deltas ("one more night") and `reconcile.py` to recompute `check_out` from
+      `check_in + nights` whenever nights changes without an explicit new check-out
+- [x] EC3 no availability, date-shift offer — `test_ec3_...`
+- [x] EC4 capacity conflict, split or upgrade — `test_ec4_...`
+- [x] EC5 policy conflict, surfaced not silently filtered — `test_ec5_...`
+- [x] EC6 unknown information, with `resolution_path` — `test_ec6_...`
+- [x] EC7 impossible budget, honest floor — `test_ec7_...`
+- [x] EC8 prompt injection in a guest message, deflected — deterministic regex guard in
+      `pipeline/safety.py`, runs before extractor classification is trusted (Decision 001/015);
+      `test_ec8_...` plus `tests/test_safety.py`
+- [x] Test per edge case — `tests/test_edge_cases.py` (8), plus `test_conflicts.py` (11) and
+      `test_alternatives.py` (4) for the underlying mechanisms
 
 ## Phase 4 — UI (5h)
 
-- [ ] `lib/api.ts` and `types.ts` generated or mirrored from the Pydantic models
-- [ ] `Chat.tsx` — message list, composer, error surfacing
-- [ ] `StatePanel.tsx` — the brief's field sketch, changed-this-turn highlighting, assumption and unknown markers
-- [ ] `TracePanel.tsx` — user act, next-action chip, tool cards with args/result/latency, grounding badge
-- [ ] `TurnTimeline.tsx` — click a turn to time-travel the console
-- [ ] Console collapse toggle (chat-only view)
-- [ ] Empty, loading and error states
-- [ ] Confirm no chain of thought is rendered anywhere
+- [x] `lib/api.ts` and `types.ts` mirrored by hand from the Pydantic models (`frontend/src/lib/`)
+- [x] `Chat.tsx` — message list, composer, error surfacing (with retry)
+- [x] `StatePanel.tsx` — the brief's field sketch, changed-this-turn highlighting (via each
+      `Slot.source_turn`, no snapshot diffing needed), assumption and unknown markers
+- [x] `TracePanel.tsx` — user act, next-action chip, tool cards with args/result/latency
+      (expandable), grounding badge
+- [x] `TurnTimeline.tsx` — click a turn to time-travel the console; "back to live" banner
+- [x] Console collapse toggle (chat-only view)
+- [x] Empty, loading and error states (boot-error screen, inline retry banner, typing indicator)
+- [x] Confirm no chain of thought is rendered anywhere — the UI only ever renders
+      `GroundingPacket`-sourced facts and structured trace data, never a reasoning trace
+- [x] `channels/web.py` API surface wired to a real FastAPI app (`main.py` lifespan);
+      design lifted from mehman.io's own visual language (warm cream/ink/purple/rust
+      palette, Instrument Serif + Hanken Grotesk) at the user's request — see
+      `frontend/src/index.css`
+- [x] Verified live end-to-end against the real Claude CLI in the browser: search →
+      select → quote → upsell → hold, time-travel, console collapse, all confirmed
+      working. Caught and fixed 3 real bugs along the way (Decisions 017-019).
 
 ## Phase 5 — Bonuses (4h)
 
-- [ ] `suggest_addons` — eligibility rules, segment affinity, at most two with reasons
-- [ ] Upsell timing rule — only after engagement with an option
-- [ ] Referent registry wired into extraction and reconciliation
-- [ ] Recovery behaviours: "yes", "too expensive", "whichever is better", "what about the other one?", "any cheaper option?"
-- [ ] `evals/runner.py` — assertion types, scorecard maths, JSON and markdown output
-- [ ] Write 16 cases in `evals/cases/*.yaml` (happy paths, all 8 edge cases, all 5 recovery phrases)
-- [ ] Record fixtures, verify the suite runs deterministically with no API key
-- [ ] Commit `evals/REPORT.md`
+- [x] `suggest_addons` — eligibility rules, segment affinity, at most two with reasons
+      (`tools/addons.py`; Decision 016)
+- [x] Upsell timing rule — only after engagement with an option (`NextActionType.UPSELL`
+      fires once between QUOTE and HOLD, Decision 016)
+- [x] Referent registry wired into extraction and reconciliation (`pipeline/referents.py`,
+      already wired into `engine.py`; extended for recovery phrases, see below)
+- [x] Recovery behaviours: "yes", "too expensive", "whichever is better", "what about the
+      other one?", "any cheaper option?" — `pipeline/referents.py` (`_OTHER_PHRASES`,
+      `_DEFER_TO_RANKING_PHRASES`), `pipeline/act.py` (cheapest-first re-rank on a price
+      objection); `tests/test_recovery.py`. Caught and fixed a real stale-quote bug along
+      the way (Decision 017).
+- [x] `evals/runner.py` — assertion types, scorecard maths, JSON and markdown output
+- [x] Write 16 cases in `evals/cases/*.yaml` (happy paths, all 8 edge cases, all 5 recovery phrases)
+- [x] Record fixtures, verify the suite runs deterministically with no API key
+      (scripted extraction, not live-recorded — see `evals/README.md`)
+- [x] Commit `evals/REPORT.md` (37/37 turns passing)
 
 ## Phase 6 — Ship (2h)
 
@@ -113,7 +143,8 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 
 ## Cross-cutting, do not skip
 
-- [ ] `ChannelAdapter` interface with `web` and `cli` real, `whatsapp` stubbed
+- [x] `ChannelAdapter` interface with `web` and `cli` real, `whatsapp` stubbed
+      (`channels/web.py` — Decision 018; `tests/test_web_api.py`)
 - [x] Structured logging with `conversation_id` and `turn_index` on every record
 - [x] `.env.example` committed
 - [ ] Every architectural change appended to `docs/04-decisions.md`

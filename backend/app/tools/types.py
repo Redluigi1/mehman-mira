@@ -46,6 +46,7 @@ class SearchHit(BaseModel):
 class SearchResult(BaseModel):
     exact: list[SearchHit] = Field(default_factory=list)
     near_miss: list[SearchHit] = Field(default_factory=list)
+    strategy: str = ""  # set by find_alternatives to say which relaxation produced this result
 
 
 class AvailabilityArgs(BaseModel):
@@ -145,3 +146,24 @@ class BookingHoldResult(BaseModel):
     idempotency_key: str
     expires_at: str
     reused_existing: bool = False
+
+
+class SuggestAddonsArgs(BaseModel):
+    property_id: str
+    party_type: str | None = None
+    trip_purpose: str | None = None
+    occasion: str | None = None
+    guests_for_addons: int = 1
+
+
+class SuggestedAddon(BaseModel):
+    id: str
+    name: str
+    price: float
+    price_basis: str
+    reason: str
+
+
+class SuggestAddonsResult(BaseModel):
+    property_id: str
+    suggestions: list[SuggestedAddon] = Field(default_factory=list)

@@ -1,0 +1,32 @@
+id: recovery_yes
+description: >
+  Recovery phrase 1/5 — a bare "yes" after a quote is presented is enough to
+  move the conversation forward (accepting into the upsell offer here, since
+  an always-eligible add-on exists; a plain "yes" reaches hold directly only
+  once the one-time upsell has already been shown for this quote).
+conversation_id: eval-recovery-yes
+turns:
+  - guest_message: "Coorg in 14 days for 2 nights, 2 of us."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Coorg
+        party.adults: 2
+      date_expression: "in 14 days for 2 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+  - guest_message: "The first one."
+    extracted_delta:
+      user_act: select
+      referent_mentions: ["the first one"]
+    assert:
+      next_action: quote
+      tools_called: [calculate_quote]
+      price_total: 7530.0
+  - guest_message: "Yes."
+    extracted_delta:
+      user_act: answer
+    assert:
+      next_action: upsell
+      tools_called: [suggest_addons]

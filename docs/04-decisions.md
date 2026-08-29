@@ -174,3 +174,151 @@ The repo is `Desktop\ola\mehman-mira\`. The parent `Desktop\ola\` contains Aadha
 resume and an offer letter, and must never be inside a git repository that gets pushed.
 The assignment PDF is copied to `reference/` and gitignored — the submission does not need
 to carry the company's own brief.
+
+---
+
+### 014 — Conflict engine: two lifetimes, not one
+**Date:** 2026-08-29 · **Status:** accepted
+
+`pipeline/conflicts.py` splits `Conflict` into two tiers with different resolution semantics,
+recomputed every turn against current state (never patched incrementally):
+
+- **Hard** (`PAST_DATE`, `CONTRADICTION`) — pure functions of stated intent (a check-in in the
+  past, check-out not after check-in, non-positive party/budget). These block every turn until
+  the offending field actually changes; there is nothing to "acknowledge" about a request that
+  is not usable as stated.
+- **Soft** (`CAPACITY`, `BUDGET`, `POLICY`, `MIN_STAY`) — checked against whatever option the
+  guest is currently focused on, straight against the repo (not against stale `relaxations` from
+  whenever the option was originally searched, so a party that grows *after* selection is still
+  caught). `policy.decide()` already treated `unresolved_conflicts` as the top-priority check
+  before this existed, so wiring in `RESOLVE_CONFLICT` closed a real gap: previously, selecting a
+  near-miss option went straight to `QUOTE` with the tradeoff never confirmed. Mira now gets
+  exactly one turn to flag it (`sync_conflicts` marks a same-kind, same-option conflict resolved
+  the turn after it was first surfaced). If the guest objects instead, the existing
+  rejection/`REFINE_SEARCH` path takes over on that same turn, since the conflict no longer blocks.
+
+*Cost:* "surfaced once, then treated as accepted" means a guest who stays silent on the tradeoff
+is treated as having accepted it — a debatable default. The alternative (require an explicit
+affirmative act before proceeding) was considered and deferred; noted for the engineering note's
+"what I'd improve" list.
+
+---
+
+### 015 — `find_alternatives` widens guest preferences, not search's own thresholds; EC8 gets a deterministic backstop
+**Date:** 2026-08-29 · **Status:** accepted
+
+Two related Phase 3 calls:
+
+1. `find_alternatives` (backs `WIDEN_OR_ASK`, used only when `search_properties` returns nothing
+   at all) drops guest-*stated preferences* in a fixed order — budget ceiling, then required
+   amenities, then property type — before falling back to an unfiltered floor. It deliberately
+   does **not** extend `search_properties`'s own ±2-day date-shift or 2-room capacity-split
+   thresholds; going further than those starts to offer a materially different stay than what
+   was asked for, and the dataset's planted cases (impossible budget, missing amenity) are
+   already served by dropping preferences rather than widening those thresholds.
+2. EC8 (prompt injection) gets a second, code-side check (`pipeline/safety.py`) independent of
+   the extractor's own instruction not to comply. Decision 001 already established that
+   reliability-critical behaviour lives in deterministic code; asking the model nicely not to be
+   jailbroken is not that. The regex guard runs before `decide()` and forces `DEFLECT`, so no
+   tool ever dispatches on an injected message regardless of how the extractor classified it.
+
+---
+
+### 016 — Upsell timing rule delays hold by one turn; add-on eligibility is dataset-grounded
+**Date:** 2026-08-29 · **Status:** accepted
+
+`suggest_addons` (`tools/addons.py`) checks eligibility against real dataset facts, never a
+guess: `requires_airport` checks the property's own `airport_shuttle` amenity;
+`requires_early_checkin_available`/`requires_late_checkout_available` check the policy is
+`known` and *not already free* (`False` or `"on_request"`) — paying to guarantee something
+already free would be a bad upsell, not a good one. Ranking may use `party_type` (derived,
+silent, per Decision 009) plus any explicitly-stated `occasion`/`trip_purpose`, but the
+`reason` text shown to the guest only ever cites the explicit signal or a property-side fact
+— never the derived segment itself, so "since you're a couple..." never reaches a reply.
+
+Timing: `NextActionType.UPSELL` fires between `QUOTE` and `HOLD` — decide() checks
+`state.upsell_offered_for_quote` and only inserts the upsell turn once per quote, before
+falling through to `HOLD` on the guest's next acceptance. This costs the guest one extra
+turn on every accepted quote (two of the five hand-authored add-ons, breakfast and the
+candlelight dinner, carry no eligibility precondition at all, so this is not a rare event) —
+accepted as the honest reading of "upsell timing rule: only after engagement with an
+option," matching Decision 011's general stance that a deterministic policy branch beats an
+LLM guessing when to sell.
+
+---
+
+### 017 — `focused_option` switch invalidates a stale quote/hold, found via eval authoring
+**Date:** 2026-08-29 · **Status:** accepted (bug fix)
+
+Building the `recovery_other_one` eval case (Bonus 3) surfaced a real bug: resolving "what
+about the other one?" to a different `option_id` updated `state.focused_option` but left
+`state.quote` (and `upsell_offered_for_quote`) pointing at the *previous* option. Because
+`policy.decide()`'s accept-quote branch only checks `state.quote is not None`, not which
+option it's for, the very next guest turn would silently upsell-or-hold against the wrong
+room's stale price.
+
+`engine.py` now clears `quote`/`hold`/`upsell_offered_for_quote` whenever a referent
+resolves to a genuinely different `option_id` than the one already focused (re-mentioning
+the *same* option is a no-op, quote preserved). `evals/cases/recovery_other_one.yaml`
+documents the corrected behaviour — the guest gets a fresh, correctly-priced quote for the
+newly-focused option, not a hold on the one they moved away from.
+
+---
+
+### 018 — Web channel (`channels/web.py`) added; sqlite connection shared across threads
+**Date:** 2026-08-29 · **Status:** accepted
+
+Phase 4's API surface (plan §10) is implemented as `POST /conversations`,
+`POST /conversations/{id}/messages`, `GET /conversations/{id}`,
+`GET /conversations/{id}/turns/{n}`, `GET /catalogue/properties/{id}`, mounted on the
+existing FastAPI app; the engine (repo, city index, hold store, in-memory conversation
+store, `ClaudeCliClient`) is built once at startup via a `lifespan` handler and hangs off
+`app.state`. `ConversationStore` gained `get_replies`/`get_snapshots`/`get_traces`
+accessors so the web layer never reaches into its private record.
+
+First live request against it failed immediately: `sqlite3.Connection` objects are
+thread-affine by default, but FastAPI's sync route handlers run on threadpool worker
+threads, not the thread that opened the connection at startup. `data/loader.py` now opens
+with `check_same_thread=False` — safe here because the catalogue is read-only after
+`build_database` returns; nothing about the query layer itself needed to change.
+
+An `LLMError` bubbling out of `handle_message` (the dev backend shells out to a real
+`claude` CLI process, per the still-open Decision 003) is caught at the route and returned
+as a 503 with a typed detail message, per plan §10's "errors reach the UI, never get
+swallowed" — rather than a bare 500.
+
+---
+
+### 019 — `stay.source_turn` provenance fix, found while wiring the State panel
+**Date:** 2026-08-29 · **Status:** accepted (bug fix)
+
+Manually driving a full conversation through the real UI (search → select → quote →
+upsell → hold) to check the State panel's "fields changed this turn" highlighting showed
+the Dates row lit up as changed on *every* turn — including the hold-confirmation turn,
+where the guest said nothing about dates at all.
+
+Cause: `reconcile.py` calls `resolve_date_expression` every turn regardless of whether
+`delta.date_expression` is set. With no expression, it returns early with
+`DateResolution(nights=known_nights)` — the *already-known* nights count, carried forward,
+not new information. But `nights` being truthy was enough to satisfy
+`if date_res.check_in or date_res.check_out or date_res.nights:`, which unconditionally
+replaced `intent.stay` with a fresh `Slot(..., source_turn=turn_index)`, stamping the
+current turn every time.
+
+Fixed by comparing the recomputed `StayWindow` against the pre-turn one and only replacing
+the slot (and therefore only bumping `source_turn`) when something in it actually changed.
+`tests/test_edge_cases.py::test_ec2_stay_source_turn_does_not_bump_when_dates_arent_mentioned`
+pins the corrected behaviour. This is the third bug this build caught by actually exercising
+the system end-to-end (the other two: Decision 017's stale-quote-on-option-switch, and
+Decision 018's sqlite thread-affinity crash) — none of them were visible from reading the
+code in isolation.
+
+A fourth gap, found the same way while checking the State panel's assumption marker
+actually had something to display: `Slot.is_assumption` was never set to `True` anywhere
+in the backend — a schema field the plan promised the UI (plan §11: "assumptions are
+marked") but nothing populated. `reconcile.py` now flags it in the one clear, common case:
+`budget.amount` given without `budget.basis`, where `Budget.basis`'s pydantic default
+(`per_night`) fills the gap rather than the guest having said so.
+`tests/test_reconcile.py::test_budget_amount_without_basis_is_flagged_an_assumption` pins
+it. Not a bug fix like the other three — a missed wire-up, closed while verifying the UI
+against the schema it's supposed to render.

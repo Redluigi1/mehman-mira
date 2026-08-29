@@ -1,0 +1,19 @@
+id: ec5_policy_conflict
+description: >
+  EC5 — a smoking requirement doesn't silently filter the planted no-smoking
+  property out of the results; it's surfaced as a near-miss with an honest
+  policy-conflict tradeoff instead.
+conversation_id: eval-ec5
+turns:
+  - guest_message: "Goa tonight for 2 nights, 2 of us, need to be able to smoke in the room."
+    extracted_delta:
+      user_act: new_request
+      set_fields:
+        destination.city: Goa
+        party.adults: 2
+        policy_needs.smoking: true
+      date_expression: "tonight for 2 nights"
+    assert:
+      next_action: present
+      tools_called: [search_properties]
+      shortlist_contains: goa-edge-nosmoking

@@ -11,19 +11,22 @@ from app.data.repo import Repo
 from app.domain.events import GuestMessage
 from app.domain.intent import PartyType
 from app.domain.state import ConversationState, Stage
-from app.domain.trace import NextActionType, TurnTrace
+from app.domain.trace import NextAction, NextActionType, TurnTrace
 from app.llm.base import LLMClient
 from app.logging_config import turn_logger
 from app.pipeline.act import TurnServices, run_action
+from app.pipeline.conflicts import sync_conflicts
 from app.pipeline.extract import extract_state_delta
 from app.pipeline.ground import build_grounding_packet
 from app.pipeline.policy import NEEDS_REDECIDE_AFTER_ACT, ONE_SHOT_TOOL_ACTIONS, TurnContext, decide
 from app.pipeline.reconcile import apply_state_delta
 from app.pipeline.referents import resolve_selection
 from app.pipeline.respond import generate_response
+from app.pipeline.safety import looks_like_injection
 from app.store.conversations import ConversationStore
 from app.store.holds import HoldStore
 from app.tools.registry import build_default_registry
+from app.tools.types import SuggestAddonsArgs
 
 MAX_DECIDE_ITERATIONS = 4
 
@@ -38,6 +41,8 @@ _STAGE_FOR_ACTION = {
 
 
 def _tool_already_ran(action_type: NextActionType, ctx: TurnContext) -> bool:
+    if action_type == NextActionType.WIDEN_OR_ASK:
+        return ctx.last_widen is not None
     if action_type in (NextActionType.SEARCH, NextActionType.REFINE_SEARCH):
         return ctx.last_search is not None
     if action_type == NextActionType.ANSWER_FACTUAL:
@@ -119,33 +124,61 @@ class ConversationEngine:
 
         if delta.referent_mentions:
             selected = resolve_selection(state, delta.referent_mentions, self.repo)
-            if selected is not None:
+            if selected is not None and (state.focused_option is None or selected.option_id != state.focused_option.option_id):
                 state.focused_option = selected
+                # Switching options invalidates any quote/hold/upsell state built
+                # for the *previous* one — otherwise "what about the other one?"
+                # would silently accept-or-upsell against a stale, wrong-option quote.
+                state.quote = None
+                state.hold = None
+                state.upsell_offered_for_quote = None
+
+        sync_conflicts(state, self.repo, self.today)
+
+        services = TurnServices(repo=self.repo, city_index=self.city_index, hold_store=self.hold_store,
+                                 today=self.today, registry=self.registry)
+
+        eligible_addons: list = []
+        if state.quote is not None and state.focused_option is not None:
+            party = state.intent.party.value
+            addon_args = SuggestAddonsArgs(
+                property_id=state.focused_option.property_id,
+                party_type=state.intent.party_type.value if state.intent.party_type != PartyType.UNKNOWN else None,
+                trip_purpose=state.intent.trip_purpose.value.value if state.intent.trip_purpose.value else None,
+                occasion=state.intent.occasion.value.value if state.intent.occasion.value else None,
+                guests_for_addons=party.total_guests if party else 1,
+            )
+            eligible_addons = self.registry.get("suggest_addons").fn(addon_args).suggestions
 
         ctx = TurnContext(
             user_act=delta.user_act, objection=delta.objection, is_question=delta.is_question,
             question_about=delta.question_about, referent_mentions=delta.referent_mentions,
+            eligible_addons=eligible_addons,
         )
-        services = TurnServices(repo=self.repo, city_index=self.city_index, hold_store=self.hold_store,
-                                 today=self.today, registry=self.registry)
 
         tool_calls = []
-        action = decide(state, ctx)
-        for _ in range(MAX_DECIDE_ITERATIONS):
-            if action.type in NEEDS_REDECIDE_AFTER_ACT and not _tool_already_ran(action.type, ctx):
+        if looks_like_injection(text):
+            # Deterministic backstop (Decision 001/015, plan §12 EC8): never trust the
+            # extractor's own judgment for something this consequential. No tool runs.
+            action = NextAction(type=NextActionType.DEFLECT, reason="message matched the deterministic injection guard")
+            log.info("injection guard triggered, deflecting without running any tool")
+        else:
+            action = decide(state, ctx)
+            for _ in range(MAX_DECIDE_ITERATIONS):
+                if action.type in NEEDS_REDECIDE_AFTER_ACT and not _tool_already_ran(action.type, ctx):
+                    tc = run_action(action, state, ctx, services)
+                    if tc is not None:
+                        tool_calls.append(tc)
+                        log.info("tool call: %s ok=%s %s", tc.name, tc.ok, tc.result_summary)
+                    action = decide(state, ctx)
+                    continue
+                break
+
+            if action.type in ONE_SHOT_TOOL_ACTIONS:
                 tc = run_action(action, state, ctx, services)
                 if tc is not None:
                     tool_calls.append(tc)
                     log.info("tool call: %s ok=%s %s", tc.name, tc.ok, tc.result_summary)
-                action = decide(state, ctx)
-                continue
-            break
-
-        if action.type in ONE_SHOT_TOOL_ACTIONS:
-            tc = run_action(action, state, ctx, services)
-            if tc is not None:
-                tool_calls.append(tc)
-                log.info("tool call: %s ok=%s %s", tc.name, tc.ok, tc.result_summary)
 
         state.stage = _STAGE_FOR_ACTION.get(action.type, state.stage)
 

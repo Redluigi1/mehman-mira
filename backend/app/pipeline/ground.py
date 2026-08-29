@@ -10,7 +10,7 @@ import re
 from pydantic import BaseModel, Field
 
 from app.domain.state import ConversationState
-from app.domain.trace import NextAction
+from app.domain.trace import NextAction, NextActionType
 from app.pipeline.policy import TurnContext
 
 
@@ -56,6 +56,19 @@ class GroundedFact(BaseModel):
     value: bool | str | int | float | None = None
 
 
+class GroundedConflict(BaseModel):
+    kind: str
+    detail: str
+
+
+class GroundedAddon(BaseModel):
+    id: str
+    name: str
+    price: float
+    price_basis: str
+    reason: str
+
+
 class GroundingPacket(BaseModel):
     next_action: NextAction
     ask_field: str | None = None
@@ -63,7 +76,9 @@ class GroundingPacket(BaseModel):
     quote: GroundedQuote | None = None
     hold: GroundedHold | None = None
     facts: list[GroundedFact] = Field(default_factory=list)
+    conflicts: list[GroundedConflict] = Field(default_factory=list)
     room_details: dict | None = None
+    suggested_addons: list[GroundedAddon] = Field(default_factory=list)
     tool_errors: list[str] = Field(default_factory=list)
 
     allowed_numbers: list[str] = Field(default_factory=list)
@@ -84,10 +99,32 @@ def _collect_numbers(*values: float | int | None) -> set[str]:
     return out
 
 
+def _collect_numbers_from_text(text: str) -> set[str]:
+    """Conflict details are free-text and may cite a figure (a budget ceiling,
+    an estimated total) that appears nowhere else in the packet. Whatever
+    number is already in the detail is, by construction, grounded — pull it
+    out so the response validator doesn't flag Mira for repeating it.
+    """
+    out: set[str] = set()
+    for token in _NUMBER_RE.findall(text):
+        try:
+            value = float(token.replace(",", ""))
+        except ValueError:
+            continue
+        out |= _collect_numbers(value)
+    return out
+
+
 def build_grounding_packet(state: ConversationState, ctx: TurnContext, action: NextAction) -> GroundingPacket:
     packet = GroundingPacket(next_action=action, ask_field=action.ask_field)
     allowed_numbers: set[str] = set()
     allowed_names: set[str] = set()
+
+    for c in state.conflicts:
+        if c.resolved:
+            continue
+        packet.conflicts.append(GroundedConflict(kind=c.kind.value, detail=c.detail))
+        allowed_numbers |= _collect_numbers_from_text(c.detail)
 
     for opt in state.shortlist:
         notes = [r.detail for r in opt.relaxations]
@@ -114,6 +151,12 @@ def build_grounding_packet(state: ConversationState, ctx: TurnContext, action: N
         packet.hold = GroundedHold(hold_id=h.hold_id, total=h.quote_total, currency="INR", expires_at=h.expires_at)
         allowed_numbers |= _collect_numbers(h.quote_total)
         allowed_names.add(h.hold_id)
+
+    if action.type == NextActionType.UPSELL and ctx.eligible_addons:
+        for a in ctx.eligible_addons:
+            packet.suggested_addons.append(GroundedAddon(id=a.id, name=a.name, price=a.price, price_basis=a.price_basis, reason=a.reason))
+            allowed_names.add(a.name)
+            allowed_numbers |= _collect_numbers(a.price)
 
     if ctx.last_policy_fact is not None:
         for pf in ctx.last_policy_fact.policies:

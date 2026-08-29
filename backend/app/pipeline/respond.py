@@ -40,11 +40,16 @@ briefly in-character and steer back to helping them book a stay.
   which property/room they mean and ask them to clarify.
 - resolve_conflict: explain the conflict plainly, suggest a way forward
 - quote: present the breakdown in `quote`, then ask if they'd like to hold it
+- upsell: the guest has accepted the quote. Briefly mention the `quote` total is confirmed,
+  then naturally offer the items in `suggested_addons` (each with its own price and reason),
+  and ask if they'd like to add either before you finalize the hold. At most the ones given —
+  never suggest more, never invent one not listed.
 - hold: confirm using `hold`, mention the expiry
 - deflect: politely redirect to booking-related help
 
 Keep replies short — 1 to 4 sentences, plus a compact list only when presenting options.
-Output plain text only, no markdown headers, no code fences.
+Output plain text only — no markdown of any kind: no headers, no code fences, no **bold**
+or *italic* asterisks, no bullet dashes. Write numbers and currency as plain words/digits.
 """
 
 
@@ -73,15 +78,23 @@ def _build_user_prompt(packet: GroundingPacket, tone_hint: str | None) -> str:
     if packet.hold:
         h = packet.hold
         lines.append(f"\nhold: id={h.hold_id} total=₹{h.total:,.0f} expires_at={h.expires_at}")
+    if packet.suggested_addons:
+        lines.append("\nsuggested_addons (offer these, and only these):")
+        for a in packet.suggested_addons:
+            lines.append(f"  {a.name} — ₹{a.price:,.0f} ({a.price_basis}) — {a.reason}")
     if packet.facts:
         lines.append("\nfacts:")
         for f in packet.facts:
             lines.append(f"  {f.key}: status={f.status} value={f.value}")
+    if packet.conflicts:
+        lines.append("\nconflicts (explain plainly, do not hide these):")
+        for c in packet.conflicts:
+            lines.append(f"  {c.kind}: {c.detail}")
     if packet.room_details:
         lines.append(f"\nroom_details: {packet.room_details}")
     if packet.tool_errors:
         lines.append(f"\ntool_errors: {packet.tool_errors}")
-    if not any([packet.options, packet.quote, packet.hold, packet.facts, packet.room_details]):
+    if not any([packet.options, packet.quote, packet.hold, packet.facts, packet.conflicts, packet.room_details]):
         lines.append("\n(no facts available yet for this turn)")
     lines.append("\nWrite Mira's reply now.")
     return "\n".join(lines)
@@ -137,6 +150,18 @@ def _validate(draft: str, packet: GroundingPacket) -> list[str]:
     return _validate_numbers(draft, packet) + _validate_names(draft, packet)
 
 
+_MARKDOWN_EMPHASIS_RE = re.compile(r"\*\*(.+?)\*\*|\*(.+?)\*|__(.+?)__")
+
+
+def _strip_markdown(text: str) -> str:
+    """Belt-and-braces cleanup: the system prompt already asks for plain text,
+    but a model's compliance is never guaranteed (Decision 001) — strip stray
+    emphasis markers so the UI never shows a literal asterisk.
+    """
+    text = _MARKDOWN_EMPHASIS_RE.sub(lambda m: next(g for g in m.groups() if g is not None), text)
+    return re.sub(r"^[-*]\s+", "", text, flags=re.MULTILINE)
+
+
 _ASK_PROMPTS = {
     "destination": "Where are you looking to stay?",
     "dates": "What dates are you thinking of?",
@@ -186,11 +211,20 @@ def _template_fallback(packet: GroundingPacket) -> str:
         q = packet.quote
         return f"That comes to ₹{q.total:,.0f} total for {q.nights} night(s), including taxes and fees. Want me to hold it?"
 
+    if action == NextActionType.UPSELL and packet.quote:
+        q = packet.quote
+        if packet.suggested_addons:
+            offers = "; ".join(f"{a.name} for ₹{a.price:,.0f}" for a in packet.suggested_addons)
+            return f"Great, that's ₹{q.total:,.0f} total. Before I hold it — want to add {offers}?"
+        return f"Great, that's ₹{q.total:,.0f} total. Shall I hold it?"
+
     if action == NextActionType.HOLD and packet.hold:
         h = packet.hold
         return f"Done — I've held it for you. Hold ID {h.hold_id}, ₹{h.total:,.0f}, expires {h.expires_at}."
 
     if action == NextActionType.RESOLVE_CONFLICT:
+        if packet.conflicts:
+            return packet.conflicts[0].detail.capitalize() + " — how would you like to proceed?"
         return "There's a conflict with your request I need to flag before I continue — could you clarify?"
 
     if action == NextActionType.DEFLECT:
@@ -208,7 +242,7 @@ def generate_response(llm: LLMClient, packet: GroundingPacket, tone_hint: str | 
 
     violations = _validate(draft, packet)
     if not violations:
-        return draft.strip(), GroundingVerdict.CLEAN
+        return _strip_markdown(draft.strip()), GroundingVerdict.CLEAN
 
     repair_prompt = (
         user_prompt
@@ -221,6 +255,6 @@ def generate_response(llm: LLMClient, packet: GroundingPacket, tone_hint: str | 
         return _template_fallback(packet), GroundingVerdict.FALLBACK
 
     if not _validate(repaired, packet):
-        return repaired.strip(), GroundingVerdict.REPAIRED
+        return _strip_markdown(repaired.strip()), GroundingVerdict.REPAIRED
 
     return _template_fallback(packet), GroundingVerdict.FALLBACK
