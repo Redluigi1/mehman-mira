@@ -1,0 +1,87 @@
+[
+  {
+    "id": "addon-airport-pickup",
+    "scope": "global",
+    "property_id": null,
+    "category": "transport",
+    "name": "Airport Pickup",
+    "price": 1500.0,
+    "price_basis": "per_stay",
+    "eligibility": "requires_airport",
+    "segment_affinity": [
+      "couple",
+      "family_with_kids",
+      "solo"
+    ]
+  },
+  {
+    "id": "addon-breakfast",
+    "scope": "global",
+    "property_id": null,
+    "category": "food",
+    "name": "Daily Breakfast",
+    "price": 450.0,
+    "price_basis": "per_person",
+    "eligibility": null,
+    "segment_affinity": [
+      "family_with_kids",
+      "extended_family"
+    ]
+  },
+  {
+    "id": "addon-early-checkin",
+    "scope": "global",
+    "property_id": null,
+    "category": "room_upgrade",
+    "name": "Guaranteed Early Check-in",
+    "price": 1000.0,
+    "price_basis": "per_stay",
+    "eligibility": "requires_early_checkin_available",
+    "segment_affinity": [
+      "business",
+      "workation"
+    ]
+  },
+  {
+    "id": "addon-late-checkout",
+    "scope": "global",
+    "property_id": null,
+    "category": "room_upgrade",
+    "name": "Guaranteed Late Checkout",
+    "price": 1000.0,
+    "price_basis": "per_stay",
+    "eligibility": "requires_late_checkout_available",
+    "segment_affinity": [
+      "leisure"
+    ]
+  },
+  {
+    "id": "addon-candlelight-dinner",
+    "scope": "global",
+    "property_id": null,
+    "category": "experience",
+    "name": "Candlelight Dinner",
+    "price": 3500.0,
+    "price_basis": "per_stay",
+    "eligibility": null,
+    "segment_affinity": [
+      "couple",
+      "honeymoon",
+      "anniversary"
+    ]
+  },
+  {
+    "id": "addon-spa-alibaug-gen-16",
+    "scope": "property",
+    "property_id": "alibaug-gen-16",
+    "category": "experience",
+    "name": "In-house Spa Session",
+    "price": 2800.0,
+    "price_basis": "per_person",
+    "eligibility": null,
+    "segment_affinity": [
+      "couple",
+      "leisure"
+    ]
+  }
+]

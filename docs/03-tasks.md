@@ -9,19 +9,19 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 
 ## Phase 0 — Scaffold and data (4h)
 
-- [ ] `backend/` skeleton: FastAPI app, `config.py` via pydantic-settings, `/health`
-- [ ] `frontend/` skeleton: Vite + React + TS + Tailwind, dev proxy to backend
-- [ ] Domain schemas — `domain/intent.py`: `Slot[T]`, `GuestIntent`, `Party`, `StayWindow`, `Budget`
-- [ ] Domain schemas — `domain/state.py`: `ConversationState`, `Stage`, `ReferentRegistry`, `Rejection`, `Conflict`
-- [ ] Domain schemas — `domain/supply.py`: `Property`, `RoomType`, `Policy`, `AddOn`, `RateCalendar`, `TaxRule`
-- [ ] Domain schemas — `domain/events.py` and `domain/trace.py` (`TurnTrace`, `ToolCall`, `GroundingVerdict`)
-- [ ] Policy value type with `known` / `not_applicable` / `unknown` — used everywhere
-- [ ] `data/seed.py` — seeded generator for the 16 non-curated properties
-- [ ] Hand-author 8 edge-case properties (see plan §8 for the exact list)
-- [ ] `data/loader.py` — JSON to SQLite at boot, with schema and indices
-- [ ] `data/repo.py` — query layer; `data/indexes.py` — city index + `AvailabilityIndex`
-- [ ] `store/conversations.py` — append-only event log, state as fold over events
-- [ ] Sanity test: load dataset, assert counts and that every planted edge case exists
+- [x] `backend/` skeleton: FastAPI app, `config.py` via pydantic-settings, `/health`
+- [x] `frontend/` skeleton: Vite + React + TS + Tailwind, dev proxy to backend
+- [x] Domain schemas — `domain/intent.py`: `Slot[T]`, `GuestIntent`, `Party`, `StayWindow`, `Budget`
+- [x] Domain schemas — `domain/state.py`: `ConversationState`, `Stage`, `ReferentRegistry`, `Rejection`, `Conflict`
+- [x] Domain schemas — `domain/supply.py`: `Property`, `RoomType`, `Policy`, `AddOn`, `RateCalendar`, `TaxRule`
+- [x] Domain schemas — `domain/events.py` and `domain/trace.py` (`TurnTrace`, `ToolCall`, `GroundingVerdict`)
+- [x] Policy value type with `known` / `not_applicable` / `unknown` — used everywhere
+- [x] `data/seed.py` — seeded generator for the 16 non-curated properties
+- [x] Hand-author 8 edge-case properties (see plan §8 for the exact list)
+- [x] `data/loader.py` — JSON to SQLite at boot, with schema and indices
+- [x] `data/repo.py` — query layer; `data/indexes.py` — city index + `AvailabilityIndex`
+- [x] `store/conversations.py` — append-only event log, state as fold over events
+- [x] Sanity test: load dataset, assert counts and that every planted edge case exists
 
 ## Phase 1 — Happy path (6h)
 
@@ -113,5 +113,5 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 
 - [ ] `ChannelAdapter` interface with `web` and `cli` real, `whatsapp` stubbed
 - [ ] Structured logging with `conversation_id` and `turn_index` on every record
-- [ ] `.env.example` committed
+- [x] `.env.example` committed
 - [ ] Every architectural change appended to `docs/04-decisions.md`

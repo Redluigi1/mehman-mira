@@ -1,0 +1,3251 @@
+{
+  "demo_today": "2026-09-02",
+  "window_days": 21,
+  "tax_rule": {
+    "slabs": [
+      {
+        "max_per_night_rate": 7500.0,
+        "gst_percent": 12.0
+      },
+      {
+        "max_per_night_rate": null,
+        "gst_percent": 18.0
+      }
+    ],
+    "fixed_fee_per_stay": 250.0
+  },
+  "properties": [
+    {
+      "id": "goa-edge-dateshift",
+      "name": "Tidewatch Villa",
+      "city": "Goa",
+      "area": "Candolim",
+      "geo": {
+        "lat": 15.31324267984579,
+        "lng": 74.07650107552226
+      },
+      "type": "villa",
+      "star_tier": 4,
+      "description": "Tidewatch Villa, Candolim, Goa.",
+      "amenities": [
+        "airport_shuttle",
+        "bicycle_rental",
+        "parking",
+        "pet_friendly_common_areas",
+        "pool",
+        "restaurant"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "goa-edge-dateshift-rt1",
+          "property_id": "goa-edge-dateshift",
+          "name": "Sea View Room",
+          "base_occupancy": 3,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "bunk",
+          "size_sqft": 236,
+          "view": "sea",
+          "amenities": [
+            "coffee_maker",
+            "tv"
+          ],
+          "units_total": 4
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "goa-edge-dateshift",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-dateshift",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-dateshift",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-dateshift",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-dateshift",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-dateshift",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "goa-edge-unknown",
+      "name": "Palm Grove Homestay",
+      "city": "Goa",
+      "area": "Anjuna",
+      "geo": {
+        "lat": 15.257180019807846,
+        "lng": 74.1033178281407
+      },
+      "type": "homestay",
+      "star_tier": 3,
+      "description": "Palm Grove Homestay, Anjuna, Goa.",
+      "amenities": [
+        "kids_play_area",
+        "pet_friendly_common_areas",
+        "pool",
+        "restaurant",
+        "room_service",
+        "wifi"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "goa-edge-unknown-rt1",
+          "property_id": "goa-edge-unknown",
+          "name": "Garden Room",
+          "base_occupancy": 2,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 271,
+          "view": "mountain",
+          "amenities": [
+            "balcony",
+            "minibar",
+            "workdesk"
+          ],
+          "units_total": 5
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "goa-edge-unknown",
+          "key": "pool_heated",
+          "policy": {
+            "status": "unknown",
+            "value": null,
+            "source": null
+          }
+        },
+        {
+          "property_id": "goa-edge-unknown",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-unknown",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-unknown",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-unknown",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-unknown",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "goa-edge-nosmoking",
+      "name": "Whitesands Boutique",
+      "city": "Goa",
+      "area": "Palolem",
+      "geo": {
+        "lat": 15.276074087597571,
+        "lng": 74.09509828435863
+      },
+      "type": "boutique",
+      "star_tier": 4,
+      "description": "Whitesands Boutique, Palolem, Goa.",
+      "amenities": [
+        "beach_access",
+        "board_games",
+        "gym",
+        "kids_play_area",
+        "power_backup",
+        "restaurant"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "goa-edge-nosmoking-rt1",
+          "property_id": "goa-edge-nosmoking",
+          "name": "Deluxe Room",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "twin",
+          "size_sqft": 346,
+          "view": "none",
+          "amenities": [
+            "balcony",
+            "bathtub",
+            "coffee_maker",
+            "minibar"
+          ],
+          "units_total": 5
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "goa-edge-nosmoking",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "strict, no exceptions"
+          }
+        },
+        {
+          "property_id": "goa-edge-nosmoking",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-nosmoking",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-nosmoking",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-nosmoking",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-nosmoking",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "goa-edge-cap2",
+      "name": "Cove Corner Guesthouse",
+      "city": "Goa",
+      "area": "Baga",
+      "geo": {
+        "lat": 15.335377970223451,
+        "lng": 74.07514810219428
+      },
+      "type": "guesthouse",
+      "star_tier": 3,
+      "description": "Cove Corner Guesthouse, Baga, Goa.",
+      "amenities": [
+        "airport_shuttle",
+        "bar",
+        "bicycle_rental",
+        "bonfire",
+        "power_backup",
+        "restaurant"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "goa-edge-cap2-rt1",
+          "property_id": "goa-edge-cap2",
+          "name": "Cozy Double",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 0,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "bunk",
+          "size_sqft": 300,
+          "view": "mountain",
+          "amenities": [
+            "coffee_maker",
+            "workdesk"
+          ],
+          "units_total": 6
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "goa-edge-cap2",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-cap2",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-cap2",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-cap2",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-cap2",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-cap2",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "goa-edge-villa8",
+      "name": "Grand Dunes Villa",
+      "city": "Goa",
+      "area": "Candolim",
+      "geo": {
+        "lat": 15.257865345206788,
+        "lng": 74.12259904633166
+      },
+      "type": "villa",
+      "star_tier": 5,
+      "description": "Grand Dunes Villa, Candolim, Goa.",
+      "amenities": [
+        "airport_shuttle",
+        "bicycle_rental",
+        "bonfire",
+        "kids_play_area",
+        "parking",
+        "pet_friendly_common_areas"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "goa-edge-villa8-rt1",
+          "property_id": "goa-edge-villa8",
+          "name": "Entire Villa (4BHK)",
+          "base_occupancy": 6,
+          "max_occupancy": 8,
+          "max_adults": 8,
+          "max_children": 4,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1500.0,
+          "bed_config": "queen",
+          "size_sqft": 490,
+          "view": "city",
+          "amenities": [
+            "bathtub",
+            "coffee_maker",
+            "tv"
+          ],
+          "units_total": 2
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "goa-edge-villa8",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-villa8",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-villa8",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-villa8",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-villa8",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-villa8",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "goa-edge-pricecliff",
+      "name": "Amber Coast Resort",
+      "city": "Goa",
+      "area": "Anjuna",
+      "geo": {
+        "lat": 15.273599724239572,
+        "lng": 74.12129729429445
+      },
+      "type": "resort",
+      "star_tier": 4,
+      "description": "Amber Coast Resort, Anjuna, Goa.",
+      "amenities": [
+        "board_games",
+        "gym",
+        "kids_play_area",
+        "pool",
+        "power_backup",
+        "restaurant"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "goa-edge-pricecliff-rt1",
+          "property_id": "goa-edge-pricecliff",
+          "name": "Pool View Room",
+          "base_occupancy": 2,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "bunk",
+          "size_sqft": 593,
+          "view": "sea",
+          "amenities": [
+            "ac",
+            "bathtub",
+            "coffee_maker",
+            "workdesk"
+          ],
+          "units_total": 6
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "goa-edge-pricecliff",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-pricecliff",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-pricecliff",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-pricecliff",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-pricecliff",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-pricecliff",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "goa-edge-minstay3",
+      "name": "Riverside Manor",
+      "city": "Goa",
+      "area": "Panjim",
+      "geo": {
+        "lat": 15.335765039403022,
+        "lng": 74.16424428655105
+      },
+      "type": "hotel",
+      "star_tier": 4,
+      "description": "Riverside Manor, Panjim, Goa.",
+      "amenities": [
+        "bar",
+        "beach_access",
+        "bicycle_rental",
+        "gym",
+        "spa",
+        "wifi"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "goa-edge-minstay3-rt1",
+          "property_id": "goa-edge-minstay3",
+          "name": "Superior Room",
+          "base_occupancy": 2,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "bunk",
+          "size_sqft": 299,
+          "view": "pool",
+          "amenities": [
+            "ac",
+            "bathtub",
+            "tv"
+          ],
+          "units_total": 5
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "goa-edge-minstay3",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-minstay3",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-minstay3",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-minstay3",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-minstay3",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-minstay3",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "goa-edge-fullybooked",
+      "name": "The Golden Bay Resort",
+      "city": "Goa",
+      "area": "Baga",
+      "geo": {
+        "lat": 15.316272597476983,
+        "lng": 74.10541838627955
+      },
+      "type": "resort",
+      "star_tier": 5,
+      "description": "The Golden Bay Resort, Baga, Goa.",
+      "amenities": [
+        "airport_shuttle",
+        "bar",
+        "bonfire",
+        "gym",
+        "parking",
+        "power_backup"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "goa-edge-fullybooked-rt1",
+          "property_id": "goa-edge-fullybooked",
+          "name": "Premium Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "king",
+          "size_sqft": 454,
+          "view": "city",
+          "amenities": [
+            "ac",
+            "bathtub",
+            "coffee_maker",
+            "tv"
+          ],
+          "units_total": 4
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "goa-edge-fullybooked",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-fullybooked",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-fullybooked",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-fullybooked",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-fullybooked",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-edge-fullybooked",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "goa-gen-01",
+      "name": "Casa Retreat",
+      "city": "Goa",
+      "area": "Panjim",
+      "geo": {
+        "lat": 15.257993883262943,
+        "lng": 74.11619218196853
+      },
+      "type": "boutique",
+      "star_tier": 3,
+      "description": "A boutique in Candolim, Goa, with beach access and more.",
+      "amenities": [
+        "beach_access",
+        "parking",
+        "pet_friendly_common_areas",
+        "pool",
+        "power_backup",
+        "restaurant"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "goa-gen-01-rt1",
+          "property_id": "goa-gen-01",
+          "name": "Superior Room",
+          "base_occupancy": 1,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "bunk",
+          "size_sqft": 332,
+          "view": "mountain",
+          "amenities": [
+            "ac",
+            "balcony",
+            "minibar",
+            "tv"
+          ],
+          "units_total": 4
+        },
+        {
+          "id": "goa-gen-01-rt2",
+          "property_id": "goa-gen-01",
+          "name": "Deluxe Room",
+          "base_occupancy": 2,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 271,
+          "view": "mountain",
+          "amenities": [
+            "balcony",
+            "minibar",
+            "workdesk"
+          ],
+          "units_total": 3
+        },
+        {
+          "id": "goa-gen-01-rt3",
+          "property_id": "goa-gen-01",
+          "name": "Garden Suite",
+          "base_occupancy": 3,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "king",
+          "size_sqft": 337,
+          "view": "sea",
+          "amenities": [
+            "ac",
+            "balcony",
+            "minibar"
+          ],
+          "units_total": 3
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "goa-gen-01",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-gen-01",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-gen-01",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-gen-01",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-gen-01",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-gen-01",
+          "key": "pool_heated",
+          "policy": {
+            "status": "unknown",
+            "value": null,
+            "source": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "goa-gen-02",
+      "name": "Casa Nest",
+      "city": "Goa",
+      "area": "Panjim",
+      "geo": {
+        "lat": 15.34891213802401,
+        "lng": 74.1269114345099
+      },
+      "type": "hotel",
+      "star_tier": 5,
+      "description": "A hotel in Candolim, Goa, with board games and more.",
+      "amenities": [
+        "board_games",
+        "bonfire",
+        "gym",
+        "pool",
+        "room_service"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "goa-gen-02-rt1",
+          "property_id": "goa-gen-02",
+          "name": "Garden Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "king",
+          "size_sqft": 370,
+          "view": "mountain",
+          "amenities": [
+            "ac",
+            "balcony"
+          ],
+          "units_total": 4
+        },
+        {
+          "id": "goa-gen-02-rt2",
+          "property_id": "goa-gen-02",
+          "name": "Superior Room",
+          "base_occupancy": 3,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "bunk",
+          "size_sqft": 501,
+          "view": "pool",
+          "amenities": [
+            "balcony",
+            "bathtub",
+            "coffee_maker"
+          ],
+          "units_total": 3
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "goa-gen-02",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-gen-02",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-gen-02",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-gen-02",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-gen-02",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "goa-gen-02",
+          "key": "pool_heated",
+          "policy": {
+            "status": "unknown",
+            "value": null,
+            "source": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "jaipur-gen-03",
+      "name": "Green Residency",
+      "city": "Jaipur",
+      "area": "Amer",
+      "geo": {
+        "lat": 26.940861942429077,
+        "lng": 75.81804969977667
+      },
+      "type": "hotel",
+      "star_tier": 3,
+      "description": "A hotel in Amer, Jaipur, with airport shuttle and more.",
+      "amenities": [
+        "airport_shuttle",
+        "bar",
+        "beach_access",
+        "bonfire",
+        "kids_play_area",
+        "parking",
+        "power_backup",
+        "restaurant"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "jaipur-gen-03-rt1",
+          "property_id": "jaipur-gen-03",
+          "name": "Premium Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "bunk",
+          "size_sqft": 593,
+          "view": "sea",
+          "amenities": [
+            "ac",
+            "bathtub",
+            "coffee_maker",
+            "workdesk"
+          ],
+          "units_total": 5
+        },
+        {
+          "id": "jaipur-gen-03-rt2",
+          "property_id": "jaipur-gen-03",
+          "name": "Premium Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "bunk",
+          "size_sqft": 466,
+          "view": "pool",
+          "amenities": [
+            "ac",
+            "balcony",
+            "tv"
+          ],
+          "units_total": 2
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "jaipur-gen-03",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "jaipur-gen-03",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "jaipur-gen-03",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "jaipur-gen-03",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "jaipur-gen-03",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "jaipur-gen-03",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "jaipur-gen-04",
+      "name": "Casa Haven",
+      "city": "Jaipur",
+      "area": "C-Scheme",
+      "geo": {
+        "lat": 26.875487828212748,
+        "lng": 75.80185007888376
+      },
+      "type": "guesthouse",
+      "star_tier": 4,
+      "description": "A guesthouse in C-Scheme, Jaipur, with bar and more.",
+      "amenities": [
+        "bar",
+        "bicycle_rental",
+        "board_games",
+        "bonfire",
+        "kids_play_area",
+        "power_backup",
+        "restaurant",
+        "spa"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "jaipur-gen-04-rt1",
+          "property_id": "jaipur-gen-04",
+          "name": "Deluxe Room",
+          "base_occupancy": 3,
+          "max_occupancy": 5,
+          "max_adults": 5,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "king",
+          "size_sqft": 495,
+          "view": "pool",
+          "amenities": [
+            "ac",
+            "coffee_maker",
+            "minibar",
+            "tv"
+          ],
+          "units_total": 3
+        },
+        {
+          "id": "jaipur-gen-04-rt2",
+          "property_id": "jaipur-gen-04",
+          "name": "Garden Suite",
+          "base_occupancy": 3,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "queen",
+          "size_sqft": 529,
+          "view": "pool",
+          "amenities": [
+            "balcony",
+            "coffee_maker",
+            "minibar",
+            "tv"
+          ],
+          "units_total": 4
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "jaipur-gen-04",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "jaipur-gen-04",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "jaipur-gen-04",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "jaipur-gen-04",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "jaipur-gen-04",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "jaipur-gen-04",
+          "key": "pool_heated",
+          "policy": {
+            "status": "unknown",
+            "value": null,
+            "source": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "udaipur-gen-05",
+      "name": "Casa Grove",
+      "city": "Udaipur",
+      "area": "Lake Pichola",
+      "geo": {
+        "lat": 24.55333606634182,
+        "lng": 73.75494872952416
+      },
+      "type": "resort",
+      "star_tier": 4,
+      "description": "A resort in Lake Pichola, Udaipur, with board games and more.",
+      "amenities": [
+        "board_games",
+        "bonfire",
+        "gym",
+        "parking",
+        "pet_friendly_common_areas",
+        "power_backup",
+        "restaurant",
+        "room_service"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "udaipur-gen-05-rt1",
+          "property_id": "udaipur-gen-05",
+          "name": "Superior Room",
+          "base_occupancy": 1,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 638,
+          "view": "mountain",
+          "amenities": [
+            "minibar",
+            "tv",
+            "workdesk"
+          ],
+          "units_total": 2
+        },
+        {
+          "id": "udaipur-gen-05-rt2",
+          "property_id": "udaipur-gen-05",
+          "name": "Superior Room",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "queen",
+          "size_sqft": 242,
+          "view": "none",
+          "amenities": [
+            "ac",
+            "bathtub",
+            "workdesk"
+          ],
+          "units_total": 3
+        },
+        {
+          "id": "udaipur-gen-05-rt3",
+          "property_id": "udaipur-gen-05",
+          "name": "Premium Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 535,
+          "view": "city",
+          "amenities": [
+            "ac",
+            "balcony",
+            "bathtub"
+          ],
+          "units_total": 4
+        },
+        {
+          "id": "udaipur-gen-05-rt4",
+          "property_id": "udaipur-gen-05",
+          "name": "Cottage",
+          "base_occupancy": 2,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "king",
+          "size_sqft": 453,
+          "view": "mountain",
+          "amenities": [
+            "balcony",
+            "bathtub",
+            "coffee_maker",
+            "tv"
+          ],
+          "units_total": 5
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "udaipur-gen-05",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "udaipur-gen-05",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "udaipur-gen-05",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "udaipur-gen-05",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "udaipur-gen-05",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "udaipur-gen-05",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "udaipur-gen-06",
+      "name": "Blue Springs",
+      "city": "Udaipur",
+      "area": "Fatehsagar",
+      "geo": {
+        "lat": 24.568984753662132,
+        "lng": 73.75180268327904
+      },
+      "type": "boutique",
+      "star_tier": 3,
+      "description": "A boutique in Lake Pichola, Udaipur, with bar and more.",
+      "amenities": [
+        "bar",
+        "beach_access",
+        "bicycle_rental",
+        "kids_play_area",
+        "pet_friendly_common_areas",
+        "pool",
+        "restaurant"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "udaipur-gen-06-rt1",
+          "property_id": "udaipur-gen-06",
+          "name": "Superior Room",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "king",
+          "size_sqft": 432,
+          "view": "mountain",
+          "amenities": [
+            "balcony",
+            "bathtub",
+            "workdesk"
+          ],
+          "units_total": 2
+        },
+        {
+          "id": "udaipur-gen-06-rt2",
+          "property_id": "udaipur-gen-06",
+          "name": "Superior Room",
+          "base_occupancy": 2,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "king",
+          "size_sqft": 421,
+          "view": "city",
+          "amenities": [
+            "ac",
+            "balcony",
+            "coffee_maker",
+            "workdesk"
+          ],
+          "units_total": 3
+        },
+        {
+          "id": "udaipur-gen-06-rt3",
+          "property_id": "udaipur-gen-06",
+          "name": "Deluxe Room",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "king",
+          "size_sqft": 606,
+          "view": "sea",
+          "amenities": [
+            "ac",
+            "tv"
+          ],
+          "units_total": 6
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "udaipur-gen-06",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "udaipur-gen-06",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "udaipur-gen-06",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "udaipur-gen-06",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "udaipur-gen-06",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "udaipur-gen-06",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rishikesh-gen-07",
+      "name": "Riverside Cottage",
+      "city": "Rishikesh",
+      "area": "Tapovan",
+      "geo": {
+        "lat": 30.116522721660022,
+        "lng": 78.27419325553673
+      },
+      "type": "hotel",
+      "star_tier": 3,
+      "description": "A hotel in Laxman Jhula, Rishikesh, with board games and more.",
+      "amenities": [
+        "board_games",
+        "kids_play_area",
+        "power_backup",
+        "room_service"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "rishikesh-gen-07-rt1",
+          "property_id": "rishikesh-gen-07",
+          "name": "Premium Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "bunk",
+          "size_sqft": 274,
+          "view": "mountain",
+          "amenities": [
+            "balcony",
+            "tv",
+            "workdesk"
+          ],
+          "units_total": 5
+        },
+        {
+          "id": "rishikesh-gen-07-rt2",
+          "property_id": "rishikesh-gen-07",
+          "name": "Garden Suite",
+          "base_occupancy": 1,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 469,
+          "view": "pool",
+          "amenities": [
+            "coffee_maker",
+            "minibar",
+            "workdesk"
+          ],
+          "units_total": 4
+        },
+        {
+          "id": "rishikesh-gen-07-rt3",
+          "property_id": "rishikesh-gen-07",
+          "name": "Cottage",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "queen",
+          "size_sqft": 400,
+          "view": "none",
+          "amenities": [
+            "coffee_maker",
+            "minibar",
+            "workdesk"
+          ],
+          "units_total": 3
+        },
+        {
+          "id": "rishikesh-gen-07-rt4",
+          "property_id": "rishikesh-gen-07",
+          "name": "Garden Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "twin",
+          "size_sqft": 374,
+          "view": "sea",
+          "amenities": [
+            "ac",
+            "bathtub",
+            "minibar",
+            "tv"
+          ],
+          "units_total": 2
+        },
+        {
+          "id": "rishikesh-gen-07-rt5",
+          "property_id": "rishikesh-gen-07",
+          "name": "Garden Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "king",
+          "size_sqft": 347,
+          "view": "sea",
+          "amenities": [
+            "balcony",
+            "bathtub",
+            "coffee_maker",
+            "tv"
+          ],
+          "units_total": 6
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "rishikesh-gen-07",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "rishikesh-gen-07",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "rishikesh-gen-07",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "rishikesh-gen-07",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "rishikesh-gen-07",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "rishikesh-gen-07",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rishikesh-gen-08",
+      "name": "The Cottage",
+      "city": "Rishikesh",
+      "area": "Tapovan",
+      "geo": {
+        "lat": 30.129291104448257,
+        "lng": 78.29638280266468
+      },
+      "type": "villa",
+      "star_tier": 5,
+      "description": "A villa in Tapovan, Rishikesh, with beach access and more.",
+      "amenities": [
+        "beach_access",
+        "board_games",
+        "pet_friendly_common_areas",
+        "pool",
+        "power_backup",
+        "room_service"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "rishikesh-gen-08-rt1",
+          "property_id": "rishikesh-gen-08",
+          "name": "Deluxe Room",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "king",
+          "size_sqft": 304,
+          "view": "garden",
+          "amenities": [
+            "balcony",
+            "bathtub",
+            "minibar",
+            "workdesk"
+          ],
+          "units_total": 2
+        },
+        {
+          "id": "rishikesh-gen-08-rt2",
+          "property_id": "rishikesh-gen-08",
+          "name": "Premium Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "bunk",
+          "size_sqft": 266,
+          "view": "mountain",
+          "amenities": [
+            "balcony",
+            "minibar",
+            "workdesk"
+          ],
+          "units_total": 2
+        },
+        {
+          "id": "rishikesh-gen-08-rt3",
+          "property_id": "rishikesh-gen-08",
+          "name": "Superior Room",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "queen",
+          "size_sqft": 501,
+          "view": "pool",
+          "amenities": [
+            "balcony",
+            "coffee_maker",
+            "workdesk"
+          ],
+          "units_total": 2
+        },
+        {
+          "id": "rishikesh-gen-08-rt4",
+          "property_id": "rishikesh-gen-08",
+          "name": "Cottage",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "twin",
+          "size_sqft": 255,
+          "view": "garden",
+          "amenities": [
+            "bathtub",
+            "coffee_maker",
+            "minibar"
+          ],
+          "units_total": 2
+        },
+        {
+          "id": "rishikesh-gen-08-rt5",
+          "property_id": "rishikesh-gen-08",
+          "name": "Deluxe Room",
+          "base_occupancy": 2,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 477,
+          "view": "city",
+          "amenities": [
+            "ac",
+            "balcony",
+            "coffee_maker"
+          ],
+          "units_total": 2
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "rishikesh-gen-08",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "rishikesh-gen-08",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "rishikesh-gen-08",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "rishikesh-gen-08",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "rishikesh-gen-08",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "rishikesh-gen-08",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "manali-gen-09",
+      "name": "The Grove",
+      "city": "Manali",
+      "area": "Old Manali",
+      "geo": {
+        "lat": 32.2176197432184,
+        "lng": 77.18040517489756
+      },
+      "type": "hotel",
+      "star_tier": 3,
+      "description": "A hotel in Old Manali, Manali, with bicycle rental and more.",
+      "amenities": [
+        "bicycle_rental",
+        "gym",
+        "room_service",
+        "spa"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "manali-gen-09-rt1",
+          "property_id": "manali-gen-09",
+          "name": "Superior Room",
+          "base_occupancy": 3,
+          "max_occupancy": 5,
+          "max_adults": 5,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "bunk",
+          "size_sqft": 518,
+          "view": "pool",
+          "amenities": [
+            "balcony",
+            "workdesk"
+          ],
+          "units_total": 4
+        },
+        {
+          "id": "manali-gen-09-rt2",
+          "property_id": "manali-gen-09",
+          "name": "Garden Suite",
+          "base_occupancy": 3,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "king",
+          "size_sqft": 644,
+          "view": "none",
+          "amenities": [
+            "ac",
+            "bathtub",
+            "minibar"
+          ],
+          "units_total": 2
+        },
+        {
+          "id": "manali-gen-09-rt3",
+          "property_id": "manali-gen-09",
+          "name": "Garden Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "queen",
+          "size_sqft": 645,
+          "view": "pool",
+          "amenities": [
+            "balcony",
+            "coffee_maker",
+            "minibar"
+          ],
+          "units_total": 4
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "manali-gen-09",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "manali-gen-09",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "manali-gen-09",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "manali-gen-09",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "manali-gen-09",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "manali-gen-09",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "manali-gen-10",
+      "name": "Golden Residency",
+      "city": "Manali",
+      "area": "Old Manali",
+      "geo": {
+        "lat": 32.216680003243134,
+        "lng": 77.19295466058826
+      },
+      "type": "boutique",
+      "star_tier": 4,
+      "description": "A boutique in Vashisht, Manali, with bar and more.",
+      "amenities": [
+        "bar",
+        "beach_access",
+        "kids_play_area",
+        "pool",
+        "wifi"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "manali-gen-10-rt1",
+          "property_id": "manali-gen-10",
+          "name": "Superior Room",
+          "base_occupancy": 3,
+          "max_occupancy": 5,
+          "max_adults": 5,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "bunk",
+          "size_sqft": 555,
+          "view": "sea",
+          "amenities": [
+            "balcony",
+            "bathtub",
+            "minibar"
+          ],
+          "units_total": 2
+        },
+        {
+          "id": "manali-gen-10-rt2",
+          "property_id": "manali-gen-10",
+          "name": "Superior Room",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "king",
+          "size_sqft": 644,
+          "view": "city",
+          "amenities": [
+            "bathtub",
+            "tv"
+          ],
+          "units_total": 3
+        },
+        {
+          "id": "manali-gen-10-rt3",
+          "property_id": "manali-gen-10",
+          "name": "Superior Room",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "bunk",
+          "size_sqft": 489,
+          "view": "sea",
+          "amenities": [
+            "ac",
+            "balcony",
+            "minibar",
+            "workdesk"
+          ],
+          "units_total": 6
+        },
+        {
+          "id": "manali-gen-10-rt4",
+          "property_id": "manali-gen-10",
+          "name": "Deluxe Room",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "queen",
+          "size_sqft": 531,
+          "view": "pool",
+          "amenities": [
+            "minibar",
+            "tv"
+          ],
+          "units_total": 6
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "manali-gen-10",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "manali-gen-10",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "manali-gen-10",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "manali-gen-10",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "manali-gen-10",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "manali-gen-10",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "coorg-gen-11",
+      "name": "Casa Grove",
+      "city": "Coorg",
+      "area": "Madikeri",
+      "geo": {
+        "lat": 12.296622478836605,
+        "lng": 75.76543643573316
+      },
+      "type": "homestay",
+      "star_tier": 4,
+      "description": "A homestay in Madikeri, Coorg, with bar and more.",
+      "amenities": [
+        "bar",
+        "beach_access",
+        "bicycle_rental",
+        "kids_play_area",
+        "parking",
+        "power_backup",
+        "spa"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "coorg-gen-11-rt1",
+          "property_id": "coorg-gen-11",
+          "name": "Garden Suite",
+          "base_occupancy": 3,
+          "max_occupancy": 5,
+          "max_adults": 5,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "king",
+          "size_sqft": 430,
+          "view": "garden",
+          "amenities": [
+            "ac",
+            "balcony",
+            "coffee_maker",
+            "minibar"
+          ],
+          "units_total": 6
+        },
+        {
+          "id": "coorg-gen-11-rt2",
+          "property_id": "coorg-gen-11",
+          "name": "Cottage",
+          "base_occupancy": 3,
+          "max_occupancy": 5,
+          "max_adults": 5,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "king",
+          "size_sqft": 531,
+          "view": "none",
+          "amenities": [
+            "ac",
+            "coffee_maker",
+            "minibar",
+            "tv"
+          ],
+          "units_total": 4
+        },
+        {
+          "id": "coorg-gen-11-rt3",
+          "property_id": "coorg-gen-11",
+          "name": "Cottage",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "king",
+          "size_sqft": 565,
+          "view": "sea",
+          "amenities": [
+            "balcony",
+            "coffee_maker",
+            "workdesk"
+          ],
+          "units_total": 5
+        },
+        {
+          "id": "coorg-gen-11-rt4",
+          "property_id": "coorg-gen-11",
+          "name": "Superior Room",
+          "base_occupancy": 2,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 611,
+          "view": "garden",
+          "amenities": [
+            "ac",
+            "minibar",
+            "workdesk"
+          ],
+          "units_total": 5
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "coorg-gen-11",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "coorg-gen-11",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "coorg-gen-11",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "coorg-gen-11",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "coorg-gen-11",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "coorg-gen-11",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "coorg-gen-12",
+      "name": "Silver Grove",
+      "city": "Coorg",
+      "area": "Virajpet",
+      "geo": {
+        "lat": 12.346387128830292,
+        "lng": 75.80929625430007
+      },
+      "type": "guesthouse",
+      "star_tier": 4,
+      "description": "A guesthouse in Virajpet, Coorg, with board games and more.",
+      "amenities": [
+        "board_games",
+        "kids_play_area",
+        "pool",
+        "restaurant"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "coorg-gen-12-rt1",
+          "property_id": "coorg-gen-12",
+          "name": "Deluxe Room",
+          "base_occupancy": 3,
+          "max_occupancy": 5,
+          "max_adults": 5,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 617,
+          "view": "garden",
+          "amenities": [
+            "coffee_maker",
+            "tv",
+            "workdesk"
+          ],
+          "units_total": 3
+        },
+        {
+          "id": "coorg-gen-12-rt2",
+          "property_id": "coorg-gen-12",
+          "name": "Garden Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 445,
+          "view": "sea",
+          "amenities": [
+            "balcony",
+            "minibar",
+            "workdesk"
+          ],
+          "units_total": 4
+        },
+        {
+          "id": "coorg-gen-12-rt3",
+          "property_id": "coorg-gen-12",
+          "name": "Garden Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "king",
+          "size_sqft": 478,
+          "view": "none",
+          "amenities": [
+            "ac",
+            "tv"
+          ],
+          "units_total": 5
+        },
+        {
+          "id": "coorg-gen-12-rt4",
+          "property_id": "coorg-gen-12",
+          "name": "Garden Suite",
+          "base_occupancy": 3,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "king",
+          "size_sqft": 518,
+          "view": "none",
+          "amenities": [
+            "coffee_maker",
+            "minibar"
+          ],
+          "units_total": 5
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "coorg-gen-12",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "coorg-gen-12",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "coorg-gen-12",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "coorg-gen-12",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "coorg-gen-12",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "coorg-gen-12",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lonavala-gen-13",
+      "name": "Sunset Springs",
+      "city": "Lonavala",
+      "area": "Tungarli",
+      "geo": {
+        "lat": 18.764324644107162,
+        "lng": 73.37162527613211
+      },
+      "type": "guesthouse",
+      "star_tier": 3,
+      "description": "A guesthouse in Tungarli, Lonavala, with bicycle rental and more.",
+      "amenities": [
+        "bicycle_rental",
+        "bonfire",
+        "power_backup",
+        "room_service"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "lonavala-gen-13-rt1",
+          "property_id": "lonavala-gen-13",
+          "name": "Garden Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "bunk",
+          "size_sqft": 339,
+          "view": "city",
+          "amenities": [
+            "balcony",
+            "minibar"
+          ],
+          "units_total": 3
+        },
+        {
+          "id": "lonavala-gen-13-rt2",
+          "property_id": "lonavala-gen-13",
+          "name": "Garden Suite",
+          "base_occupancy": 3,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "king",
+          "size_sqft": 610,
+          "view": "pool",
+          "amenities": [
+            "balcony",
+            "bathtub",
+            "tv"
+          ],
+          "units_total": 5
+        },
+        {
+          "id": "lonavala-gen-13-rt3",
+          "property_id": "lonavala-gen-13",
+          "name": "Premium Suite",
+          "base_occupancy": 1,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 608,
+          "view": "none",
+          "amenities": [
+            "ac",
+            "balcony",
+            "bathtub"
+          ],
+          "units_total": 2
+        },
+        {
+          "id": "lonavala-gen-13-rt4",
+          "property_id": "lonavala-gen-13",
+          "name": "Cottage",
+          "base_occupancy": 2,
+          "max_occupancy": 2,
+          "max_adults": 2,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "queen",
+          "size_sqft": 343,
+          "view": "city",
+          "amenities": [
+            "ac",
+            "tv",
+            "workdesk"
+          ],
+          "units_total": 6
+        },
+        {
+          "id": "lonavala-gen-13-rt5",
+          "property_id": "lonavala-gen-13",
+          "name": "Garden Suite",
+          "base_occupancy": 1,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 242,
+          "view": "garden",
+          "amenities": [
+            "balcony",
+            "minibar",
+            "tv",
+            "workdesk"
+          ],
+          "units_total": 5
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "lonavala-gen-13",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "lonavala-gen-13",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "lonavala-gen-13",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "lonavala-gen-13",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "lonavala-gen-13",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "lonavala-gen-13",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lonavala-gen-14",
+      "name": "Silver Haven",
+      "city": "Lonavala",
+      "area": "Old Lonavala",
+      "geo": {
+        "lat": 18.784714808740176,
+        "lng": 73.42890813243426
+      },
+      "type": "boutique",
+      "star_tier": 3,
+      "description": "A boutique in Old Lonavala, Lonavala, with airport shuttle and more.",
+      "amenities": [
+        "airport_shuttle",
+        "beach_access",
+        "bicycle_rental",
+        "kids_play_area",
+        "pet_friendly_common_areas",
+        "spa"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "lonavala-gen-14-rt1",
+          "property_id": "lonavala-gen-14",
+          "name": "Garden Suite",
+          "base_occupancy": 1,
+          "max_occupancy": 1,
+          "max_adults": 1,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "queen",
+          "size_sqft": 376,
+          "view": "mountain",
+          "amenities": [
+            "balcony",
+            "coffee_maker",
+            "tv",
+            "workdesk"
+          ],
+          "units_total": 4
+        },
+        {
+          "id": "lonavala-gen-14-rt2",
+          "property_id": "lonavala-gen-14",
+          "name": "Premium Suite",
+          "base_occupancy": 3,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "queen",
+          "size_sqft": 410,
+          "view": "mountain",
+          "amenities": [
+            "bathtub",
+            "tv"
+          ],
+          "units_total": 6
+        },
+        {
+          "id": "lonavala-gen-14-rt3",
+          "property_id": "lonavala-gen-14",
+          "name": "Premium Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 282,
+          "view": "pool",
+          "amenities": [
+            "balcony",
+            "tv"
+          ],
+          "units_total": 5
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "lonavala-gen-14",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "lonavala-gen-14",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "lonavala-gen-14",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "lonavala-gen-14",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "lonavala-gen-14",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "lonavala-gen-14",
+          "key": "pool_heated",
+          "policy": {
+            "status": "unknown",
+            "value": null,
+            "source": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "alibaug-gen-15",
+      "name": "Silver Springs",
+      "city": "Alibaug",
+      "area": "Kihim",
+      "geo": {
+        "lat": 18.637983319962107,
+        "lng": 72.87393600118199
+      },
+      "type": "homestay",
+      "star_tier": 3,
+      "description": "A homestay in Nagaon, Alibaug, with board games and more.",
+      "amenities": [
+        "board_games",
+        "bonfire",
+        "kids_play_area",
+        "parking",
+        "pool",
+        "room_service",
+        "spa"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "alibaug-gen-15-rt1",
+          "property_id": "alibaug-gen-15",
+          "name": "Superior Room",
+          "base_occupancy": 1,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "queen",
+          "size_sqft": 304,
+          "view": "pool",
+          "amenities": [
+            "minibar",
+            "tv",
+            "workdesk"
+          ],
+          "units_total": 6
+        },
+        {
+          "id": "alibaug-gen-15-rt2",
+          "property_id": "alibaug-gen-15",
+          "name": "Cottage",
+          "base_occupancy": 3,
+          "max_occupancy": 5,
+          "max_adults": 5,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "queen",
+          "size_sqft": 508,
+          "view": "sea",
+          "amenities": [
+            "ac",
+            "coffee_maker"
+          ],
+          "units_total": 6
+        },
+        {
+          "id": "alibaug-gen-15-rt3",
+          "property_id": "alibaug-gen-15",
+          "name": "Premium Suite",
+          "base_occupancy": 1,
+          "max_occupancy": 1,
+          "max_adults": 1,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "bunk",
+          "size_sqft": 467,
+          "view": "mountain",
+          "amenities": [
+            "bathtub",
+            "minibar"
+          ],
+          "units_total": 3
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "alibaug-gen-15",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "alibaug-gen-15",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "alibaug-gen-15",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "alibaug-gen-15",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "alibaug-gen-15",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "alibaug-gen-15",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "alibaug-gen-16",
+      "name": "Riverside Grove",
+      "city": "Alibaug",
+      "area": "Kihim",
+      "geo": {
+        "lat": 18.64113702730475,
+        "lng": 72.83120490950438
+      },
+      "type": "villa",
+      "star_tier": 4,
+      "description": "A villa in Kihim, Alibaug, with airport shuttle and more.",
+      "amenities": [
+        "airport_shuttle",
+        "beach_access",
+        "bicycle_rental",
+        "bonfire",
+        "spa"
+      ],
+      "images": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "room_types": [
+        {
+          "id": "alibaug-gen-16-rt1",
+          "property_id": "alibaug-gen-16",
+          "name": "Garden Suite",
+          "base_occupancy": 1,
+          "max_occupancy": 1,
+          "max_adults": 1,
+          "max_children": 1,
+          "extra_bed_allowed": false,
+          "extra_bed_price": null,
+          "bed_config": "bunk",
+          "size_sqft": 525,
+          "view": "none",
+          "amenities": [
+            "ac",
+            "balcony",
+            "bathtub",
+            "minibar"
+          ],
+          "units_total": 2
+        },
+        {
+          "id": "alibaug-gen-16-rt2",
+          "property_id": "alibaug-gen-16",
+          "name": "Garden Suite",
+          "base_occupancy": 2,
+          "max_occupancy": 4,
+          "max_adults": 4,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "twin",
+          "size_sqft": 321,
+          "view": "city",
+          "amenities": [
+            "ac",
+            "balcony",
+            "bathtub",
+            "workdesk"
+          ],
+          "units_total": 2
+        },
+        {
+          "id": "alibaug-gen-16-rt3",
+          "property_id": "alibaug-gen-16",
+          "name": "Premium Suite",
+          "base_occupancy": 1,
+          "max_occupancy": 3,
+          "max_adults": 3,
+          "max_children": 1,
+          "extra_bed_allowed": true,
+          "extra_bed_price": 1200.0,
+          "bed_config": "queen",
+          "size_sqft": 555,
+          "view": "city",
+          "amenities": [
+            "ac",
+            "balcony",
+            "tv",
+            "workdesk"
+          ],
+          "units_total": 3
+        }
+      ],
+      "policies": [
+        {
+          "property_id": "alibaug-gen-16",
+          "key": "smoking",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "alibaug-gen-16",
+          "key": "pets",
+          "policy": {
+            "status": "known",
+            "value": false,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "alibaug-gen-16",
+          "key": "early_checkin",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "alibaug-gen-16",
+          "key": "late_checkout",
+          "policy": {
+            "status": "known",
+            "value": "on_request",
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "alibaug-gen-16",
+          "key": "party_friendly",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        },
+        {
+          "property_id": "alibaug-gen-16",
+          "key": "pool_heated",
+          "policy": {
+            "status": "known",
+            "value": true,
+            "source": "listed"
+          }
+        }
+      ]
+    }
+  ]
+}

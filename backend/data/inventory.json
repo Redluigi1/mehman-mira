@@ -1,0 +1,6617 @@
+[
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-02",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-03",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-04",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-07",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-10",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-15",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-18",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-19",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-21",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-dateshift-rt1",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-02",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-03",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-04",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-06",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-08",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-10",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-11",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-14",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-16",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-17",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-18",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-19",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-20",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-unknown-rt1",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-03",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-04",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-05",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-08",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-09",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-10",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-11",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-12",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-15",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-nosmoking-rt1",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-03",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-05",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-07",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-11",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-12",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-13",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-14",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-17",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-19",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-21",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "goa-edge-cap2-rt1",
+    "date": "2026-09-22",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-21",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-villa8-rt1",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-03",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-04",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-05",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-06",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-07",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-09",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-10",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-12",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-13",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-14",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-15",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-16",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-17",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-19",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-20",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-pricecliff-rt1",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-02",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-03",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-04",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-05",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-10",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-11",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-13",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-14",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-15",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-17",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-18",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-20",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-edge-minstay3-rt1",
+    "date": "2026-09-22",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-02",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-03",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-04",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-05",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-06",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-07",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-08",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-09",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-10",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-11",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-12",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-13",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-14",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-15",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-16",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-17",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-18",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-19",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-20",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-21",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-edge-fullybooked-rt1",
+    "date": "2026-09-22",
+    "units_available": 0
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-03",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-04",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-06",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-07",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-09",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-13",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-15",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-17",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-21",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-01-rt1",
+    "date": "2026-09-22",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-04",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-10",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-13",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-17",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt2",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-13",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-14",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-21",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-01-rt3",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-02",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-03",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-06",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-08",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-09",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-12",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-13",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-17",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-19",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-20",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-02-rt1",
+    "date": "2026-09-22",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-15",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-17",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "goa-gen-02-rt2",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-02",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-03",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-04",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-05",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-06",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-09",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-11",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-14",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-15",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-18",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-19",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-21",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt1",
+    "date": "2026-09-22",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-21",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-03-rt2",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-04",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-17",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt1",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-02",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-03",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-06",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-07",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-09",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-14",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-15",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-16",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-17",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-18",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "jaipur-gen-04-rt2",
+    "date": "2026-09-22",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt1",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-04",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-10",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt2",
+    "date": "2026-09-22",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-03",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-09",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-12",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-15",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-19",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-21",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt3",
+    "date": "2026-09-22",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-02",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-03",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-04",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-05",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-07",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-08",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-11",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-13",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-14",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-16",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-05-rt4",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt1",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-03",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-04",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-08",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt2",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-02",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-03",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-04",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-07",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-09",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-10",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-12",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-13",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-14",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-19",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-20",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-21",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "udaipur-gen-06-rt3",
+    "date": "2026-09-22",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-02",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-04",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-13",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-14",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-15",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-17",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-21",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt1",
+    "date": "2026-09-22",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-03",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-04",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-05",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-06",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-09",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-13",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-14",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt2",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-02",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-04",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-06",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-10",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt3",
+    "date": "2026-09-22",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-21",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt4",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-02",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-03",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-04",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-05",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-07",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-08",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-11",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-14",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-15",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-17",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-18",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-20",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-21",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "rishikesh-gen-07-rt5",
+    "date": "2026-09-22",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt1",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt2",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt3",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt4",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-21",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "rishikesh-gen-08-rt5",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-04",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-07",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-08",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-19",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt1",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-21",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt2",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-02",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-04",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-06",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-09",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-11",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-13",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-19",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-09-rt3",
+    "date": "2026-09-22",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt1",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-03",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-07",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-08",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-14",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-15",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt2",
+    "date": "2026-09-22",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-03",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-04",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-06",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-08",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-12",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-13",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-15",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-16",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-17",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-19",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-21",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "manali-gen-10-rt3",
+    "date": "2026-09-22",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-06",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-07",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-10",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-14",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-15",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-17",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "manali-gen-10-rt4",
+    "date": "2026-09-22",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-02",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-03",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-04",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-07",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-08",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-10",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-11",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-12",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-13",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-15",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-16",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-17",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-19",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-21",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt1",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-04",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-06",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-08",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-09",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-10",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-11",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-17",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-21",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt2",
+    "date": "2026-09-22",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-06",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-08",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-09",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-11",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-17",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-18",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-21",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt3",
+    "date": "2026-09-22",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-03",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-04",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-07",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-10",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-11",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-13",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-15",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-17",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-11-rt4",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-02",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-03",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-06",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-08",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-10",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt1",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-02",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-04",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-08",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-09",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-12",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-13",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-16",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-20",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt2",
+    "date": "2026-09-22",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-06",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-07",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-08",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-09",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-14",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-15",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-16",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-17",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-18",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt3",
+    "date": "2026-09-22",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-02",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-04",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-08",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-09",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-11",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-14",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-15",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-17",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-18",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-19",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-21",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "coorg-gen-12-rt4",
+    "date": "2026-09-22",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-13",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-15",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-17",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt1",
+    "date": "2026-09-22",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-02",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-03",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-05",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-06",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-08",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-12",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-14",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-15",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-16",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-17",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-19",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-21",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt2",
+    "date": "2026-09-22",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-21",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt3",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-02",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-03",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-09",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-10",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-12",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-14",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-15",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-16",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-18",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-19",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-20",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-21",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt4",
+    "date": "2026-09-22",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-02",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-03",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-04",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-06",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-07",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-08",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-09",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-10",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-11",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-13",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-19",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-20",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-13-rt5",
+    "date": "2026-09-22",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-03",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-07",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-08",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-11",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-12",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-13",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-15",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-17",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-18",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt1",
+    "date": "2026-09-22",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-02",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-03",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-04",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-06",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-07",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-08",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-09",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-11",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-14",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-16",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-17",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-18",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-21",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt2",
+    "date": "2026-09-22",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-02",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-03",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-04",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-05",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-08",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-09",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-10",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-11",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-14",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-15",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-16",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-17",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-18",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-20",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "lonavala-gen-14-rt3",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-02",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-03",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-04",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-05",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-08",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-09",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-11",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-14",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-17",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-20",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-21",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt1",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-02",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-04",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-05",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-06",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-09",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-10",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-12",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-13",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-15",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-17",
+    "units_available": 5
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-19",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-20",
+    "units_available": 4
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt2",
+    "date": "2026-09-22",
+    "units_available": 6
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-04",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-08",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-09",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-10",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-12",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-13",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-14",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-15",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-16",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-19",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-20",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-21",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-15-rt3",
+    "date": "2026-09-22",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-03",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-06",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-07",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-08",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-11",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-14",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-17",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-19",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt1",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-02",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-07",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-09",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-10",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-13",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-14",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-15",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-16",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-18",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-19",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt2",
+    "date": "2026-09-22",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-02",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-03",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-04",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-05",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-06",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-07",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-08",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-09",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-10",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-11",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-12",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-13",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-14",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-15",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-16",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-17",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-18",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-19",
+    "units_available": 3
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-20",
+    "units_available": 2
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-21",
+    "units_available": 1
+  },
+  {
+    "room_type_id": "alibaug-gen-16-rt3",
+    "date": "2026-09-22",
+    "units_available": 3
+  }
+]
