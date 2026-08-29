@@ -27,6 +27,8 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 
 - [x] `llm/base.py` — `LLMClient` protocol (`complete_json`, `complete_text`)
 - [x] `llm/claude_cli.py` — local Claude Code CLI on Haiku, JSON output, timeout, retry
+- [x] `llm/codex_cli.py` — default local Codex CLI on GPT-5.6 Terra, isolated ephemeral
+      runs, prompt-carried schema plus Pydantic validation, timeout, retry
 - [x] `llm/replay.py` — record to `evals/fixtures/`, replay by prompt hash
 - [x] `pipeline/extract.py` — `StateDelta` schema, extraction prompt, enum vocabularies
 - [x] Deterministic date resolution from `date_expression` against an explicit `today`
@@ -36,7 +38,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 - [x] `pipeline/engine.py` — wire the loop, emit `TurnTrace`
 - [x] `channels/cli.py` — run whole conversations in the terminal before any UI exists
 - [x] End-to-end: the brief's Goa example produces a sensible multi-turn conversation
-      (verified live via `backend/scripts/demo_goa.py` against the real Claude CLI —
+      (verified live via `backend/scripts/demo_goa.py`; now configured for the real Codex CLI —
       search → select → quote → factual question → price re-query → hold, all grounded)
 
 ## Phase 2 — Tools, pricing, grounding
@@ -98,7 +100,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
       design lifted from mehman.io's own visual language (warm cream/ink/purple/rust
       palette, Instrument Serif + Hanken Grotesk) at the user's request — see
       `frontend/src/index.css`
-- [x] Verified live end-to-end against the real Claude CLI in the browser: search →
+- [x] Verified live end-to-end in the browser (now configured for Codex CLI): search →
       select → quote → upsell → hold, time-travel, console collapse, all confirmed
       working. Caught and fixed 3 real bugs along the way (Decisions 017-019).
 
@@ -123,9 +125,10 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 
 ## Phase 6 — Ship
 
-- [ ] **Resolve Decision 003** — a reviewer must be able to run this without a local Claude Code CLI
+- [x] **Resolve Decision 003** — local default migrated from Claude Code to Codex CLI
+- [x] Add Vertex AI as a direct API backend, selectable through `.env`
 - [x] `README.md` — setup, architecture diagram, env vars, assumptions, known limitations
-- [ ] `ENGINEERING_NOTE.md` — architecture, model choice, agent flow, state management, tool calling, hallucination prevention, tradeoffs, what to improve next (include the segmentation and RAG extensions, and the owner write-back loop)
+- [x] `ENGINEERING_NOTE.md`: architecture, model choice, agent flow, state management, tool calling, hallucination prevention, tradeoffs, what to improve next (include the segmentation and RAG extensions, and the owner write-back loop)
 - [ ] Fresh-clone smoke test on a clean checkout
 - [ ] Demo script: happy path, 2+ edge cases, tool calls, state updates, key decisions
 - [ ] Record the demo, no slides
@@ -155,12 +158,9 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
       reviewing how well the agent performed after the fact (conversion rate, grounding
       failures over time, next-action accuracy in production vs. in `evals/`). The eval
       harness (`evals/runner.py`) scores fixed offline cases, not live traffic.
-- [ ] **Single LLM backend.** `LLMClient` (`backend/app/llm/base.py`) is a protocol, but
-      only one implementation exists — `llm/claude_cli.py`, which shells out to the local
-      Claude Code CLI on Haiku. There is no Anthropic API-key client and no
-      Vertex AI / Gemini / other-provider client, so this only runs on a machine with the
-      Claude Code CLI installed and authenticated (see Decision 003). Swapping backends
-      means writing a new class against the same protocol, not a redesign.
+- [ ] **Provider operations.** `CodexCliClient` (default) and `ClaudeCliClient` each pay
+      CLI process-startup latency. `VertexAIClient` is the direct API path, but production
+      still needs provider-level latency, quota, cost and failure monitoring.
 
 ## Cross-cutting, do not skip
 

@@ -286,3 +286,53 @@ def test_ec8_injection_deflected_before_any_tool_runs(repo: Repo, city_index: Ci
     assert trace.tool_calls == []
     assert "system prompt" not in reply.lower()
     assert "MIRA_SYSTEM_PROMPT" not in reply
+
+
+class _SemanticSelectionLLM:
+    """Models semantic selection: the LLM sees displayed options and maps a
+    misspelled shorthand to the canonical ordinal; code validates the ordinal.
+    """
+
+    def __init__(self):
+        self.deltas = [
+            StateDelta(user_act=UserAct.NEW_REQUEST, set_fields={
+                "destination.city": "Goa",
+                "party.adults": 2,
+                "stay.check_in": "2026-09-02",
+                "stay.check_out": "2026-09-04",
+                "stay.nights": 2,
+            }),
+            StateDelta(
+                user_act=UserAct.SELECT,
+                referent_mentions=["paml grove"],
+                selected_option_ordinal=6,
+            ),
+        ]
+        self.call_index = 0
+
+    def complete_json(self, *, system: str, user: str, schema):
+        if self.call_index == 1:
+            assert "shown option #6: Palm Grove Homestay — Garden Room" in user
+        result = self.deltas[self.call_index]
+        self.call_index += 1
+        return result
+
+    def complete_text(self, *, system: str, user: str) -> str:
+        raise LLMError("forced fallback for deterministic assertions")
+
+
+def test_llm_semantic_ordinal_selects_misspelled_property_reference(repo: Repo, city_index: CityIndex):
+    engine = ConversationEngine(
+        llm=_SemanticSelectionLLM(), repo=repo, city_index=city_index,
+        hold_store=HoldStore(), store=ConversationStore(), today=repo.get_demo_today(),
+    )
+    engine.handle_message("c-missing-referent", "Goa tonight for 2 nights, 2 of us.")
+    _reply, state, trace = engine.handle_message(
+        "c-missing-referent", "I want to book paml grove.",
+    )
+
+    assert state.focused_option is not None
+    assert state.focused_option.property_id == "goa-edge-unknown"
+    assert state.quote is not None and state.quote.total == 9658.0
+    assert trace.next_action.type == NextActionType.QUOTE
+    assert [call.name for call in trace.tool_calls] == ["calculate_quote"]

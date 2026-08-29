@@ -79,6 +79,10 @@ def _render_state_summary(state: ConversationState) -> str:
         lines.append("amenities required: " + ", ".join(intent.amenities_required.value))
     if state.shortlist:
         lines.append(f"{len(state.shortlist)} option(s) currently shown to the guest")
+        for option in state.shortlist:
+            lines.append(
+                f"shown option #{option.ordinal}: {option.property_name} — {option.room_type_name}"
+            )
     if state.focused_option:
         lines.append(f"guest is focused on option #{state.focused_option.ordinal} ({state.focused_option.property_name})")
     if state.quote:
@@ -123,8 +127,18 @@ class ConversationEngine:
 
         state = apply_state_delta(state, delta, self.today, turn_index)
 
-        if delta.referent_mentions:
+        selected = None
+        if delta.selected_option_ordinal is not None:
+            # The LLM performs semantic interpretation over the displayed
+            # options; code constrains its proposal to an ordinal that really
+            # exists in the current referent registry.
+            selected = state.referents.by_ordinal(delta.selected_option_ordinal)
+        elif delta.referent_mentions:
+            # Backward-compatible exact/ordinal resolution for scripted evals
+            # and straightforward extractor output.
             selected = resolve_selection(state, delta.referent_mentions, self.repo)
+
+        if selected is not None:
             if selected is not None and (state.focused_option is None or selected.option_id != state.focused_option.option_id):
                 state.focused_option = selected
                 # Switching options invalidates any quote/hold/upsell state built

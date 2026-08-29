@@ -43,7 +43,9 @@ mehman-mira/
         indexes.py           # city index, AvailabilityIndex
       llm/
         base.py              # LLMClient protocol
-        claude_cli.py        # local Claude Code CLI, Haiku (dev default)
+        codex_cli.py         # local Codex CLI, GPT-5.6 Terra (dev default)
+        claude_cli.py        # optional legacy local backend
+        vertex.py            # direct Vertex AI backend, API key or ADC
         anthropic_api.py     # API-key client (deferred, Decision 003)
         replay.py            # record/replay fixtures for deterministic evals
       channels/
@@ -416,8 +418,8 @@ graded deliverables and get their own tasks.
 
 | Risk | Mitigation |
 | --- | --- |
-| Reviewer cannot run a local Claude Code CLI | Decision 003 — resolve in Phase 6, do not let it slip |
-| Haiku extraction quality on messy input | Tight schema, enum vocabularies, confidence thresholds, eval coverage |
+| Demo machine lacks an authenticated Codex CLI | Preflight `codex --version` and `codex login status`; Decision 003 |
+| Small-model extraction quality on messy input | Tight schema, enum vocabularies, confidence thresholds, eval coverage |
 | Dataset generation becomes a time sink | Seeded generator; only 8 properties hand-authored |
 | UI polish eats reliability time | UI is deliberately simple and comes after the core works |
 | Scope creep from the extras list | Extras are strictly post-Phase-5 |

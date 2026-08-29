@@ -1,5 +1,5 @@
 """Manual e2e demo: the brief's Goa example across multiple turns, run
-against the real Claude CLI. Not a pytest — this needs live LLM credentials
+against the real Codex CLI. Not a pytest — this needs local Codex authentication
 and is for eyeballing pipeline behavior during development / the recorded
 5-minute demo.
 """
@@ -8,7 +8,7 @@ from pathlib import Path
 from app.data.indexes import CityIndex
 from app.data.loader import build_database
 from app.data.repo import Repo
-from app.llm.claude_cli import ClaudeCliClient
+from app.llm.codex_cli import CodexCliClient
 from app.pipeline.engine import ConversationEngine
 from app.store.conversations import ConversationStore
 from app.store.holds import HoldStore
@@ -31,7 +31,7 @@ def main() -> None:
     today = repo.get_demo_today()
 
     engine = ConversationEngine(
-        llm=ClaudeCliClient(model="haiku", timeout_s=45),
+        llm=CodexCliClient(model="gpt-5.6-terra", reasoning_effort="low", timeout_s=90),
         repo=repo, city_index=CityIndex(repo), hold_store=HoldStore(),
         store=ConversationStore(), today=today,
     )

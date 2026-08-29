@@ -15,10 +15,15 @@ class Settings(BaseSettings):
     data_dir: Path = BACKEND_ROOT / "data"
     sqlite_path: Path = BACKEND_ROOT / "data" / "runtime" / "mira.db"
 
-    llm_backend: str = "claude_cli"  # claude_cli | anthropic_api | replay
-    llm_model: str = "haiku"
+    llm_backend: str = "codex_cli"  # codex_cli | claude_cli | vertex
+    llm_model: str = "gpt-5.6-terra"
+    llm_reasoning_effort: str = "low"
     llm_timeout_s: float = 90.0
-    anthropic_api_key: str | None = None
+
+    vertex_project: str | None = None
+    vertex_location: str = "global"
+    vertex_api_key: str | None = None
+    google_application_credentials: str | None = None
 
     today_override: str | None = None  # ISO date; lets demos anchor "today" deterministically
 

@@ -34,16 +34,17 @@ not built.
 
 ---
 
-### 003 — Dev LLM backend is the local Claude Code CLI on Haiku
-**Date:** 2026-08-29 · **Status:** **open — must be resolved in Phase 6**
+### 003 — Dev LLM backend uses a local CLI behind `LLMClient`
+**Date:** 2026-08-29 · **Status:** accepted (revised for Codex CLI)
 
-Development runs against `claude -p --model haiku --output-format json` behind the
-`LLMClient` interface. Free, and Haiku handles schema-constrained extraction well.
+Development now defaults to `codex exec --model gpt-5.6-terra` with low reasoning effort
+behind the existing `LLMClient` interface. Each call is ephemeral and runs in an empty,
+read-only temporary workspace; application code still validates extracted JSON with its
+Pydantic schema. The previous `ClaudeCliClient` remains as an optional backend.
 
-*Open risk:* a reviewer at Mehman cannot run a local Claude Code subscription, and the
-brief requires the system to actually run. Resolution options, to be picked in Phase 6:
-an `AnthropicClient` with an API key, or a `ReplayClient` demo mode that runs with no
-credentials at all. Do not let this reach the deadline unresolved.
+*Tradeoff:* this keeps local setup keyless for an already-authenticated Codex user, but
+process startup adds latency and the machine still needs Codex authentication and network
+access. A direct API client is the production follow-up, not an agent-loop redesign.
 
 ---
 
@@ -487,3 +488,23 @@ directly (resolved by hand against the seeded `demo_today`, 2026-09-02, the same
 real extractor would produce); fixtures re-recorded from scratch. Back to 37/37, verified
 for real this time — the earlier "37/37" in git history predates Decision 022 and was never
 re-verified against it before now.
+
+---
+
+### 024 — Vertex AI is a third `LLMClient` backend
+**Date:** 2026-08-29 · **Status:** accepted
+
+`VertexAIClient` uses Google's Gen AI SDK for the same two narrow calls as the existing
+Codex and Claude CLI clients. `LLM_BACKEND=vertex` selects it, while `LLM_MODEL` remains
+provider-controlled. It supports Vertex Express API keys and standard Google Cloud
+authentication through ADC or an explicit credential file.
+
+Structured extraction uses Vertex response schemas and is still validated by the same
+Pydantic model after the call. The response path remains plain text, followed by Mira's
+existing grounding validator. Vertex therefore changes transport and authentication only;
+it does not get control of policy, tools, pricing, state, or the agent loop.
+
+*Tradeoff:* this adds an SDK dependency and a second credential setup path, but removes CLI
+process startup latency for production-style deployments. Tests use a fake SDK client, so
+schema configuration, retries and response handling are verified without a live Google
+Cloud project.

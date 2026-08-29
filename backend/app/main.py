@@ -9,7 +9,7 @@ from app.config import get_settings
 from app.data.indexes import CityIndex
 from app.data.loader import build_database
 from app.data.repo import Repo
-from app.llm.claude_cli import ClaudeCliClient
+from app.llm import build_llm_client
 from app.logging_config import configure_logging
 from app.pipeline.engine import ConversationEngine
 from app.store.conversations import ConversationStore
@@ -25,7 +25,16 @@ async def lifespan(app: FastAPI):
     repo = Repo(conn)
     today = date.fromisoformat(settings.today_override) if settings.today_override else repo.get_demo_today()
     app.state.engine = ConversationEngine(
-        llm=ClaudeCliClient(model=settings.llm_model, timeout_s=settings.llm_timeout_s),
+        llm=build_llm_client(
+            backend=settings.llm_backend,
+            model=settings.llm_model,
+            timeout_s=settings.llm_timeout_s,
+            reasoning_effort=settings.llm_reasoning_effort,
+            vertex_project=settings.vertex_project,
+            vertex_location=settings.vertex_location,
+            vertex_api_key=settings.vertex_api_key,
+            vertex_credentials_file=settings.google_application_credentials,
+        ),
         repo=repo, city_index=CityIndex(repo), hold_store=HoldStore(),
         store=ConversationStore(), today=today,
     )

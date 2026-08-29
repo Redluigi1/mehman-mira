@@ -38,6 +38,7 @@ extractor — see `pipeline/safety.py` and the `ec8_prompt_injection` eval case.
 | [`docs/02-plan.md`](docs/02-plan.md) | Detailed implementation plan |
 | [`docs/03-tasks.md`](docs/03-tasks.md) | Phase-by-phase checklist — live build status, plus known limitations |
 | [`docs/04-decisions.md`](docs/04-decisions.md) | Numbered decision log |
+| [`ENGINEERING_NOTE.md`](ENGINEERING_NOTE.md) | Short architecture and tradeoff summary |
 
 ## Setup
 
@@ -45,9 +46,9 @@ extractor — see `pipeline/safety.py` and the `ec8_prompt_injection` eval case.
 
 - Python 3.11+
 - Node 18+
-- The [Claude Code CLI](https://docs.claude.com/en/docs/claude-code), installed and
-  authenticated (`claude` on your `PATH`) — this is the only working LLM backend right
-  now, see [Known limitations](#known-limitations) below.
+- One configured LLM backend. The default uses the
+  [Codex CLI](https://learn.chatgpt.com/docs/developer-commands?surface=cli), installed and
+  authenticated as `codex` on your `PATH`. Claude Code CLI and Vertex AI are also supported.
 
 ### Backend
 
@@ -94,22 +95,41 @@ recording is itself scripted rather than live-recorded.
 
 ### Environment variables
 
-See [`backend/.env.example`](backend/.env.example). The only one that matters for a
-default run is `TODAY_OVERRIDE` — the seeded dataset's demo window starts
-`2026-09-02`, so set it to that date if the real wall-clock date has drifted past the
-availability window.
+Copy [`backend/.env.example`](backend/.env.example) to `backend/.env`. `LLM_BACKEND` chooses
+the provider and `LLM_MODEL` accepts a model identifier supported by that provider:
+
+```dotenv
+# Default: authenticated Codex CLI
+LLM_BACKEND=codex_cli
+LLM_MODEL=gpt-5.6-terra
+
+# Or: authenticated Claude Code CLI
+LLM_BACKEND=claude_cli
+LLM_MODEL=haiku
+
+# Or: Vertex AI Express mode
+LLM_BACKEND=vertex
+LLM_MODEL=gemini-2.5-flash
+VERTEX_API_KEY=your-key
+```
+
+For standard Vertex AI instead of Express mode, leave `VERTEX_API_KEY` empty, set
+`VERTEX_PROJECT` and `VERTEX_LOCATION`, then use Application Default Credentials or set
+`GOOGLE_APPLICATION_CREDENTIALS` to a credential file. See Google's
+[Vertex AI quickstart](https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstart).
+The `.env` file is gitignored. `TODAY_OVERRIDE` is optional; when unset, the app uses the
+seeded catalogue's deterministic demo date (`2026-09-02`).
 
 ## Known limitations
 
 Honest gaps, not attempted or only partially built in the time available. See
 [`docs/03-tasks.md`](docs/03-tasks.md) for the full list with file references.
 
-- **Single LLM backend.** `LLMClient` (`backend/app/llm/base.py`) is a protocol, but the
-  only implementation is `llm/claude_cli.py`, which shells out to the local Claude Code
-  CLI. There is no Anthropic API-key client and no Vertex AI / Gemini / other-provider
-  client, so a reviewer without the Claude Code CLI installed and authenticated cannot
-  run this out of the box (see Decision 003 in `docs/04-decisions.md`). Swapping
-  backends means writing one more class against the existing protocol, not a redesign.
+- **Provider tradeoffs.** The default `CodexCliClient` shells out once for extraction and
+  once for response wording on every turn, so it requires an authenticated CLI and pays
+  process startup latency. `ClaudeCliClient` has the same local tradeoff. `VertexAIClient`
+  avoids the subprocess but requires a Google Cloud project or Vertex Express API key.
+  All three sit behind the same `LLMClient` protocol.
 - **Kid vs. adult differentiation.** `Party` captures `adults` and per-child
   `children: list[ChildAge]`, but capacity and pricing collapse the party to a flat
   `total_guests` and treat every head the same. A booking of "3 kids, 4 adults" is

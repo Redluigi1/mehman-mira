@@ -19,7 +19,6 @@ _ORDINAL_WORDS = {
 _DEFER_TO_RANKING_PHRASES = ("whichever", "whatever", "you pick", "you choose", "recommend", "best one", "up to you")
 _OTHER_PHRASES = ("other one", "the other", "different one", "another one")
 
-
 def resolve_selection(state: ConversationState, referent_mentions: list[str], repo: Repo) -> OptionRef | None:
     if not state.shortlist:
         return None

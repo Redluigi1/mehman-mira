@@ -47,9 +47,10 @@ raise it and add a numbered entry to `docs/04-decisions.md`.
 
 - Backend: Python 3.11, FastAPI, Pydantic v2, SQLite (seeded from JSON in git)
 - Frontend: Vite + React + TypeScript + Tailwind
-- LLM: pluggable `LLMClient`. Dev backend is the **local Claude Code CLI on Haiku**
-  (`claude -p --model haiku --output-format json`). An Anthropic API-key client is
-  planned but explicitly deferred — see Decision 003.
+- LLM: pluggable `LLMClient`. The default dev backend is the **local Codex CLI on
+  GPT-5.6 Terra** (`codex exec --model gpt-5.6-terra`), with low reasoning effort for
+  local demo latency. Claude CLI and the direct Vertex AI adapter are optional. Selection
+  is through `LLM_BACKEND` and `LLM_MODEL` — see Decisions 003 and 024.
 
 ## Working conventions
 

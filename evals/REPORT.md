@@ -5,7 +5,7 @@
 ## Methodology (read before the numbers)
 
 This harness scripts the two LLM calls (state extraction, response generation) per
-turn instead of recording them from the live Claude CLI. See `evals/README.md` for
+turn instead of recording them from a live model backend. See `evals/README.md` for
 why. The consequence: this is a regression harness for the **deterministic core**
 (reconcile -> conflicts -> policy -> tools -> pricing -> grounding), not a measure of
 extraction accuracy or natural-language quality against the real model. The advisory

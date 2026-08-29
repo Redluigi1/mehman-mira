@@ -157,12 +157,11 @@ Chosen for signal-per-hour, all cheap because the trace and state layers already
 
 ## The LLM backend, honestly
 
-Development runs against the **local Claude Code CLI on Haiku** — free, and Haiku is
-genuinely good enough for schema-constrained extraction. The provider sits behind an
-`LLMClient` interface from day one so an API-key client is a drop-in later.
+Development defaults to the **local Codex CLI on GPT-5.6 Terra** with low reasoning
+effort. Terra is sufficient for the two narrow tasks here: schema-guided extraction and
+grounded response wording. The provider sits behind an `LLMClient` interface so an API
+backend does not change the pipeline. Vertex AI is now available as that direct API path,
+while the Claude CLI remains an optional local backend.
 
-Known open risk, deliberately accepted for now: a reviewer at Mehman cannot run a local
-Claude Code subscription, and the brief says the system must actually run. Before
-submission this needs either an `AnthropicClient` with an API key or a `ReplayClient`
-demo mode that runs with no credentials at all. Tracked as Decision 003 and as a
-Phase 6 task; do not let it reach the deadline unresolved.
+The default local demo requires an authenticated Codex CLI and network access. Vertex AI
+avoids process startup latency but requires Google Cloud or Vertex Express credentials.

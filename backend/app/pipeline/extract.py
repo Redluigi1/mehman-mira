@@ -72,6 +72,7 @@ class StateDelta(BaseModel):
     set_fields: dict[str, Any] = Field(default_factory=dict)
     clear_fields: list[str] = Field(default_factory=list)
     referent_mentions: list[str] = Field(default_factory=list)
+    selected_option_ordinal: int | None = None
     date_expression: str | None = None
     objection: Objection | None = None
     is_question: bool = False
@@ -120,9 +121,15 @@ Rules:
   it", "sounds good", "book it lesgooo", "confirm", "sold", a plain "yes" — is `select`,
   however casual, slangy, or oddly capitalized the wording is. Do not classify these as
   `other` or `chitchat` just because the phrasing is informal.
-- `referent_mentions` captures phrases like "the second one", "the villa", "the other one",
-  or "whichever is better"/"you pick" (the guest deferring to your judgment) so code can
-  resolve them against what was actually shown. Copy the phrase near-verbatim; don't paraphrase it.
+- `referent_mentions` captures phrases like "the second one", "the villa", a partial or
+  misspelled property name such as "paml grove", "the other one", or "whichever is
+  better"/"you pick". Copy the guest's phrase near-verbatim.
+- When the current state lists numbered options and the guest is selecting one, resolve
+  their meaning semantically even when it is abbreviated, misspelled, slangy, or phrased
+  indirectly. Set `selected_option_ordinal` to that option's displayed number. Use only
+  the options explicitly listed in Current known state. If the intended option is truly
+  ambiguous, leave it null rather than guessing. This field identifies a shown option;
+  it does not authorize pricing, holding, or booking it.
 - If the guest asks a factual question, set is_question=true and question_about to the
   closest match from the allowed vocabulary.
 - `confidence` maps each field path you set to a 0..1 confidence score.
