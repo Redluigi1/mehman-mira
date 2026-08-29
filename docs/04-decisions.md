@@ -399,3 +399,50 @@ deterministic (Decision 001 still holds)?* Converting "a month" → 30 is pure v
 not calendar arithmetic against `today` — it doesn't need to be reproducible against a
 specific anchor date the way "next weekend" or "in 5 days" does, so there's no reliability
 cost to letting the model do it, and it avoids Python chasing English synonyms forever.
+
+---
+
+### 022 — Calendar-anchor resolution moved fully into the extractor; `dates.py`'s regex/dateutil layer retired from the main pipeline
+**Date:** 2026-08-29 · **Status:** accepted (revisit) — supersedes the "code resolves it" half of Decision 001/021
+
+Reported symptom: a guest who said "12th july my flight will land" got re-asked "When are
+you looking to visit Goa?" on the very next turn, even though a date had just been stated.
+Root cause traced to the extractor's prompt having only one narrow worked example for
+indirect/flight-style date phrasing (date-first, "is landing" tense) — Haiku missed
+phrasings with the date at the end or a different tense ("will land"), so `date_expression`
+stayed empty that turn and `dates.py` had nothing to resolve.
+
+Rather than keep patching `extract.py`'s prompt example-by-example to cover every phrasing
+a regex/dateutil-based downstream parser might miss, the owner directed dropping that
+translation layer entirely: the extractor now resolves calendar anchors itself — using the
+"Today's date" already given in its prompt — straight into `stay.check_in`/`stay.check_out`
+as ISO `YYYY-MM-DD` strings in `set_fields`. `date_expression` is retired (field kept on
+`StateDelta` for schema compatibility, no longer populated or read). `reconcile.py` no
+longer calls `resolve_date_expression`; `_apply_field` parses/validates the ISO strings the
+extractor already resolved, and the only code-side date logic left is deriving `check_out`
+from a known `check_in` + `nights` when the guest didn't state checkout explicitly — plain
+arithmetic on already-structured values, not text parsing.
+
+Decision 021's "a past bare date is left as the literal past date, never silently rolled to
+next year" still holds — the extractor's prompt explicitly tells it not to guess a future
+year, so `PAST_DATE` conflict detection (Decision 014) keeps working unchanged.
+
+*Why:* one narrow LLM call already has to understand arbitrary English phrasing to decide
+*that* a date was stated at all; asking it to also emit the resolved ISO date is not
+meaningfully more work, and it removes an entire fragile translation surface (regex range-
+parsing, ordinal-suffix stripping, dateutil fuzzy-parse quirks — three separate bugs already
+found there, Decision 021) whose only job was reproducing what the model already had to
+figure out to extract the phrase in the first place.
+
+*Cost, and why "revisit":* this is a real narrowing of Decision 001's "the LLM never
+computes" principle — date arithmetic (weekday resolution, month/day-without-year handling)
+is now something a small model does per-turn, unverified by any deterministic layer beyond
+ISO-format validation and past-date conflict detection. `dates.py`/`resolve_date_expression`
+is left in place (still covered by `tests/test_dates.py`) as a fallback path, not deleted,
+in case Haiku's date arithmetic proves unreliable enough in practice to warrant reintroducing
+a deterministic check.
+
+*Known gap:* `tests/test_reconcile.py`, `tests/test_edge_cases.py` and `tests/test_web_api.py`
+still construct `StateDelta`s using `date_expression` to drive date resolution through
+`reconcile.py` — those assertions no longer reflect how dates flow through the pipeline and
+need updating to set `stay.check_in`/`stay.check_out` directly. Not done in this pass.

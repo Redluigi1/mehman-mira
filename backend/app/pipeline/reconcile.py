@@ -14,7 +14,6 @@ from app.domain.intent import (
     Party, PolicyNeeds, PropertyType, RoomPrefs, Slot, StayWindow, TripPurpose, ViewType,
 )
 from app.domain.state import ConversationState, ReferentRegistry, Rejection, Stage
-from app.pipeline.dates import resolve_date_expression
 from app.pipeline.extract import StateDelta
 
 DEFAULT_CONFIDENCE = 0.7
@@ -54,6 +53,10 @@ def _apply_field(intent: GuestIntent, path: str, value: Any, turn_index: int, co
             stay.nights = int(value)
         elif rest == "flex_days":
             stay.flex_days = int(value)
+        elif rest == "check_in":
+            stay.check_in = date.fromisoformat(str(value)).isoformat()
+        elif rest == "check_out":
+            stay.check_out = date.fromisoformat(str(value)).isoformat()
         else:
             return
         intent.stay = Slot(value=stay, confidence=confidence, source_turn=turn_index)
@@ -156,28 +159,18 @@ def apply_state_delta(state: ConversationState, delta: StateDelta, today: date, 
         # rather than presenting it as a known fact.
         intent.budget.is_assumption = True
 
-    existing_stay = intent.stay.value
-    known_nights = existing_stay.nights if existing_stay else None
-    date_res = resolve_date_expression(delta.date_expression, today, known_nights=known_nights)
-    if date_res.check_in or date_res.check_out or date_res.nights:
-        stay = existing_stay.model_copy() if existing_stay else StayWindow()
-        if date_res.check_in:
-            stay.check_in = date_res.check_in.isoformat()
-        if date_res.nights:
-            stay.nights = date_res.nights
-        if date_res.check_out:
-            stay.check_out = date_res.check_out.isoformat()
-        elif stay.check_in and stay.nights:
-            # nights (or check_in) changed with no explicit new check_out this turn —
-            # check_out is derived, not independently stated, so it always follows.
-            stay.check_out = (date.fromisoformat(stay.check_in) + timedelta(days=stay.nights)).isoformat()
-        # A guest message with no date_expression at all still runs this block
-        # (known_nights carries forward as a truthy value) — only actually
-        # replace the slot, bumping its source_turn, when something about the
-        # stay genuinely changed. Otherwise "changed this turn" provenance
-        # (used by the UI's State panel) would fire on every single turn.
-        if stay != existing_stay:
-            intent.stay = Slot(value=stay, confidence=0.8, source_turn=turn_index)
+    # check_in/check_out/nights were already set directly from the extractor's
+    # resolved ISO dates above (Decision 022 — the LLM resolves calendar
+    # anchors itself, no downstream regex/dateutil parsing of guest text).
+    # The only thing left to derive here is a check_out the guest didn't
+    # state explicitly this turn, from a check_in + nights that are known.
+    stay = intent.stay.value
+    if stay and stay.check_in and stay.nights and "stay.check_out" not in delta.set_fields:
+        derived_check_out = (date.fromisoformat(stay.check_in) + timedelta(days=stay.nights)).isoformat()
+        if derived_check_out != stay.check_out:
+            stay = stay.model_copy()
+            stay.check_out = derived_check_out
+            intent.stay = Slot(value=stay, confidence=intent.stay.confidence, source_turn=turn_index)
 
     for path in delta.clear_fields:
         _clear_field(intent, path)

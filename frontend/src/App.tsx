@@ -127,7 +127,7 @@ function App() {
             error={sendError}
             onSend={handleSend}
             onRetry={handleRetry}
-            disabled={!isLive}
+            disabled={!isLive || isSending}
           />
         </main>
 
