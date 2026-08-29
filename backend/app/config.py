@@ -17,7 +17,7 @@ class Settings(BaseSettings):
 
     llm_backend: str = "claude_cli"  # claude_cli | anthropic_api | replay
     llm_model: str = "haiku"
-    llm_timeout_s: float = 30.0
+    llm_timeout_s: float = 90.0
     anthropic_api_key: str | None = None
 
     today_override: str | None = None  # ISO date; lets demos anchor "today" deterministically

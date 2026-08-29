@@ -18,7 +18,10 @@ SETTABLE_FIELD_PATHS: dict[str, str] = {
     "destination.city": "string",
     "destination.area": "string",
     "destination.flexible": "boolean",
-    "stay.nights": "integer",
+    "stay.nights": (
+        "integer — convert ANY stated duration to a night count yourself, including spelled-out "
+        "units (a week=7, a fortnight=14, a month=30, two weeks=14), not just 'N nights'"
+    ),
     "stay.flex_days": "integer",
     "party.adults": "integer",
     "party.children": "list of {age: integer}",
@@ -75,10 +78,15 @@ your output deterministically.
 Rules:
 - Output ONLY a single JSON object matching the schema. No prose, no markdown fences.
 - `set_fields` keys MUST come only from the allowed field-path list below. Do not invent paths.
-- Never resolve dates yourself. If the guest mentions any date/timing, put the exact phrase
-  verbatim in the TOP-LEVEL `date_expression` field (e.g. "this weekend", "Sep 10 to 13",
-  "next Friday for 3 nights") — never as a key inside `set_fields`. Code resolves it against
-  the real calendar.
+- Never resolve calendar anchors yourself. If the guest mentions a specific date, weekday,
+  or relative-day anchor (e.g. "Sep 10 to 13", "next Friday", "this weekend", "tomorrow"),
+  put the exact phrase verbatim in the TOP-LEVEL `date_expression` field — never as a key
+  inside `set_fields`. Code resolves it against the real calendar.
+- Duration is different: if the guest states how long they're staying — in nights ("3
+  nights"), or any other spelled-out unit ("a week", "a fortnight", "a month", "two weeks")
+  — YOU convert it to a night count and set `stay.nights` directly in `set_fields` (week=7,
+  fortnight=14, month=30 nights). Only put the calendar-anchor part of the phrase in
+  `date_expression`; leave duration wording out of it.
 - `user_act` classifies the message: new_request (a fresh ask), modify (changes existing
   state, e.g. "actually make that 4 people"), answer (answering a question you asked),
   select (picking one of the presented options), objection (pushing back, e.g. "too
@@ -106,6 +114,12 @@ Something private would be nice.":
 "date_expression": "this weekend", "objection": null, "is_question": false,
 "question_about": null, "confidence": {{"destination.city": 1.0, "party.adults": 0.9,
 "room_prefs.private_pool": 0.5}}}}
+
+Example — guest says "12th july my flight is landing and ill stay for a month" (duration
+word converted to nights, calendar anchor kept separate in date_expression):
+{{"user_act": "new_request", "set_fields": {{"stay.nights": 30}}, "clear_fields": [],
+"referent_mentions": [], "date_expression": "12th july", "objection": null,
+"is_question": false, "question_about": null, "confidence": {{"stay.nights": 0.8}}}}
 """
 
 

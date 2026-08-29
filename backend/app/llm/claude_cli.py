@@ -47,7 +47,7 @@ def _strip_fences(text: str) -> str:
 
 
 class ClaudeCliClient(LLMClient):
-    def __init__(self, model: str = "haiku", timeout_s: float = 30.0, max_retries: int = 1):
+    def __init__(self, model: str = "haiku", timeout_s: float = 90.0, max_retries: int = 1):
         self.model = model
         self.timeout_s = timeout_s
         self.max_retries = max_retries

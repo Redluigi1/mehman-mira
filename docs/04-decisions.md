@@ -322,3 +322,80 @@ marked") but nothing populated. `reconcile.py` now flags it in the one clear, co
 `tests/test_reconcile.py::test_budget_amount_without_basis_is_flagged_an_assumption` pins
 it. Not a bug fix like the other three — a missed wire-up, closed while verifying the UI
 against the schema it's supposed to render.
+
+---
+
+### 020 — `GroundingPacket` carries guest-stated `search_context`; response model was blind to known state
+**Date:** 2026-08-29 · **Status:** accepted (bug fix)
+
+Manually driving a conversation (Bengaluru, dates given, party of 5, zero matching
+properties) surfaced a confusing regression: on `widen_or_ask`, Mira's reply asked "a
+specific destination, or should we start with your travel dates?" — as if the conversation
+had just started, even though `ConversationState` correctly had the city, dates and party
+size from two turns earlier.
+
+Cause was not conversation memory — the extractor (`extract.py`) already receives the last
+8 turns of transcript plus a state summary and reconciles correctly; the State panel showed
+the right values throughout. The gap was one stage later: `build_grounding_packet` (Decision
+005) only ever carried tool-result facts — `options`/`quote`/`hold`/`facts`/`conflicts` —
+never the guest's own stated destination/dates/party. On `widen_or_ask` specifically, none of
+those tool-result fields are populated (nothing matched), so the response model's prompt was
+`next_action: widen_or_ask` and nothing else. With zero context to reference, it drafted a
+generic opener instead of following the system prompt's "say so honestly" instruction — and
+passed the grounding validator cleanly (no invented numbers/names), so it shipped as
+`REPAIRED` rather than falling back to a safe template.
+
+Fix: `GroundingPacket` gained `search_context` (`GroundedSearchContext`: city, area,
+check_in/out, nights, adults, children), populated straight from `state.intent` — guest-
+stated facts, not a tool result, so this doesn't relax Decision 005's "nothing not in the
+packet" rule, only widens what's in it. `respond.py`'s system prompt now tells the model to
+reference `known_so_far` instead of re-asking or re-greeting, and the deterministic
+`widen_or_ask` template (the last-resort fallback if the LLM never grounds) now names the
+city/dates too, so even that path stops reading as if the conversation restarted.
+
+---
+
+### 021 — `dates.py` no longer guesses a future year for a past bare date; duration words moved to the extractor
+**Date:** 2026-08-29 · **Status:** accepted (bug fix)
+
+Manually driving a conversation on 2026-08-29 ("12th july to 14th", then "12th july ... ill
+stay for a month") surfaced three bugs in the deterministic date layer:
+
+1. **Ordinal suffixes broke range parsing.** `_try_parse_range`'s month-hint attachment
+   checked `not re.search(r"[a-z]", b_text)` to decide whether the second half of a range
+   needed the first half's month name borrowed in. "14th" already contains letters (the
+   suffix), so the check silently failed and "12th july to 14th" parsed as July 12 →
+   August 14 **2027** (a 33-night stay) instead of July 12–14. Fixed by stripping `st/nd/
+   rd/th` suffixes right after lowercasing, since the rest of the module assumes bare day
+   numbers anyway.
+
+2. **A past bare date silently became "next year."** `_roll_forward_if_past` bumped any
+   month/day that had already passed this calendar year forward by however many years it
+   took to land on/after `today`, with no guest-visible signal. This directly conflicts
+   with Decision 001's "unknown means unknown" spirit: guessing which year the guest meant
+   is guessing, not resolving. It also made the `PAST_DATE` hard conflict (Decision 014)
+   effectively unreachable for the common case (a bare "12th July" stated after July has
+   passed) — the only way to trigger it was an explicit past *year*. Removed the roll-
+   forward entirely from `_try_parse_range`/`_try_parse_single`; a bare date that has
+   already passed is now left as the literal past date, so `sync_conflicts` flags
+   `PAST_DATE` and `policy.decide()` routes to `RESOLVE_CONFLICT`, which tells the guest
+   plainly that the date's in the past and asks them to confirm what they meant — instead
+   of silently booking a year they never stated.
+
+3. **Duration words ("a week", "a month", "a fortnight") weren't understood at all** —
+   `_explicit_nights` only matched `"N nights"`, so Mira fell back to asking "how many
+   nights?" even after the guest said "I'll stay for a month." Tempting fix was to extend
+   the regex vocabulary (week/fortnight/month/...), but that's an open-ended list that
+   will always be one phrasing behind real guest language, and it's exactly the kind of
+   NL-to-structured-value judgment call the extractor (LLM call #1) already exists to make
+   — `stay.nights` is already a settable field. Fixed in `extract.py`'s system prompt
+   instead: the extractor now converts stated durations (numeric or spelled out) straight
+   to `stay.nights` in `set_fields`, keeping `date_expression` reserved for the calendar
+   anchor only. No new deterministic-layer code needed; `dates.py` is unchanged for this
+   part.
+
+*Why bother splitting duration into the LLM call but keeping the calendar anchor
+deterministic (Decision 001 still holds)?* Converting "a month" → 30 is pure vocabulary,
+not calendar arithmetic against `today` — it doesn't need to be reproducible against a
+specific anchor date the way "next weekend" or "in 5 days" does, so there's no reliability
+cost to letting the model do it, and it avoids Python chasing English synonyms forever.

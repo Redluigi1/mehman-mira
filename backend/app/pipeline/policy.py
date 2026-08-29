@@ -44,7 +44,15 @@ def _missing_field(state: ConversationState) -> str | None:
     intent = state.intent
     if not intent.destination.is_set:
         return "destination"
-    if not intent.stay.is_set or intent.stay.value.check_in is None or intent.stay.value.check_out is None:
+    stay = intent.stay.value if intent.stay.is_set else None
+    if stay is None or (stay.check_in is None and stay.check_out is None):
+        return "dates"
+    if stay.check_in is not None and stay.check_out is None:
+        # check-in is already known — asking "dates" again from scratch would
+        # ignore what the guest just said; the only gap left is how long
+        # they're staying.
+        return "duration"
+    if stay.check_out is not None and stay.check_in is None:
         return "dates"
     if not intent.party.is_set or intent.party.value.adults is None:
         return "party"

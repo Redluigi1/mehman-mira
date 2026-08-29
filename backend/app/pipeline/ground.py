@@ -69,6 +69,22 @@ class GroundedAddon(BaseModel):
     reason: str
 
 
+class GroundedSearchContext(BaseModel):
+    """What the guest has already told us this conversation (destination,
+    dates, party) — not a tool result, but still safe to state back, since it
+    came from the guest's own words via the extractor. Without this, a turn
+    with no options/facts (e.g. widen_or_ask) gives the response model
+    nothing to reference, and it drafts as if the conversation just started.
+    """
+    city: str | None = None
+    area: str | None = None
+    check_in: str | None = None
+    check_out: str | None = None
+    nights: int | None = None
+    adults: int | None = None
+    children: int | None = None
+
+
 class GroundingPacket(BaseModel):
     next_action: NextAction
     ask_field: str | None = None
@@ -80,6 +96,7 @@ class GroundingPacket(BaseModel):
     room_details: dict | None = None
     suggested_addons: list[GroundedAddon] = Field(default_factory=list)
     tool_errors: list[str] = Field(default_factory=list)
+    search_context: GroundedSearchContext | None = None
 
     allowed_numbers: list[str] = Field(default_factory=list)
     allowed_names: list[str] = Field(default_factory=list)
@@ -119,6 +136,29 @@ def build_grounding_packet(state: ConversationState, ctx: TurnContext, action: N
     packet = GroundingPacket(next_action=action, ask_field=action.ask_field)
     allowed_numbers: set[str] = set()
     allowed_names: set[str] = set()
+
+    intent = state.intent
+    dest = intent.destination.value
+    stay = intent.stay.value
+    party = intent.party.value
+    if dest or stay or party:
+        packet.search_context = GroundedSearchContext(
+            city=dest.city if dest else None,
+            area=dest.area if dest else None,
+            check_in=stay.check_in if stay else None,
+            check_out=stay.check_out if stay else None,
+            nights=stay.nights if stay else None,
+            adults=party.adults if party else None,
+            children=len(party.children) if party else None,
+        )
+        if dest:
+            allowed_names.add(dest.city)
+            if dest.area:
+                allowed_names.add(dest.area)
+        if stay and stay.nights:
+            allowed_numbers |= _collect_numbers(stay.nights)
+        if party and party.adults is not None:
+            allowed_numbers |= _collect_numbers(party.adults)
 
     for c in state.conflicts:
         if c.resolved:

@@ -1,3 +1,4 @@
+from app.domain.intent import Destination, Party, Slot, StayWindow
 from app.domain.state import ConversationState, OptionRef
 from app.domain.trace import GroundingVerdict, NextAction, NextActionType
 from app.llm.base import LLMError
@@ -80,6 +81,41 @@ def test_template_fallback_ask():
         NextAction(type=NextActionType.ASK, ask_field="destination"),
     )
     assert "stay" in _template_fallback(packet).lower()
+
+
+def _state_with_known_search() -> ConversationState:
+    state = ConversationState(conversation_id="c1")
+    state.intent.destination = Slot(value=Destination(city="Bengaluru"))
+    state.intent.stay = Slot(value=StayWindow(check_in="2026-07-14", check_out="2026-07-24", nights=10))
+    state.intent.party = Slot(value=Party(adults=5))
+    return state
+
+
+def test_build_packet_carries_search_context_from_guest_stated_intent():
+    packet = build_grounding_packet(_state_with_known_search(), _ctx(), NextAction(type=NextActionType.WIDEN_OR_ASK))
+    assert packet.search_context is not None
+    assert packet.search_context.city == "Bengaluru"
+    assert packet.search_context.check_in == "2026-07-14"
+    assert packet.search_context.adults == 5
+    assert "Bengaluru" in packet.allowed_names
+
+
+def test_build_packet_search_context_absent_when_nothing_known():
+    packet = build_grounding_packet(ConversationState(conversation_id="c1"), _ctx(), NextAction(type=NextActionType.ASK))
+    assert packet.search_context is None
+
+
+def test_template_fallback_widen_or_ask_names_known_city_and_dates():
+    packet = build_grounding_packet(_state_with_known_search(), _ctx(), NextAction(type=NextActionType.WIDEN_OR_ASK))
+    text = _template_fallback(packet)
+    assert "Bengaluru" in text
+    assert "2026-07-14" in text and "2026-07-24" in text
+
+
+def test_template_fallback_widen_or_ask_generic_without_known_state():
+    packet = build_grounding_packet(ConversationState(conversation_id="c1"), _ctx(), NextAction(type=NextActionType.WIDEN_OR_ASK))
+    text = _template_fallback(packet)
+    assert "couldn't find anything" in text
 
 
 def test_template_fallback_surface_unknown():

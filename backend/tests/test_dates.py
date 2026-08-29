@@ -49,9 +49,19 @@ def test_single_date_with_known_nights_from_state():
     assert r.check_out == date(2026, 9, 22)
 
 
-def test_past_date_rolls_forward_a_year():
+def test_bare_month_day_in_the_past_is_left_as_is_not_silently_rolled_forward():
+    # Guessing "next year" would silently book a date the guest never said —
+    # the conflict engine's PAST_DATE check needs the literal past date to
+    # flag it and ask, per the "unknown means unknown" invariant.
     r = resolve_date_expression("January 5", TODAY)
-    assert r.check_in.year == 2027
+    assert r.check_in == date(2026, 1, 5)
+
+
+def test_ordinal_suffixes_dont_break_range_parsing():
+    r = resolve_date_expression("12th july to 14th", TODAY)
+    assert r.check_in == date(2026, 7, 12)
+    assert r.check_out == date(2026, 7, 14)
+    assert r.nights == 2
 
 
 def test_empty_expression_keeps_known_nights_only():

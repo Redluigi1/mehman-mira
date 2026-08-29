@@ -66,9 +66,6 @@ def _try_parse_range(text: str, today: date) -> tuple[date, date] | None:
         return None
     if end <= start:
         return None
-    start, end = _roll_forward_if_past(start, today), end
-    if end < start:
-        end = end.replace(year=start.year)
     return start, end
 
 
@@ -77,25 +74,18 @@ def _default_dt(today: date):
     return datetime(today.year, today.month, today.day)
 
 
-def _roll_forward_if_past(d: date, today: date) -> date:
-    while d < today:
-        d = d.replace(year=d.year + 1)
-    return d
-
-
 def _try_parse_single(text: str, today: date) -> date | None:
     try:
-        parsed = dateutil_parser.parse(text, default=_default_dt(today), fuzzy=True).date()
+        return dateutil_parser.parse(text, default=_default_dt(today), fuzzy=True).date()
     except (ValueError, OverflowError):
         return None
-    return _roll_forward_if_past(parsed, today)
 
 
 def resolve_date_expression(expression: str | None, today: date, known_nights: int | None = None) -> DateResolution:
     if not expression or not expression.strip():
         return DateResolution(nights=known_nights)
 
-    text = expression.strip().lower()
+    text = re.sub(r"(?<=\d)(st|nd|rd|th)\b", "", expression.strip().lower())
     nights = _explicit_nights(text) or known_nights
 
     night_delta = _relative_night_delta(text)
