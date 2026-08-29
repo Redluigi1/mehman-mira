@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from app.domain.events import ConversationEvent
+from app.domain.events import ConversationEvent, GuestMessage
 from app.domain.state import ConversationState
 from app.domain.trace import TurnTrace
 
@@ -18,6 +18,7 @@ class _ConversationRecord:
     events: list[ConversationEvent] = field(default_factory=list)
     snapshots: list[ConversationState] = field(default_factory=list)  # index == turn_index
     traces: list[TurnTrace] = field(default_factory=list)  # index == turn_index
+    replies: list[str] = field(default_factory=list)  # index == turn_index - 1, Mira's reply text per turn
 
 
 class ConversationStore:
@@ -52,6 +53,20 @@ class ConversationStore:
 
     def get_events(self, conversation_id: str) -> list[ConversationEvent]:
         return list(self._get(conversation_id).events)
+
+    def append_reply(self, conversation_id: str, text: str) -> None:
+        self._get(conversation_id).replies.append(text)
+
+    def render_transcript(self, conversation_id: str, max_turns: int = 8) -> list[str]:
+        record = self._get(conversation_id)
+        guest_messages = [e for e in record.events if isinstance(e, GuestMessage)]
+        lines: list[str] = []
+        for i, msg in enumerate(guest_messages[-max_turns:]):
+            lines.append(f"Guest: {msg.text}")
+            idx = len(guest_messages) - max_turns + i if len(guest_messages) > max_turns else i
+            if 0 <= idx < len(record.replies):
+                lines.append(f"Mira: {record.replies[idx]}")
+        return lines
 
     def get_state(self, conversation_id: str, turn_index: int | None = None) -> ConversationState:
         record = self._get(conversation_id)

@@ -119,6 +119,14 @@ class Repo:
 
     # -- addons -------------------------------------------------------------
 
+    def get_addon(self, addon_id: str) -> AddOn | None:
+        row = self.conn.execute("SELECT * FROM addons WHERE id = ?", (addon_id,)).fetchone()
+        if row is None:
+            return None
+        return AddOn(id=row["id"], scope=row["scope"], property_id=row["property_id"], category=row["category"],
+                     name=row["name"], price=row["price"], price_basis=row["price_basis"],
+                     eligibility=row["eligibility"], segment_affinity=json.loads(row["segment_affinity_json"]))
+
     def get_addons(self, property_id: str | None = None) -> list[AddOn]:
         rows = self.conn.execute(
             "SELECT * FROM addons WHERE scope = 'global' OR property_id = ?", (property_id,)

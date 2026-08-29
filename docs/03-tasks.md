@@ -25,32 +25,34 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 
 ## Phase 1 — Happy path (6h)
 
-- [ ] `llm/base.py` — `LLMClient` protocol (`complete_json`, `complete_text`)
-- [ ] `llm/claude_cli.py` — local Claude Code CLI on Haiku, JSON output, timeout, retry
-- [ ] `llm/replay.py` — record to `evals/fixtures/`, replay by prompt hash
-- [ ] `pipeline/extract.py` — `StateDelta` schema, extraction prompt, enum vocabularies
-- [ ] Deterministic date resolution from `date_expression` against an explicit `today`
-- [ ] `pipeline/reconcile.py` — apply delta with provenance; modify must not reset
-- [ ] `pipeline/policy.py` — `NextActionPolicy` per plan §3 table
-- [ ] `pipeline/respond.py` — Mira persona, response prompt
-- [ ] `pipeline/engine.py` — wire the loop, emit `TurnTrace`
-- [ ] `channels/cli.py` — run whole conversations in the terminal before any UI exists
-- [ ] End-to-end: the brief's Goa example produces a sensible multi-turn conversation
+- [x] `llm/base.py` — `LLMClient` protocol (`complete_json`, `complete_text`)
+- [x] `llm/claude_cli.py` — local Claude Code CLI on Haiku, JSON output, timeout, retry
+- [x] `llm/replay.py` — record to `evals/fixtures/`, replay by prompt hash
+- [x] `pipeline/extract.py` — `StateDelta` schema, extraction prompt, enum vocabularies
+- [x] Deterministic date resolution from `date_expression` against an explicit `today`
+- [x] `pipeline/reconcile.py` — apply delta with provenance; modify must not reset
+- [x] `pipeline/policy.py` — `NextActionPolicy` per plan §3 table
+- [x] `pipeline/respond.py` — Mira persona, response prompt
+- [x] `pipeline/engine.py` — wire the loop, emit `TurnTrace`
+- [x] `channels/cli.py` — run whole conversations in the terminal before any UI exists
+- [x] End-to-end: the brief's Goa example produces a sensible multi-turn conversation
+      (verified live via `backend/scripts/demo_goa.py` against the real Claude CLI —
+      search → select → quote → factual question → price re-query → hold, all grounded)
 
 ## Phase 2 — Tools, pricing, grounding (5h)
 
-- [ ] `tools/registry.py` — name to (schema, callable), JSON schema export, arg validation
-- [ ] `search_properties` — filter cascade, exact and near-miss buckets, ranked
-- [ ] `check_availability`
-- [ ] `get_room_details`
-- [ ] `get_property_policies` — explicit unknown semantics
-- [ ] `calculate_quote` — deterministic breakdown per plan §5
-- [ ] Pricing unit tests against hand-computed fixtures (seasonal, weekend, extra bed, tax slab)
-- [ ] `create_booking_hold` — TTL plus idempotency key
-- [ ] `pipeline/ground.py` — `GroundingPacket` builder
-- [ ] Grounding validator — numbers, property names, room names must appear in the packet
-- [ ] Repair pass, then deterministic template fallback; record the verdict
-- [ ] Tool error handling — typed failures surface in the trace, never crash the turn
+- [x] `tools/registry.py` — name to (schema, callable), JSON schema export, arg validation
+- [x] `search_properties` — filter cascade, exact and near-miss buckets, ranked
+- [x] `check_availability`
+- [x] `get_room_details`
+- [x] `get_property_policies` — explicit unknown semantics
+- [x] `calculate_quote` — deterministic breakdown per plan §5
+- [x] Pricing unit tests against hand-computed fixtures (seasonal, weekend, extra bed, tax slab)
+- [x] `create_booking_hold` — TTL plus idempotency key
+- [x] `pipeline/ground.py` — `GroundingPacket` builder
+- [x] Grounding validator — numbers, property names, room names must appear in the packet
+- [x] Repair pass, then deterministic template fallback; record the verdict
+- [x] Tool error handling — typed failures surface in the trace, never crash the turn
 
 ## Phase 3 — Edge cases (4h)
 
@@ -112,6 +114,6 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 ## Cross-cutting, do not skip
 
 - [ ] `ChannelAdapter` interface with `web` and `cli` real, `whatsapp` stubbed
-- [ ] Structured logging with `conversation_id` and `turn_index` on every record
+- [x] Structured logging with `conversation_id` and `turn_index` on every record
 - [x] `.env.example` committed
 - [ ] Every architectural change appended to `docs/04-decisions.md`

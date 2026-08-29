@@ -31,12 +31,25 @@ class Relaxation(BaseModel):
 
 
 class OptionRef(BaseModel):
-    """A search result the guest has been shown, addressable by ordinal ('the second one')."""
+    """A search result the guest has been shown, addressable by ordinal ('the
+    second one'). Self-contained with the facts as shown, so grounding never
+    drifts from what the guest actually saw even if the catalogue changes
+    between turns.
+    """
 
     option_id: str
     property_id: str
     room_type_id: str
     ordinal: int  # 1-based, position as last presented
+    property_name: str
+    room_type_name: str
+    city: str
+    area: str | None = None
+    star_tier: int
+    rooms_needed: int
+    nights: int
+    price_per_night: float
+    estimated_total: float
     relaxations: list[Relaxation] = Field(default_factory=list)
 
 
