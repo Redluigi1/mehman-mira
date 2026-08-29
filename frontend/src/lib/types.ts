@@ -253,6 +253,7 @@ export interface ChatMessage {
   turn_index: number
   role: "guest" | "mira"
   text: string
+  options?: OptionRef[]
 }
 
 export interface ApiError {

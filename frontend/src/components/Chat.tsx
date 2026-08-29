@@ -1,8 +1,9 @@
-import { AlertCircle, ArrowUp, Sparkles } from "lucide-react"
+import { AlertCircle, ArrowUp, BedDouble, MapPin, Sparkles, Star } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import { Chip } from "./ui/Chip"
+import { formatInr } from "../lib/format"
 import { GROUNDING_LABEL, GROUNDING_TONE } from "../lib/semantics"
-import type { ChatMessage, GroundingVerdict } from "../lib/types"
+import type { ChatMessage, GroundingVerdict, OptionRef } from "../lib/types"
 
 const SUGGESTIONS = [
   "A villa in Goa for 2, next weekend",
@@ -149,7 +150,63 @@ function MessageBubble({ message, verdict }: { message: ChatMessage; verdict?: G
         {!isGuest && verdict && verdict !== "clean" && (
           <Chip tone={GROUNDING_TONE[verdict]}>{GROUNDING_LABEL[verdict]}</Chip>
         )}
+        {!isGuest && message.options && message.options.length > 0 && (
+          <OptionList options={message.options} />
+        )}
       </div>
+    </div>
+  )
+}
+
+function OptionList({ options }: { options: OptionRef[] }) {
+  return (
+    <div className="flex w-full flex-col gap-2">
+      {options.map((o) => (
+        <OptionCard key={o.option_id} option={o} />
+      ))}
+    </div>
+  )
+}
+
+function OptionCard({ option }: { option: OptionRef }) {
+  return (
+    <div className="w-full rounded-xl border border-ink/10 bg-white/80 px-3.5 py-3 shadow-soft-sm">
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex items-start gap-2.5">
+          <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-accent-soft text-[11px] font-semibold text-accent">
+            {option.ordinal}
+          </span>
+          <div>
+            <p className="text-[14px] font-semibold leading-tight text-ink">{option.property_name}</p>
+            <p className="text-[13px] text-muted-dark">{option.room_type_name}</p>
+            <div className="mt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[12px] text-muted">
+              <span className="inline-flex items-center gap-1">
+                <MapPin size={11} /> {option.city}{option.area ? `, ${option.area}` : ""}
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <Star size={11} /> {option.star_tier}-star
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <BedDouble size={11} /> {option.rooms_needed} room{option.rooms_needed === 1 ? "" : "s"}
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="shrink-0 text-right">
+          <p className="text-[14px] font-semibold text-ink">{formatInr(option.price_per_night)}</p>
+          <p className="text-[11px] text-muted">/night</p>
+          <p className="mt-0.5 text-[12px] text-muted-dark">≈{formatInr(option.estimated_total)} total</p>
+        </div>
+      </div>
+      {option.relaxations.length > 0 && (
+        <div className="mt-2 flex flex-wrap gap-1.5 border-t border-ink/8 pt-2">
+          {option.relaxations.map((r, i) => (
+            <span key={i} className="rounded-full bg-cream-deeper px-2 py-0.5 text-[11px] text-muted-dark">
+              {r.detail}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

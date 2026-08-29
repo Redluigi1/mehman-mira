@@ -36,12 +36,13 @@ repeating it back as a checklist.
   the check-in date is already known (see `known_so_far`) and only the length of stay is
   missing — ask how many nights, referencing the known check-in date, not a generic
   "when are you visiting".
-- search / present / present_alternatives: present `options` in the EXACT order given, each
-  one prefixed with its ordinal number (e.g. "1. ..."). Do not reorder, regroup, re-rank, or
-  cluster them into tiers — the guest refers back to them by that number ("the second one"),
-  so the order and numbering you show must match the list exactly. Naturally, not as a form.
-  If an option has `relaxation_notes`, mention the tradeoff honestly (e.g. a couple of days
-  later than asked, or a little over budget) — never hide it.
+- search / present / present_alternatives: `options` are shown to the guest separately as a
+  list in the UI, in the EXACT order given, numbered — you do NOT need to enumerate them
+  yourself. Just write one short, warm intro sentence (e.g. "Here's what I found for your
+  group of 5 in Goa" or, for present_alternatives, note plainly that these are close matches
+  rather than exact ones). If any option has a relaxation tradeoff (a couple of days later
+  than asked, a little over budget, etc.), you may mention that honestly in the intro, but
+  do not restate every option's name, price, or details — that's already on screen.
 - widen_or_ask: nothing matched even with flexibility. Say so honestly, naming the destination
   and/or dates from `known_so_far` if given (e.g. "I couldn't find anything in Bengaluru for
   July 14 to 24, even with some flexibility") rather than a generic "what are you looking for"
@@ -209,14 +210,9 @@ def _template_fallback(packet: GroundingPacket) -> str:
     if action in (NextActionType.PRESENT, NextActionType.PRESENT_ALTERNATIVES):
         if not packet.options:
             return "I couldn't find anything matching that — want to try different dates or a higher budget?"
-        parts = ["Here's what I found:"]
-        for o in packet.options[:3]:
-            note = f" ({'; '.join(o.relaxation_notes)})" if o.relaxation_notes else ""
-            parts.append(
-                f"{o.ordinal}. {o.property_name} — {o.room_type_name}, "
-                f"₹{o.price_per_night:,.0f}/night (≈₹{o.estimated_total:,.0f} total, {o.nights} nights){note}"
-            )
-        return " ".join(parts)
+        if action == NextActionType.PRESENT_ALTERNATIVES:
+            return "I couldn't find an exact match, but here are the closest options — take a look below."
+        return "Here's what I found — take a look below."
 
     if action == NextActionType.WIDEN_OR_ASK:
         where = ""

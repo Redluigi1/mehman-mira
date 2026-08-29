@@ -108,6 +108,20 @@ def decide(state: ConversationState, ctx: TurnContext) -> NextAction:
             return NextAction(type=NextActionType.PRESENT_ALTERNATIVES, reason="only near-miss matches found")
         return NextAction(type=NextActionType.WIDEN_OR_ASK, reason="no matches at all, even relaxed")
 
+    if state.quote is not None:
+        # Reaching here means every earlier branch already ruled out an
+        # objection, a question, and a field-changing modify/new_request (any
+        # of those would have cleared state.quote in reconcile.py or matched
+        # a branch above). A quote is pending and nothing else claimed this
+        # turn — the extractor's user_act classification (e.g. on casual
+        # slang like "book it lesgooo") is the only ambiguous thing left, so
+        # don't fall back to re-dumping the whole shortlist; treat it as
+        # acceptance instead.
+        already_offered = state.upsell_offered_for_quote == state.quote.option_id
+        if ctx.eligible_addons and not already_offered:
+            return NextAction(type=NextActionType.UPSELL, reason="quote pending, offering add-ons before the hold")
+        return NextAction(type=NextActionType.HOLD, reason="quote pending and nothing else claimed this turn, treating as acceptance")
+
     if state.shortlist:
         return NextAction(type=NextActionType.PRESENT, reason="results already on hand")
 

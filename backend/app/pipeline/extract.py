@@ -116,6 +116,10 @@ Rules:
   state, e.g. "actually make that 4 people"), answer (answering a question you asked),
   select (picking one of the presented options), objection (pushing back, e.g. "too
   expensive"), question (asking something factual), chitchat, or other.
+- Any affirmation that means "go ahead with this" — "book it", "yes book it", "let's do
+  it", "sounds good", "book it lesgooo", "confirm", "sold", a plain "yes" — is `select`,
+  however casual, slangy, or oddly capitalized the wording is. Do not classify these as
+  `other` or `chitchat` just because the phrasing is informal.
 - `referent_mentions` captures phrases like "the second one", "the villa", "the other one",
   or "whichever is better"/"you pick" (the guest deferring to your judgment) so code can
   resolve them against what was actually shown. Copy the phrase near-verbatim; don't paraphrase it.

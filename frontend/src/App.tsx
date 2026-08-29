@@ -65,7 +65,16 @@ function App() {
         const res = await postMessage(conversationId, text)
         setSnapshots((prev) => [...prev, res.state])
         setTraces((prev) => [...prev, res.trace])
-        setMessages((prev) => [...prev, { turn_index: res.state.turn_index, role: "mira", text: res.reply }])
+        const showsOptions = res.trace.next_action.type === "present" || res.trace.next_action.type === "present_alternatives"
+        setMessages((prev) => [
+          ...prev,
+          {
+            turn_index: res.state.turn_index,
+            role: "mira",
+            text: res.reply,
+            options: showsOptions ? res.state.shortlist : undefined,
+          },
+        ])
         setViewingTurn(res.state.turn_index)
         lastFailedTextRef.current = null
       } catch (e) {
