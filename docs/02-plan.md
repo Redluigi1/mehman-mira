@@ -394,18 +394,18 @@ results are deterministic and need no credentials. Output committed to `evals/RE
 
 ---
 
-## 14. Phases and budget (30 hours)
+## 14. Phases
 
-| Phase | Work | Hours |
-| --- | --- | ---: |
-| 0 | Scaffold, domain schemas, dataset, JSON to SQLite loader, event store | 4 |
-| 1 | Happy path: extract, reconcile, policy, respond; CLI first | 6 |
-| 2 | Tools, deterministic pricing, grounding packet and validator | 5 |
-| 3 | Edge cases, conflict engine, near-miss and relaxation lane | 4 |
-| 4 | UI: chat, state panel, trace panel, timeline, time travel | 5 |
-| 5 | Bonuses: upsell, conversation recovery, eval harness and report | 4 |
-| 6 | README, engineering note, runnability fix (Decision 003), demo recording | 2 |
-| 7 | *Optional if hours remain:* owner escalation and Owner Console | — |
+| Phase | Work |
+| --- | --- |
+| 0 | Scaffold, domain schemas, dataset, JSON to SQLite loader, event store |
+| 1 | Happy path: extract, reconcile, policy, respond; CLI first |
+| 2 | Tools, deterministic pricing, grounding packet and validator |
+| 3 | Edge cases, conflict engine, near-miss and relaxation lane |
+| 4 | UI: chat, state panel, trace panel, timeline, time travel |
+| 5 | Bonuses: upsell, conversation recovery, eval harness and report |
+| 6 | README, engineering note, runnability fix (Decision 003), demo recording |
+| 7 | *Optional, not attempted:* owner escalation and Owner Console |
 
 Phase 6 is a real phase, not a scramble. The engineering note and the 5-minute demo are
 graded deliverables and get their own tasks.
@@ -419,5 +419,5 @@ graded deliverables and get their own tasks.
 | Reviewer cannot run a local Claude Code CLI | Decision 003 — resolve in Phase 6, do not let it slip |
 | Haiku extraction quality on messy input | Tight schema, enum vocabularies, confidence thresholds, eval coverage |
 | Dataset generation becomes a time sink | Seeded generator; only 8 properties hand-authored |
-| UI polish eats reliability time | UI is time-boxed to 5 hours and comes after the core works |
+| UI polish eats reliability time | UI is deliberately simple and comes after the core works |
 | Scope creep from the extras list | Extras are strictly post-Phase-5 |

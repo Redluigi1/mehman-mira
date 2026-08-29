@@ -14,8 +14,13 @@ from app.main import app
 
 class _FakeLLM(LLMClient):
     def complete_json(self, *, system: str, user: str, schema):
-        return schema(user_act=UserAct.NEW_REQUEST, set_fields={"destination.city": "Goa", "party.adults": 2},
-                       date_expression="in 5 days for 2 nights")
+        # Mimics what the real extractor resolves "in 5 days for 2 nights" to
+        # itself against the seeded demo_today (2026-09-02) — Decision 022,
+        # reconcile.py no longer derives dates from a raw phrase.
+        return schema(user_act=UserAct.NEW_REQUEST, set_fields={
+            "destination.city": "Goa", "party.adults": 2,
+            "stay.check_in": "2026-09-07", "stay.check_out": "2026-09-09",
+        })
 
     def complete_text(self, *, system: str, user: str) -> str:
         raise LLMError("force deterministic template fallback for the test")

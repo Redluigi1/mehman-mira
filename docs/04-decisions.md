@@ -442,7 +442,48 @@ is left in place (still covered by `tests/test_dates.py`) as a fallback path, no
 in case Haiku's date arithmetic proves unreliable enough in practice to warrant reintroducing
 a deterministic check.
 
-*Known gap:* `tests/test_reconcile.py`, `tests/test_edge_cases.py` and `tests/test_web_api.py`
-still construct `StateDelta`s using `date_expression` to drive date resolution through
-`reconcile.py` — those assertions no longer reflect how dates flow through the pipeline and
-need updating to set `stay.check_in`/`stay.check_out` directly. Not done in this pass.
+*Known gap, closed in Decision 023:* `tests/test_reconcile.py`, `tests/test_edge_cases.py` and
+`tests/test_web_api.py` still constructed `StateDelta`s using `date_expression` to drive date
+resolution through `reconcile.py` — those assertions no longer reflected how dates flow
+through the pipeline and needed updating to set `stay.check_in`/`stay.check_out` directly. Not
+done in this pass.
+
+---
+
+### 023 — Final cleanup pass: stale tests updated for Decisions 022/d6040f5; sqlite rebuild no longer unlinks the file
+**Date:** 2026-08-29 · **Status:** accepted
+
+Two unrelated fixes made together while preparing the submission:
+
+1. **Stale test fixtures.** The known gap noted above, plus one more of the same shape:
+   commit `d6040f5` changed the `PRESENT`/`PRESENT_ALTERNATIVES` template fallback in
+   `respond.py` to a short generic intro line (options now render as UI cards, not
+   enumerated in text) but three assertions in `tests/test_ground_and_respond.py` still
+   expected the old text to contain the option's name and price. All seven stale
+   assertions (`test_reconcile.py` x1, `test_edge_cases.py` x3, `test_ground_and_respond.py`
+   x3, `test_web_api.py`'s `_FakeLLM` x1) now construct `StateDelta`s the way the real
+   extractor does post-Decision-022 (ISO `stay.check_in`/`stay.check_out`/`stay.nights` in
+   `set_fields`, no `date_expression`) and assert against the real post-d6040f5 fallback
+   text. No production code changed for this half of the fix.
+2. **`data/loader.py::build_database` no longer calls `sqlite_path.unlink()`.** On Windows
+   (this project lives under OneDrive, which briefly holds its own handle on a file after a
+   write), deleting and immediately reconnecting to the same literal path raced often enough
+   to fail with `PermissionError: WinError 32` — reproduced by running the suite twice in a
+   row, since `test_web_api.py` rebuilds the DB at the same `data/runtime/mira.db` path on
+   every test. Fixed by having `SCHEMA` open with `DROP TABLE IF EXISTS` for every table
+   instead of deleting the file first — the connection just drops and recreates tables in
+   place. Cross-platform-safe and removes a whole class of file-lock races, not just the
+   one that happened to reproduce.
+
+*Why bundled:* both were found doing one thing — getting `pytest` fully green — right before
+the final push. Neither depends on the other.
+
+A third, same-shaped issue turned up in `evals/`: every `evals/cases/*.yaml`'s scripted
+`extracted_delta` still used `date_expression` too, so `evals/runner.py run` silently
+regressed to **1/37 turns passing (2.7%)** against a `evals/REPORT.md` still committed as
+"37/37" — the eval suite has no CI gate, so this had gone unnoticed since Decision 022
+landed. All 15 affected case files now set `stay.check_in`/`stay.check_out`/`stay.nights`
+directly (resolved by hand against the seeded `demo_today`, 2026-09-02, the same values the
+real extractor would produce); fixtures re-recorded from scratch. Back to 37/37, verified
+for real this time — the earlier "37/37" in git history predates Decision 022 and was never
+re-verified against it before now.

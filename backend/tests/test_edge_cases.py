@@ -69,32 +69,50 @@ def _state_with_min_viable_set(today: date) -> ConversationState:
     return state
 
 
-# EC1 — relative dates, anchored to an explicit today, resolved in code -----
+# EC1 — relative dates, anchored to an explicit today ------------------------
 
 def test_ec1_relative_dates_resolve_against_explicit_today(repo: Repo):
+    """Calendar-anchor resolution now happens in the extractor itself, against
+    the "today" given in its prompt (Decision 022) — reconcile.py just stores
+    the ISO dates it's handed. This asserts reconcile.py stores exactly what a
+    correct resolution of "next weekend" against `today` looks like.
+    """
     today = repo.get_demo_today()
+    friday = today + timedelta(days=(4 - today.weekday()) % 7 + 7)
+    check_in, check_out = friday.isoformat(), (friday + timedelta(days=2)).isoformat()
+
     state = ConversationState(conversation_id="c1")
     state = apply_state_delta(state, _delta(
-        set_fields={"destination.city": "Goa", "party.adults": 2}, date_expression="next weekend",
+        set_fields={
+            "destination.city": "Goa", "party.adults": 2,
+            "stay.check_in": check_in, "stay.check_out": check_out,
+        },
     ), today, turn_index=1)
 
-    friday = today + timedelta(days=(4 - today.weekday()) % 7 + 7)
-    assert state.intent.stay.value.check_in == friday.isoformat()
-    assert state.intent.stay.value.check_out == (friday + timedelta(days=2)).isoformat()
+    assert state.intent.stay.value.check_in == check_in
+    assert state.intent.stay.value.check_out == check_out
 
 
 # EC2 — mid-conversation modification updates, never restarts ---------------
 
 def test_ec2_modification_combines_party_and_stay_changes_without_reset(repo: Repo):
+    """"One more night" on top of a known 2-night stay is now the extractor's
+    own job to resolve into an absolute `stay.nights` (it's given the current
+    known state, Decision 022) — reconcile.py just applies the new count and
+    re-derives check_out.
+    """
     today = repo.get_demo_today()
     state = ConversationState(conversation_id="c1")
     state = apply_state_delta(state, _delta(
-        set_fields={"destination.city": "Goa", "party.adults": 3}, date_expression="this weekend",
+        set_fields={
+            "destination.city": "Goa", "party.adults": 3,
+            "stay.check_in": today.isoformat(), "stay.nights": 2,
+        },
     ), today, turn_index=1)
     original_check_in = state.intent.stay.value.check_in
 
     state = apply_state_delta(state, _delta(
-        user_act=UserAct.MODIFY, set_fields={"party.adults": 4}, date_expression="one more night",
+        user_act=UserAct.MODIFY, set_fields={"party.adults": 4, "stay.nights": 3},
     ), today, turn_index=2)
 
     assert state.intent.party.value.adults == 4
@@ -111,9 +129,14 @@ def test_ec2_stay_source_turn_does_not_bump_when_dates_arent_mentioned(repo: Rep
     the first date was set. Caught by hand while verifying Phase 4's UI.
     """
     today = repo.get_demo_today()
+    friday = today + timedelta(days=(4 - today.weekday()) % 7)
     state = ConversationState(conversation_id="c1")
     state = apply_state_delta(state, _delta(
-        set_fields={"destination.city": "Goa", "party.adults": 2}, date_expression="this weekend",
+        set_fields={
+            "destination.city": "Goa", "party.adults": 2,
+            "stay.check_in": friday.isoformat(), "stay.check_out": (friday + timedelta(days=2)).isoformat(),
+            "stay.nights": 2,
+        },
     ), today, turn_index=1)
     assert state.intent.stay.source_turn == 1
 

@@ -12,7 +12,9 @@ turns:
       set_fields:
         destination.city: Goa
         party.adults: 2
-      date_expression: "in 10 days for 2 nights"
+        stay.check_in: "2026-09-12"
+        stay.check_out: "2026-09-14"
+        stay.nights: 2
     assert:
       next_action: present
       tools_called: [search_properties]

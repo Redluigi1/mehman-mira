@@ -67,12 +67,15 @@ def test_validate_names_allows_known_property_and_safe_words():
 
 
 def test_template_fallback_present_is_grounded():
+    """Options render as UI cards, not enumerated in text (commit d6040f5) —
+    the PRESENT fallback is a short, generic, always-true intro line with
+    nothing invented, not a re-listing of the shortlist.
+    """
     state = ConversationState(conversation_id="c1")
     state.shortlist = [_option()]
     packet = build_grounding_packet(state, _ctx(), NextAction(type=NextActionType.PRESENT))
     text = _template_fallback(packet)
-    assert "Grand Dunes Villa" in text
-    assert "36,000" in text
+    assert text == "Here's what I found — take a look below."
 
 
 def test_template_fallback_ask():
@@ -175,7 +178,7 @@ def _packet():
 def test_generate_response_llm_error_falls_back_to_template():
     text, verdict = generate_response(_RaisingClient(), _packet())
     assert verdict == GroundingVerdict.FALLBACK
-    assert "Grand Dunes Villa" in text
+    assert text == "Here's what I found — take a look below."
 
 
 def test_generate_response_clean_when_grounded():
@@ -192,4 +195,4 @@ def test_generate_response_repairs_on_second_pass():
 def test_generate_response_falls_back_when_never_grounded():
     text, verdict = generate_response(_NeverGroundedClient(), _packet())
     assert verdict == GroundingVerdict.FALLBACK
-    assert "Grand Dunes Villa" in text
+    assert text == "Here's what I found — take a look below."

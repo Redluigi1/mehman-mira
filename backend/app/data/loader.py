@@ -9,6 +9,14 @@ import sqlite3
 from pathlib import Path
 
 SCHEMA = """
+DROP TABLE IF EXISTS addons;
+DROP TABLE IF EXISTS inventory;
+DROP TABLE IF EXISTS rates;
+DROP TABLE IF EXISTS policies;
+DROP TABLE IF EXISTS room_types;
+DROP TABLE IF EXISTS properties;
+DROP TABLE IF EXISTS meta;
+
 CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
 
 CREATE TABLE properties (
@@ -95,10 +103,16 @@ def _read_json(path: Path) -> object:
 def build_database(data_dir: Path, sqlite_path: Path) -> sqlite3.Connection:
     """Load the JSON dataset into a fresh SQLite DB at sqlite_path and return
     an open connection. Overwrites any existing DB at that path.
+
+    Rebuilds by dropping and recreating tables inside the file (SCHEMA opens
+    with `DROP TABLE IF EXISTS`) rather than deleting the file first — an
+    `unlink()` immediately followed by `sqlite3.connect()` on the same path
+    raced against the previous connection's close often enough on Windows
+    (especially under OneDrive, which briefly holds its own handle on the
+    file after a write) to fail with `PermissionError: WinError 32`, e.g.
+    across back-to-back test-suite runs that each hit this same path.
     """
     sqlite_path.parent.mkdir(parents=True, exist_ok=True)
-    if sqlite_path.exists():
-        sqlite_path.unlink()
 
     # FastAPI's sync route handlers each run on a threadpool worker thread, not
     # the thread that built this connection at startup — sqlite3's default

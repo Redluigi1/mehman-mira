@@ -14,7 +14,9 @@ turns:
         budget.amount: 100
         budget.basis: per_night
         budget.hard: true
-      date_expression: "tonight for 2 nights"
+        stay.check_in: "2026-09-02"
+        stay.check_out: "2026-09-04"
+        stay.nights: 2
     assert:
       next_action: present
       tools_called: [search_properties, find_alternatives]

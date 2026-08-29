@@ -7,7 +7,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 
 ---
 
-## Phase 0 — Scaffold and data (4h)
+## Phase 0 — Scaffold and data
 
 - [x] `backend/` skeleton: FastAPI app, `config.py` via pydantic-settings, `/health`
 - [x] `frontend/` skeleton: Vite + React + TS + Tailwind, dev proxy to backend
@@ -23,7 +23,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 - [x] `store/conversations.py` — append-only event log, state as fold over events
 - [x] Sanity test: load dataset, assert counts and that every planted edge case exists
 
-## Phase 1 — Happy path (6h)
+## Phase 1 — Happy path
 
 - [x] `llm/base.py` — `LLMClient` protocol (`complete_json`, `complete_text`)
 - [x] `llm/claude_cli.py` — local Claude Code CLI on Haiku, JSON output, timeout, retry
@@ -39,7 +39,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
       (verified live via `backend/scripts/demo_goa.py` against the real Claude CLI —
       search → select → quote → factual question → price re-query → hold, all grounded)
 
-## Phase 2 — Tools, pricing, grounding (5h)
+## Phase 2 — Tools, pricing, grounding
 
 - [x] `tools/registry.py` — name to (schema, callable), JSON schema export, arg validation
 - [x] `search_properties` — filter cascade, exact and near-miss buckets, ranked
@@ -54,7 +54,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 - [x] Repair pass, then deterministic template fallback; record the verdict
 - [x] Tool error handling — typed failures surface in the trace, never crash the turn
 
-## Phase 3 — Edge cases (4h)
+## Phase 3 — Edge cases
 
 - [x] Conflict engine — capacity, budget, policy, min-stay, past dates, contradictions
       (`pipeline/conflicts.py`; hard conflicts recompute every turn, soft conflicts tied to
@@ -81,7 +81,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 - [x] Test per edge case — `tests/test_edge_cases.py` (8), plus `test_conflicts.py` (11) and
       `test_alternatives.py` (4) for the underlying mechanisms
 
-## Phase 4 — UI (5h)
+## Phase 4 — UI
 
 - [x] `lib/api.ts` and `types.ts` mirrored by hand from the Pydantic models (`frontend/src/lib/`)
 - [x] `Chat.tsx` — message list, composer, error surfacing (with retry)
@@ -102,7 +102,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
       select → quote → upsell → hold, time-travel, console collapse, all confirmed
       working. Caught and fixed 3 real bugs along the way (Decisions 017-019).
 
-## Phase 5 — Bonuses (4h)
+## Phase 5 — Bonuses
 
 - [x] `suggest_addons` — eligibility rules, segment affinity, at most two with reasons
       (`tools/addons.py`; Decision 016)
@@ -121,17 +121,17 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
       (scripted extraction, not live-recorded — see `evals/README.md`)
 - [x] Commit `evals/REPORT.md` (37/37 turns passing)
 
-## Phase 6 — Ship (2h)
+## Phase 6 — Ship
 
 - [ ] **Resolve Decision 003** — a reviewer must be able to run this without a local Claude Code CLI
-- [ ] `README.md` — setup, architecture diagram, env vars, assumptions, known limitations
+- [x] `README.md` — setup, architecture diagram, env vars, assumptions, known limitations
 - [ ] `ENGINEERING_NOTE.md` — architecture, model choice, agent flow, state management, tool calling, hallucination prevention, tradeoffs, what to improve next (include the segmentation and RAG extensions, and the owner write-back loop)
 - [ ] Fresh-clone smoke test on a clean checkout
 - [ ] Demo script: happy path, 2+ edge cases, tool calls, state updates, key decisions
-- [ ] Record the 5-minute demo, no slides
+- [ ] Record the demo, no slides
 - [ ] Send to `ashish@mehman.io`, subject `Mehman <> Assignment - Ayush Kumar + AI Engineer`
 
-## Phase 7 — Optional, only if hours remain
+## Phase 7 — Optional, not attempted
 
 - [ ] `escalate_to_property` tool plus escalations table
 - [ ] Owner Console tab, mock owner replies
@@ -140,6 +140,27 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[-]` dropped (say why)
 - [ ] TTL fallback, dedup, rate limit
 
 ---
+
+## Known limitations — not implemented, noted for future work
+
+- [ ] **Kid vs. adult differentiation.** `Party` captures `adults` and per-child `children:
+      list[ChildAge]` (`backend/app/domain/intent.py`), but capacity and pricing
+      (`tools/capacity.py::rooms_needed_for`, `extra_beds_needed`) both collapse the party
+      to `total_guests = adults + len(children)` and treat every head the same. A booking
+      of "3 kids, 4 adults" is priced and room-matched as 7 identical guests — no reduced
+      occupancy weight for children, no age-based free-stay or extra-bed-fee policy.
+- [ ] **Analytics layer.** Conversations are event-sourced and durable (`store/
+      conversations.py`) and every turn's trace is captured (`domain/trace.py`), but
+      nothing aggregates across conversations. There is no persistence/dashboard for
+      reviewing how well the agent performed after the fact (conversion rate, grounding
+      failures over time, next-action accuracy in production vs. in `evals/`). The eval
+      harness (`evals/runner.py`) scores fixed offline cases, not live traffic.
+- [ ] **Single LLM backend.** `LLMClient` (`backend/app/llm/base.py`) is a protocol, but
+      only one implementation exists — `llm/claude_cli.py`, which shells out to the local
+      Claude Code CLI on Haiku. There is no Anthropic API-key client and no
+      Vertex AI / Gemini / other-provider client, so this only runs on a machine with the
+      Claude Code CLI installed and authenticated (see Decision 003). Swapping backends
+      means writing a new class against the same protocol, not a redesign.
 
 ## Cross-cutting, do not skip
 

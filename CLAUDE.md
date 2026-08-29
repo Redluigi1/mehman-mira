@@ -3,9 +3,8 @@
 ## What this is
 
 **Mira** — a simplified version of Mehman.io's guest-facing hotel-booking AI agent.
-This is a **take-home case study for an AI Engineer role at Mehman.io**. Timeline given
-by the company: **30 hours of work**. Submission goes to `ashish@mehman.io` with subject
-`Mehman <> Assignment - {Name + Role}`.
+This is a **take-home case study for an AI Engineer role at Mehman.io**. Submission goes
+to `ashish@mehman.io` with subject `Mehman <> Assignment - {Name + Role}`.
 
 Owner: Ayush Kumar (`ayush171003@gmail.com`).
 

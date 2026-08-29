@@ -11,7 +11,9 @@ turns:
       set_fields:
         destination.city: Udaipur
         party.adults: 2
-      date_expression: "in 14 days for 2 nights"
+        stay.check_in: "2026-09-16"
+        stay.check_out: "2026-09-18"
+        stay.nights: 2
     assert:
       next_action: present
       tools_called: [search_properties]

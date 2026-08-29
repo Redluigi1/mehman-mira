@@ -13,7 +13,9 @@ turns:
         destination.city: Goa
         party.adults: 2
         party.children: [{age: 8}]
-      date_expression: "in 14 days for 3 nights"
+        stay.check_in: "2026-09-16"
+        stay.check_out: "2026-09-19"
+        stay.nights: 3
     assert:
       next_action: present
       tools_called: [search_properties]

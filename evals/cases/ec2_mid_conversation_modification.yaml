@@ -10,7 +10,9 @@ turns:
       set_fields:
         destination.city: Goa
         party.adults: 3
-      date_expression: "this weekend"
+        stay.check_in: "2026-09-04"
+        stay.check_out: "2026-09-06"
+        stay.nights: 2
     assert:
       next_action: present
       tools_called: [search_properties]
@@ -24,7 +26,7 @@ turns:
       user_act: modify
       set_fields:
         party.adults: 4
-      date_expression: "one more night"
+        stay.nights: 3  # extractor resolves "one more night" against the known 2 -> 3 itself
     assert:
       next_action: present
       tools_called: [search_properties]

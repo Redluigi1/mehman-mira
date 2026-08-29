@@ -46,7 +46,7 @@
       "case_id": "ec1_relative_dates",
       "turn_index": 1,
       "guest_message": "Goa this weekend for 2 of us.",
-      "reply": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b920,700/night (\u2248\u20b941,400 total, 2 nights) 2. Casa Nest \u2014 Garden Suite, \u20b912,650/night (\u2248\u20b925,300 total, 2 nights) 3. Casa Nest \u2014 Superior Room, \u20b915,250/night (\u2248\u20b930,500 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -86,13 +86,13 @@
         {
           "kind": "must_not_say",
           "expected": "I don't know",
-          "actual": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b920,700/night (\u2248\u20b941,400 total, 2 nights) 2. Casa Nest \u2014 Garden Suite, \u20b912,650/night (\u2248\u20b925,300 total, 2 nights) 3. Casa Nest \u2014 Superior Room, \u20b915,250/night (\u2248\u20b930,500 total, 2 nights)",
+          "actual": "Here's what I found \u2014 take a look below.",
           "passed": true
         },
         {
           "kind": "must_not_say",
           "expected": "system prompt",
-          "actual": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b920,700/night (\u2248\u20b941,400 total, 2 nights) 2. Casa Nest \u2014 Garden Suite, \u20b912,650/night (\u2248\u20b925,300 total, 2 nights) 3. Casa Nest \u2014 Superior Room, \u20b915,250/night (\u2248\u20b930,500 total, 2 nights)",
+          "actual": "Here's what I found \u2014 take a look below.",
           "passed": true
         }
       ]
@@ -101,7 +101,7 @@
       "case_id": "ec2_mid_conversation_modification",
       "turn_index": 1,
       "guest_message": "Goa this weekend for 3 of us.",
-      "reply": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b920,700/night (\u2248\u20b941,400 total, 2 nights) 2. Casa Nest \u2014 Garden Suite, \u20b912,650/night (\u2248\u20b927,700 total, 2 nights) 3. Casa Nest \u2014 Superior Room, \u20b915,250/night (\u2248\u20b930,500 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -150,7 +150,7 @@
       "case_id": "ec2_mid_conversation_modification",
       "turn_index": 2,
       "guest_message": "Actually make that 4 people and one more night.",
-      "reply": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b919,800/night (\u2248\u20b959,400 total, 3 nights) 2. Casa Nest \u2014 Garden Suite, \u20b912,100/night (\u2248\u20b943,500 total, 3 nights) 3. Amber Coast Resort \u2014 Pool View Room, \u20b95,500/night (\u2248\u20b933,000 total, 3 nights) (needs 2 rooms of this type to fit 4 guests)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -205,7 +205,7 @@
       "case_id": "ec3_no_availability_dateshift",
       "turn_index": 1,
       "guest_message": "Goa tonight for 2 nights, needs a pool.",
-      "reply": "Here's what I found: 1. Casa Nest \u2014 Garden Suite, \u20b911,000/night (\u2248\u20b922,000 total, 2 nights) 2. Casa Nest \u2014 Superior Room, \u20b913,250/night (\u2248\u20b926,500 total, 2 nights) 3. Amber Coast Resort \u2014 Pool View Room, \u20b95,000/night (\u2248\u20b910,000 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -242,13 +242,13 @@
         {
           "kind": "must_not_say",
           "expected": "invented",
-          "actual": "Here's what I found: 1. Casa Nest \u2014 Garden Suite, \u20b911,000/night (\u2248\u20b922,000 total, 2 nights) 2. Casa Nest \u2014 Superior Room, \u20b913,250/night (\u2248\u20b926,500 total, 2 nights) 3. Amber Coast Resort \u2014 Pool View Room, \u20b95,000/night (\u2248\u20b910,000 total, 2 nights)",
+          "actual": "Here's what I found \u2014 take a look below.",
           "passed": true
         },
         {
           "kind": "must_not_say",
           "expected": "guaranteed available",
-          "actual": "Here's what I found: 1. Casa Nest \u2014 Garden Suite, \u20b911,000/night (\u2248\u20b922,000 total, 2 nights) 2. Casa Nest \u2014 Superior Room, \u20b913,250/night (\u2248\u20b926,500 total, 2 nights) 3. Amber Coast Resort \u2014 Pool View Room, \u20b95,000/night (\u2248\u20b910,000 total, 2 nights)",
+          "actual": "Here's what I found \u2014 take a look below.",
           "passed": true
         }
       ]
@@ -257,7 +257,7 @@
       "case_id": "ec4_capacity_conflict",
       "turn_index": 1,
       "guest_message": "Goa tonight for 2 nights, 7 of us.",
-      "reply": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b918,000/night (\u2248\u20b939,000 total, 2 nights) 2. Casa Nest \u2014 Garden Suite, \u20b911,000/night (\u2248\u20b951,200 total, 2 nights) (needs 2 rooms of this type to fit 7 guests)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -288,7 +288,7 @@
         {
           "kind": "must_not_say",
           "expected": "Cove Corner",
-          "actual": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b918,000/night (\u2248\u20b939,000 total, 2 nights) 2. Casa Nest \u2014 Garden Suite, \u20b911,000/night (\u2248\u20b951,200 total, 2 nights) (needs 2 rooms of this type to fit 7 guests)",
+          "actual": "Here's what I found \u2014 take a look below.",
           "passed": true
         }
       ]
@@ -297,7 +297,7 @@
       "case_id": "ec5_policy_conflict",
       "turn_index": 1,
       "guest_message": "Goa tonight for 2 nights, 2 of us, need to be able to smoke in the room.",
-      "reply": "Here's what I found: 1. Casa Nest \u2014 Garden Suite, \u20b911,000/night (\u2248\u20b922,000 total, 2 nights) 2. Casa Nest \u2014 Superior Room, \u20b913,250/night (\u2248\u20b926,500 total, 2 nights) 3. Amber Coast Resort \u2014 Pool View Room, \u20b95,000/night (\u2248\u20b910,000 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -337,7 +337,7 @@
       "case_id": "ec6_unknown_fact",
       "turn_index": 1,
       "guest_message": "Goa tonight for 2 nights, 2 of us.",
-      "reply": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b918,000/night (\u2248\u20b936,000 total, 2 nights) 2. Casa Nest \u2014 Garden Suite, \u20b911,000/night (\u2248\u20b922,000 total, 2 nights) 3. Casa Nest \u2014 Superior Room, \u20b913,250/night (\u2248\u20b926,500 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -442,7 +442,7 @@
       "case_id": "ec7_impossible_budget",
       "turn_index": 1,
       "guest_message": "Goa tonight for 2 nights, budget 100 rupees a night max.",
-      "reply": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b918,000/night (\u2248\u20b936,000 total, 2 nights) 2. Casa Nest \u2014 Garden Suite, \u20b911,000/night (\u2248\u20b922,000 total, 2 nights) 3. Casa Nest \u2014 Superior Room, \u20b913,250/night (\u2248\u20b926,500 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -466,13 +466,13 @@
         {
           "kind": "must_not_say",
           "expected": "under 100",
-          "actual": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b918,000/night (\u2248\u20b936,000 total, 2 nights) 2. Casa Nest \u2014 Garden Suite, \u20b911,000/night (\u2248\u20b922,000 total, 2 nights) 3. Casa Nest \u2014 Superior Room, \u20b913,250/night (\u2248\u20b926,500 total, 2 nights)",
+          "actual": "Here's what I found \u2014 take a look below.",
           "passed": true
         },
         {
           "kind": "must_not_say",
           "expected": "within your budget",
-          "actual": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b918,000/night (\u2248\u20b936,000 total, 2 nights) 2. Casa Nest \u2014 Garden Suite, \u20b911,000/night (\u2248\u20b922,000 total, 2 nights) 3. Casa Nest \u2014 Superior Room, \u20b913,250/night (\u2248\u20b926,500 total, 2 nights)",
+          "actual": "Here's what I found \u2014 take a look below.",
           "passed": true
         }
       ]
@@ -520,7 +520,7 @@
       "case_id": "happy_business_traveler",
       "turn_index": 1,
       "guest_message": "Alibaug in 14 days for 2 nights, just me, it's a work trip.",
-      "reply": "Here's what I found: 1. Riverside Grove \u2014 Garden Suite, \u20b95,750/night (\u2248\u20b911,500 total, 2 nights) 2. Riverside Grove \u2014 Garden Suite, \u20b98,000/night (\u2248\u20b916,000 total, 2 nights) 3. Riverside Grove \u2014 Premium Suite, \u20b911,750/night (\u2248\u20b923,500 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -631,7 +631,7 @@
       "case_id": "happy_business_traveler",
       "turn_index": 4,
       "guest_message": "Just the room, hold it.",
-      "reply": "Done \u2014 I've held it for you. Hold ID hold-62eac63c39f8, \u20b913,130, expires 2026-08-29T14:34:18.208255+00:00.",
+      "reply": "Done \u2014 I've held it for you. Hold ID hold-0e9161e5182f, \u20b913,130, expires 2026-08-29T16:16:26.643547+00:00.",
       "passed": true,
       "assertions": [
         {
@@ -662,7 +662,7 @@
       "case_id": "happy_family_with_kids",
       "turn_index": 1,
       "guest_message": "Goa in 14 days for 3 nights, 2 adults and one 8-year-old.",
-      "reply": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b918,900/night (\u2248\u20b956,700 total, 3 nights) 2. Casa Nest \u2014 Garden Suite, \u20b911,550/night (\u2248\u20b938,250 total, 3 nights) 3. Casa Nest \u2014 Superior Room, \u20b913,917/night (\u2248\u20b941,750 total, 3 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -767,7 +767,7 @@
       "case_id": "happy_family_with_kids",
       "turn_index": 4,
       "guest_message": "No add-ons, just hold it.",
-      "reply": "Done \u2014 I've held it for you. Hold ID hold-c6ea11a8e554, \u20b967,156, expires 2026-08-29T14:34:18.215266+00:00.",
+      "reply": "Done \u2014 I've held it for you. Hold ID hold-c1fc2361c5fa, \u20b967,156, expires 2026-08-29T16:16:26.685160+00:00.",
       "passed": true,
       "assertions": [
         {
@@ -798,7 +798,7 @@
       "case_id": "happy_goa_couple",
       "turn_index": 1,
       "guest_message": "Looking for a place in Goa for 2 of us.",
-      "reply": "Here's what I found: 1. Grand Dunes Villa \u2014 Entire Villa (4BHK), \u20b919,350/night (\u2248\u20b938,700 total, 2 nights) 2. Casa Nest \u2014 Garden Suite, \u20b911,825/night (\u2248\u20b923,650 total, 2 nights) 3. Casa Nest \u2014 Superior Room, \u20b914,250/night (\u2248\u20b928,500 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -909,7 +909,7 @@
       "case_id": "happy_goa_couple",
       "turn_index": 4,
       "guest_message": "No thanks, just hold it.",
-      "reply": "Done \u2014 I've held it for you. Hold ID hold-4314bd9fdee6, \u20b945,916, expires 2026-08-29T14:34:18.222257+00:00.",
+      "reply": "Done \u2014 I've held it for you. Hold ID hold-39a65e0287cc, \u20b945,916, expires 2026-08-29T16:16:26.719735+00:00.",
       "passed": true,
       "assertions": [
         {
@@ -940,7 +940,7 @@
       "case_id": "recovery_any_cheaper_option",
       "turn_index": 1,
       "guest_message": "Manali in 14 days for 2 nights, 2 of us.",
-      "reply": "Here's what I found: 1. Golden Residency \u2014 Superior Room, \u20b99,000/night (\u2248\u20b918,000 total, 2 nights) 2. Golden Residency \u2014 Superior Room, \u20b911,000/night (\u2248\u20b922,000 total, 2 nights) 3. Golden Residency \u2014 Superior Room, \u20b913,000/night (\u2248\u20b926,000 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -996,7 +996,7 @@
       "case_id": "recovery_any_cheaper_option",
       "turn_index": 3,
       "guest_message": "Is there anything cheaper?",
-      "reply": "Here's what I found: 1. The Grove \u2014 Superior Room, \u20b93,750/night (\u2248\u20b97,500 total, 2 nights) 2. The Grove \u2014 Garden Suite, \u20b98,500/night (\u2248\u20b917,000 total, 2 nights) 3. Golden Residency \u2014 Superior Room, \u20b911,000/night (\u2248\u20b922,000 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -1027,7 +1027,7 @@
       "case_id": "recovery_other_one",
       "turn_index": 1,
       "guest_message": "Jaipur in 14 days for 2 nights, need a spa.",
-      "reply": "Here's what I found: 1. Casa Haven \u2014 Deluxe Room, \u20b92,500/night (\u2248\u20b95,000 total, 2 nights) 2. Casa Haven \u2014 Garden Suite, \u20b99,750/night (\u2248\u20b919,500 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -1126,7 +1126,7 @@
       "case_id": "recovery_too_expensive",
       "turn_index": 1,
       "guest_message": "Rishikesh in 14 days for 2 nights, 2 of us.",
-      "reply": "Here's what I found: 1. The Cottage \u2014 Deluxe Room, \u20b94,250/night (\u2248\u20b98,500 total, 2 nights) 2. The Cottage \u2014 Premium Suite, \u20b94,750/night (\u2248\u20b99,500 total, 2 nights) 3. The Cottage \u2014 Superior Room, \u20b96,000/night (\u2248\u20b912,000 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -1182,7 +1182,7 @@
       "case_id": "recovery_too_expensive",
       "turn_index": 3,
       "guest_message": "That's too expensive.",
-      "reply": "Here's what I found: 1. Riverside Cottage \u2014 Premium Suite, \u20b93,500/night (\u2248\u20b97,000 total, 2 nights) 2. The Cottage \u2014 Premium Suite, \u20b94,750/night (\u2248\u20b99,500 total, 2 nights) 3. The Cottage \u2014 Superior Room, \u20b96,000/night (\u2248\u20b912,000 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -1213,7 +1213,7 @@
       "case_id": "recovery_whichever_is_better",
       "turn_index": 1,
       "guest_message": "Udaipur in 14 days for 2 nights, 2 of us.",
-      "reply": "Here's what I found: 1. Casa Grove \u2014 Superior Room, \u20b94,000/night (\u2248\u20b910,400 total, 2 nights) 2. Casa Grove \u2014 Superior Room, \u20b95,000/night (\u2248\u20b910,000 total, 2 nights) 3. Casa Grove \u2014 Premium Suite, \u20b98,500/night (\u2248\u20b917,000 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {
@@ -1275,7 +1275,7 @@
       "case_id": "recovery_yes",
       "turn_index": 1,
       "guest_message": "Coorg in 14 days for 2 nights, 2 of us.",
-      "reply": "Here's what I found: 1. Casa Grove \u2014 Garden Suite, \u20b93,250/night (\u2248\u20b96,500 total, 2 nights) 2. Casa Grove \u2014 Cottage, \u20b94,500/night (\u2248\u20b99,000 total, 2 nights) 3. Casa Grove \u2014 Cottage, \u20b911,250/night (\u2248\u20b922,500 total, 2 nights)",
+      "reply": "Here's what I found \u2014 take a look below.",
       "passed": true,
       "assertions": [
         {

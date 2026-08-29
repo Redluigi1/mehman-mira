@@ -123,8 +123,8 @@ Considered and explicitly postponed. Findings, so the reasoning is not lost:
 
 **The architectural precondition is being built now** (durable, event-sourced state where
 an owner reply is just another input event) because it is free today and expensive to
-retrofit. The feature itself is a Phase 7 bolt-on if hours remain, and otherwise goes in
-the engineering note. See Decision 011.
+retrofit. The feature itself is a Phase 7 bolt-on, not attempted here — see "known
+limitations" in the README and Decision 011.
 
 ## What we are deliberately not building
 

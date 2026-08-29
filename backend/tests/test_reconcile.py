@@ -16,8 +16,15 @@ def _delta(**overrides) -> StateDelta:
 
 
 def test_new_request_sets_destination_and_party():
+    """Calendar anchors arrive pre-resolved from the extractor as ISO strings
+    (Decision 022) — reconcile.py stores them, it doesn't derive them from a
+    phrase like "this weekend" anymore.
+    """
     state = ConversationState(conversation_id="c1")
-    delta = _delta(set_fields={"destination.city": "Goa", "party.adults": 3}, date_expression="this weekend")
+    delta = _delta(set_fields={
+        "destination.city": "Goa", "party.adults": 3,
+        "stay.check_in": "2026-09-04", "stay.check_out": "2026-09-06",
+    })
     state = apply_state_delta(state, delta, TODAY, turn_index=1)
     assert state.intent.destination.value.city == "Goa"
     assert state.intent.party.value.adults == 3
